@@ -7,7 +7,7 @@ const middleware = require('webpack-dev-middleware'); //webpack hot reloading mi
 const config = require('./webpack.prod.js');
 const compiler = webpack(config); //move your `devServer` config from `webpack.config.js`
 const history = require('connect-history-api-fallback');
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 const {createProxyMiddleware} = require("http-proxy-middleware");
 
@@ -15,7 +15,9 @@ app.use(history());
 
 if(process.env.NODE_ENV === "production"){
   app.use(express.static(path.join(__dirname, "dist")));
+  
 }else{
+  PORT=8081;
   app.use( middleware(compiler, {
     // webpack-dev-middleware options
   }),
