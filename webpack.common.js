@@ -156,7 +156,9 @@ module.exports = env => {
           "https": require.resolve("https-browserify"),
           "http": require.resolve("stream-http"),
           "path": require.resolve("path-browserify"),
-          "crypto": require.resolve("crypto-browserify") }
+          "crypto": require.resolve("crypto-browserify"),
+          "fs": false,
+          "child_process": false }
     }
   }
 };
