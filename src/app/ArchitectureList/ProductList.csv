@@ -1,0 +1,17 @@
+pid,pname
+RHEL,Red Hat Enterprise Linux
+OpenStack,Red Hat OpenStack
+Virtualization,Red Hat Virtualization
+Integration,Red Hat Integration
+ProcessAutomation,Red Hat Process Automation
+Runtimes,Red Hat Runtimes
+Edge,Red Hat Edge
+Quay,Red Hat Quay
+Storage,Red Hat Ceph Storage
+Data,Red Hat Data Foundation
+Ansible,Red Hat Ansible Automation Platform
+ACM,Red Hat Advance Cluster Management
+Insight,Red Hat Insight
+Satellite,Red Hat Satellite
+SmartManagement,Red Hat Smart Management
+OpenShift,Red Hat OpenShift Platform

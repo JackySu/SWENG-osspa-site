@@ -1,0 +1,60 @@
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+
+@import url(//fonts.googleapis.com/css?family=Montserrat|Open+Sans);
+@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css); /* Default asciidoc style framework - important */
+
+/* CUSTOMISATIONS */
+/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
+:root{
+--maincolor:#FFFFFF;
+--primarycolor:#294172; /* Fedora Dark Blue */
+--secondarycolor:#3c6eb4; /* Fedora Blue */
+--tertiarycolor:#CCCCCC;
+--highlightcolor:#e59728; /* Features Orange */
+--sidebarbackground:#CACACA;
+--linkcolor:#0D47A1;
+--linkcoloralternate:#db3279; /* Friends Magneta */
+--white:#FFFFFF;
+--black:#000000;
+}
+
+/* Text styles 
+
+body{font-family: "Open Sans",sans-serif;background-color: var(--maincolor);color:var(--black);}
+*/
+h1{
+    display: block;
+    font-size: 2em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    font-weight: bold;
+}
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    font-weight: bold;
+}
+
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    font-weight: bold;
+}
+
+h3{
+    display: block;
+    font-size: 1.15em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    font-weight: bold;
+}
+
+
+
+
+
+
