@@ -58,7 +58,7 @@ class ArchitectureDetail extends React.Component {
     const parsed = qs.parse(location.search);
     console.log("Access doc name -> "+parsed.docname);
     title = parsed.title;
-    fetch("/redhatdemocentral/portfolio-architecture-examples/-/raw/main/"+parsed.docname,{
+    fetch("/osspa/osspa-content/-/raw/main/"+parsed.docname,{
       headers : { 
           method: "get",
           'Accept': 'text/asciidoc'

@@ -37,6 +37,14 @@ app.use(
 );
 
 app.use(
+  "/osspa",
+  createProxyMiddleware({
+    target: "https://gitlab.com/",
+    changeOrigin: true
+  })
+);
+
+app.use(
   "/images/intro-marketectures",
   createProxyMiddleware({
     target: "https://gitlab.com/",
