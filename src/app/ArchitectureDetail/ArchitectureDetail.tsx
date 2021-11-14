@@ -25,21 +25,41 @@ import LayerGroupIcon from '@patternfly/react-icons/dist/esm/icons/layer-group-i
 import CubeIcon from '@patternfly/react-icons/dist/esm/icons/cube-icon';
 import { withRouter } from 'react-router-dom';
 const qs = require('query-string');
-
-
+import  detailLinks  from './DetailLink.csv';
+import Papa from 'papaparse';
 import RHlogo from '@app/bgimages/Logo-RedHat.png';
 const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
 const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
 import Asciidoc from 'react-asciidoc';
 import '@app/react-asciidoc/fedora.css';
+import { array } from 'prop-types';
 
 var title;
-
+var ppid;
+var resourcelist;
 
 class ArchitectureDetail extends React.Component {
 
+  detailMap = new Map();
   
-  
+  loadMap = () => Papa.parse(detailLinks, {
+      header: true,
+      complete: (results) => {
+        for(var i = 0; i != results.data.length; i++) {
+          
+          if(this.detailMap.has(results.data[i].pid)){
+            newarray = this.detailMap.get(results.data[i].pid);
+          }else{
+            var newarray = [] as any;
+            console.log("Create a new array");
+          }
+
+          newarray.push(results.data[i]);
+          this.detailMap.set(results.data[i].pid,newarray);
+        }
+        
+      }
+  });
 
   constructor(props) {
     super(props);
@@ -55,9 +75,12 @@ class ArchitectureDetail extends React.Component {
   
 
   componentDidMount() {
+    this.loadMap();
     const parsed = qs.parse(location.search);
     console.log("Access doc name -> "+parsed.docname);
     title = parsed.title;
+    ppid = parsed.ppid;
+    
     fetch("/osspa/osspa-content/-/raw/main/"+parsed.docname,{
       headers : { 
           method: "get",
@@ -71,19 +94,24 @@ class ArchitectureDetail extends React.Component {
   }
 
   render() {
-    
-
-    
       
-   
+    
     
     const pageId = 'main-content-page-layout-tertiary-nav';
     const PageSkipToContent = <SkipToContent href={`#${pageId}`}>Skip to content</SkipToContent>;
 
+    resourcelist=this.detailMap.get(ppid);
     
+    
+    let tempdisplay = [] as any;
+    if(Array.isArray(resourcelist) ){
+      console.log(ppid+"-->tempdisplay--------->"+tempdisplay.map.length)
+      tempdisplay=resourcelist;
+      
+    }
 
     return (
-      
+
       <React.Fragment>
         <Page
           isManagedSidebar
@@ -103,21 +131,20 @@ class ArchitectureDetail extends React.Component {
           </PageSection>
           <PageSection>
           <Grid hasGutter>
-              <GridItem span={2}>
+              <GridItem span={3}>
                 <PageSection>
                   <PageGroup>
                   <Menu >
                     <MenuContent>
                       <MenuList>
-                        <MenuItem icon={<CodeBranchIcon aria-hidden />} itemId={0}>
-                          From git
-                        </MenuItem>
-                        <MenuItem icon={<LayerGroupIcon aria-hidden />} itemId={1}>
-                          Demo
-                        </MenuItem>
-                        <MenuItem icon={<CubeIcon aria-hidden />} itemId={2}>
-                          Docker file
-                        </MenuItem>
+                      {
+                          tempdisplay.map( item =>
+                          <MenuItem  itemId={item.ppid} description={item.description}>
+                           Blog
+                           <br/>
+                           <img src="/redhatdemocentral/portfolio-architecture-examples/-/raw/main/images/intro-marketectures/hybrid-multicloud-management-gitops-marketing-slide.png"  width="100" height="50"></img>
+                          </MenuItem>
+                  )}
                       </MenuList>
                     </MenuContent>
                   </Menu>
