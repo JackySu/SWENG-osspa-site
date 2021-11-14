@@ -13,8 +13,8 @@ import {
   PageSectionVariants,
   SkipToContent,
   Title,
-  Split,
-  SplitItem,
+  Tile,
+  TextListItem,
   Grid,
   GridItem
   
@@ -134,20 +134,16 @@ class ArchitectureDetail extends React.Component {
               <GridItem span={3}>
                 <PageSection>
                   <PageGroup>
-                  <Menu >
-                    <MenuContent>
-                      <MenuList>
-                      {
-                          tempdisplay.map( item =>
-                          <MenuItem  itemId={item.ppid} description={item.description}>
-                           Blog
-                           <br/>
-                           <img src="/redhatdemocentral/portfolio-architecture-examples/-/raw/main/images/intro-marketectures/hybrid-multicloud-management-gitops-marketing-slide.png"  width="100" height="50"></img>
-                          </MenuItem>
-                  )}
-                      </MenuList>
-                    </MenuContent>
-                  </Menu>
+                  { tempdisplay.map( item =>
+                      
+                    <Tile title={item.description} isDisplayLarge onClick={event => window.open(item.url)}>
+                       <img src={item.image_link}></img>
+                       <br/>
+                       {item.type}
+                     </Tile>
+                   
+                     
+                )}
                   </PageGroup>
                     
                 </PageSection>
