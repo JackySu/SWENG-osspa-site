@@ -3,10 +3,6 @@ import { ExclamationTriangleIcon } from '@patternfly/react-icons';
 import {
   Breadcrumb, 
   BreadcrumbItem,
-  Menu,
-  MenuList,
-  MenuContent,
-  MenuItem,
   Page,
   PageSection,
   PageGroup,
@@ -14,7 +10,6 @@ import {
   SkipToContent,
   Title,
   Tile,
-  TextListItem,
   Grid,
   GridItem
   
@@ -135,15 +130,12 @@ class ArchitectureDetail extends React.Component {
                 <PageSection>
                   <PageGroup>
                   { tempdisplay.map( item =>
-                      
                     <Tile title={item.description} isDisplayLarge onClick={event => window.open(item.url)}>
                        <img src={item.image_link}></img>
                        <br/>
                        {item.type}
-                     </Tile>
-                   
-                     
-                )}
+                     </Tile>   
+                  )}
                   </PageGroup>
                     
                 </PageSection>
@@ -151,6 +143,7 @@ class ArchitectureDetail extends React.Component {
               <GridItem span={7}>
                   <Title headingLevel="h1">{title}</Title>
                 <br/><br/>
+                
                 <Asciidoc>{this.state.data}</Asciidoc>
               </GridItem>
               <GridItem span={1}></GridItem>
