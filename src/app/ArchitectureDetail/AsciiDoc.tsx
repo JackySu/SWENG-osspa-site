@@ -19,9 +19,9 @@ export default class Asciidoc extends React.PureComponent {
         let convertedhtml= asciidoctor.convert(this.props.children)+"";
         let pattern = /<li><a href=\"#/g;
         let result = pattern.test(convertedhtml);
-        console.log("result-->"+result);
+        //console.log("result-->"+result);
         var filteredhtml = convertedhtml.replace(pattern,"<li><a href=\""+window.location+"#");
-        console.log("filteredhtml-->"+filteredhtml);
+        //console.log("filteredhtml-->"+filteredhtml);
         return (
             
             <Component
