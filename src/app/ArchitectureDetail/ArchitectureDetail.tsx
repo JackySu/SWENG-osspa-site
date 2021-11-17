@@ -3,6 +3,7 @@ import { ExclamationTriangleIcon } from '@patternfly/react-icons';
 import {
   Breadcrumb, 
   BreadcrumbItem,
+  BackToTop,
   Page,
   PageSection,
   PageGroup,
@@ -28,11 +29,11 @@ const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106
 import { Asciidoc } from '@app/ArchitectureDetail/AsciiDoc';
 import '@app/react-asciidoc/fedora.css';
 import { array } from 'prop-types';
-import { HashLink } from 'react-router-hash-link';
 var title;
 var ppid;
 var resourcelist;
 
+const Basic = () => <BackToTop isAlwaysVisible/>
 class ArchitectureDetail extends React.Component {
 
   detailMap = new Map();
@@ -99,7 +100,6 @@ class ArchitectureDetail extends React.Component {
       
     
     var currentLocation = window.location;
-    console.log("currentLocation--->"+currentLocation);
     
     const pageId = 'main-content-page-layout-tertiary-nav';
     const PageSkipToContent = <SkipToContent href={`#${pageId}`}>Skip to content</SkipToContent>;
@@ -152,16 +152,17 @@ class ArchitectureDetail extends React.Component {
               <GridItem span={7}>
                   <Title headingLevel="h1">{title}</Title>
                 <br/><br/>
-                <HashLink smooth to="#_bootstrapping_the_management_hub">Bootstrapping the management hub</HashLink>
                 
                 <Asciidoc>{this.state.data}</Asciidoc>
+                
               </GridItem>
-              <GridItem span={1}></GridItem>
+              
           </Grid >
               
         
         
           </PageSection>
+          <Basic scrollableSelector='[name=\"{window.location+"#"}\"]'/>
           <PageSection variant={PageSectionVariants.dark}>Footer</PageSection>
         </Page>
       </React.Fragment>
