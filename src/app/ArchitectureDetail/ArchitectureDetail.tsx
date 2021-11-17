@@ -25,10 +25,10 @@ import Papa from 'papaparse';
 import RHlogo from '@app/bgimages/Logo-RedHat.png';
 const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
 const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
-import Asciidoc from 'react-asciidoc';
+import { Asciidoc } from '@app/ArchitectureDetail/AsciiDoc';
 import '@app/react-asciidoc/fedora.css';
 import { array } from 'prop-types';
-
+import { HashLink } from 'react-router-hash-link';
 var title;
 var ppid;
 var resourcelist;
@@ -46,7 +46,6 @@ class ArchitectureDetail extends React.Component {
             newarray = this.detailMap.get(results.data[i].pid);
           }else{
             var newarray = [] as any;
-            console.log("Create a new array");
           }
 
           newarray.push(results.data[i]);
@@ -58,12 +57,20 @@ class ArchitectureDetail extends React.Component {
 
   constructor(props) {
     super(props);
+
+    
+    
+    
+
     this.state = {
       isDropdownOpen: false,
       isKebabDropdownOpen: false,
       activeItem: 0,
       data: 'Loading....'
     };
+    props.history.listen(location=>{
+      this.setState(location)
+    })
     
   }
 
@@ -82,8 +89,8 @@ class ArchitectureDetail extends React.Component {
           'Accept': 'text/asciidoc'
        }
       })
-        .then(response => response.text())
-        .then(data => this.setState({ data: data }));
+      .then(response => response.text())
+      .then(data => this.setState({ data: data }));
         //.then(data => console.log("data->",data));
         //.then(data => this.setState({ totalReactPackages: data.total }));
   }
@@ -91,6 +98,8 @@ class ArchitectureDetail extends React.Component {
   render() {
       
     
+    var currentLocation = window.location;
+    console.log("currentLocation--->"+currentLocation);
     
     const pageId = 'main-content-page-layout-tertiary-nav';
     const PageSkipToContent = <SkipToContent href={`#${pageId}`}>Skip to content</SkipToContent>;
@@ -100,7 +109,6 @@ class ArchitectureDetail extends React.Component {
     
     let tempdisplay = [] as any;
     if(Array.isArray(resourcelist) ){
-      console.log(ppid+"-->tempdisplay--------->"+tempdisplay.map.length)
       tempdisplay=resourcelist;
       
     }
@@ -108,6 +116,7 @@ class ArchitectureDetail extends React.Component {
     return (
 
       <React.Fragment>
+        <div><base href="http://www.example.com/site/" /></div>
         <Page
           isManagedSidebar
           skipToContent={PageSkipToContent}
@@ -143,6 +152,7 @@ class ArchitectureDetail extends React.Component {
               <GridItem span={7}>
                   <Title headingLevel="h1">{title}</Title>
                 <br/><br/>
+                <HashLink smooth to="#_bootstrapping_the_management_hub">Bootstrapping the management hub</HashLink>
                 
                 <Asciidoc>{this.state.data}</Asciidoc>
               </GridItem>
