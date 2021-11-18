@@ -11,6 +11,7 @@ var PORT = 8080;
 
 const {createProxyMiddleware} = require("http-proxy-middleware");
 
+app.use(express.static(__dirname + '/asset'));
 app.use(history());
 
 if(process.env.NODE_ENV === "production"){

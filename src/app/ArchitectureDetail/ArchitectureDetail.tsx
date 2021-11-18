@@ -120,7 +120,7 @@ class ArchitectureDetail extends React.Component {
     return (
 
       <React.Fragment>
-        <div><base href="http://www.example.com/site/" /></div>
+        
         <Page
           isManagedSidebar
           skipToContent={PageSkipToContent}
