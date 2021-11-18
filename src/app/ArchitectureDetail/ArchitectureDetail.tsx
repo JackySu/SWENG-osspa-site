@@ -33,7 +33,7 @@ var title;
 var ppid;
 var resourcelist;
 
-const Basic = () => <BackToTop isAlwaysVisible/>
+
 class ArchitectureDetail extends React.Component {
 
   detailMap = new Map();
@@ -56,6 +56,10 @@ class ArchitectureDetail extends React.Component {
       }
   });
 
+  scrollTo(hash) {
+    location.hash = "#" + hash;
+  }
+  
   constructor(props) {
     super(props);
 
@@ -127,7 +131,7 @@ class ArchitectureDetail extends React.Component {
           }}
         >
           
-          <PageSection>
+          <PageSection name="detail_top_section" tabIndex={0}>
             <Breadcrumb> 
               <BreadcrumbItem to="#">Portfolio Architecture</BreadcrumbItem>
               <BreadcrumbItem to="#" isActive>{title}</BreadcrumbItem>
@@ -150,7 +154,7 @@ class ArchitectureDetail extends React.Component {
                 </PageSection>
               </GridItem>
               <GridItem span={7}>
-                  <Title headingLevel="h1">{title}</Title>
+                  <Title headingLevel="h1" id="_title_top">{title}</Title>
                 <br/><br/>
                 
                 <Asciidoc>{this.state.data}</Asciidoc>
@@ -162,7 +166,8 @@ class ArchitectureDetail extends React.Component {
         
         
           </PageSection>
-          <Basic scrollableSelector='[name=\"{window.location+"#"}\"]'/>
+          <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => this.scrollTo("_title_top")} />
+          
           <PageSection variant={PageSectionVariants.dark}>Footer</PageSection>
         </Page>
       </React.Fragment>
