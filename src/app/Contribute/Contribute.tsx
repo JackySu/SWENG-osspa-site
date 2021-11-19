@@ -55,7 +55,7 @@ class Contribute extends React.Component {
           <SidebarPanel variant="sticky">
           <GridItem span={3} rowSpan={11}>
             <JumpLinks isVertical label="Jump to section">
-              <JumpLinksItem key="xx "href="/contribute#_buildingPA" isActive>What is Portfolio Architecture</JumpLinksItem>
+              <JumpLinksItem key="xx "href="/contribute#_buildingPA">What is Portfolio Architecture</JumpLinksItem>
               <JumpLinksItem key="xx "href="/contribute#_paprocess" >Portfolio Architecture Process</JumpLinksItem>
               <JumpLinksItem key="xx "href="/contribute#_gettingstartedPA">Getting Started</JumpLinksItem>
               <JumpLinksItem key="xx "href="/contribute#_contribute">Contribute</JumpLinksItem>
