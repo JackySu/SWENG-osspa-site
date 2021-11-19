@@ -56,7 +56,8 @@ class Contribute extends React.Component {
           <GridItem span={3} rowSpan={11}>
             <JumpLinks isVertical label="Jump to section">
               <JumpLinksItem key="xx "href="/contribute#_buildingPA" isActive>What is Portfolio Architecture</JumpLinksItem>
-              <JumpLinksItem key="xx "href="/contribute#_gettingstartedPA" >Getting Started</JumpLinksItem>
+              <JumpLinksItem key="xx "href="/contribute#_paprocess" >Portfolio Architecture Process</JumpLinksItem>
+              <JumpLinksItem key="xx "href="/contribute#_gettingstartedPA">Getting Started</JumpLinksItem>
               <JumpLinksItem key="xx "href="/contribute#_contribute">Contribute</JumpLinksItem>
             </JumpLinks>
           </GridItem>
@@ -100,8 +101,15 @@ class Contribute extends React.Component {
                 </GridItem>
               </Grid>
             </GridItem>
-            <GridItem span={9} rowSpan={1} id="_gettingstartedPA">
-              <br/><br/>
+            <GridItem span={9} rowSpan={1} id="_paprocess">
+              <br/>
+              <Card isRounded={true} >
+                <h2>Portfolio Architecture Process</h2>
+                <CardBody>
+                  <img src="/images/pa-process.png"/>
+                </CardBody>
+              </Card>
+              <br/>
             </GridItem>
             <GridItem span={9} rowSpan={3} id="_gettingstartedPA">
               <h2>Getting Started with Portfolio Architectures</h2>
