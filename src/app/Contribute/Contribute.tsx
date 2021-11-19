@@ -85,7 +85,7 @@ class Contribute extends React.Component {
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle">Combination of best practices and patterns</CardTitle>
-                      <CardFooter className="contributecardfooter">Base on each scenario, provides recommendations, lessons learnt and best practices that uses Red Hat solutions to architect the system.</CardFooter>    
+                      <CardFooter className="contributecardfooter">Based on each scenario, provides recommendations, lessons learnt and best practices that use Red Hat solutions to architect the system.</CardFooter>    
                   </Card>
                 </GridItem>
                 <GridItem span={4}>
@@ -96,7 +96,7 @@ class Contribute extends React.Component {
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle">Tools to architect</CardTitle>
-                      <CardFooter className="contributecardfooter">Build you own architecture diagrams, with standardized icons, diagrams for better team collabrations and communications. <br/></CardFooter>    
+                      <CardFooter className="contributecardfooter">Build your own architecture diagrams, with standardized icons, diagrams for better team collabrations and communications. <br/></CardFooter>    
                   </Card>
                 </GridItem>
               </Grid>
@@ -161,13 +161,13 @@ class Contribute extends React.Component {
               </p>
 
               <p> 
-              There are several project you can help: 
+              There are several projects you can help with: 
 
               <List>
-                <ListItem>Contribute to create a new <a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples">Portfolio Architecture</a>, it can be in many form:
+                <ListItem>Contribute to create a new <a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples">Portfolio Architecture</a>, it can be in many forms:
                   <List>
                     <ListItem>A completed Portfolio architecture with Logical, schematic and detail diagrams (see Getting Started section). And a documentation briefly explaining each diagram.</ListItem>
-                    <ListItem>We know everyone is busy, you can always share any implementation that you have done. And an architect from our team will reach out to help guide you through the next step(s). </ListItem>
+                    <ListItem>We know everyone is busy, you can always share any implementation that you have done. An architect from our team will reach out to help guide you through the next step(s). </ListItem>
                     <ListItem>All submissions need to contain at least three or more Red Hat products. </ListItem>
                   </List>
                 </ListItem>
