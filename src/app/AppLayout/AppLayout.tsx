@@ -60,7 +60,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
             <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-tooling/">Our Tool</a>
           </NavItem>
           <NavItem key={3} itemId={3} isActive={false}  href="#">
-            <a href="/contribute">Contribute</a>
+            <a href="/contribute">About Us</a>
           </NavItem>
         </NavList>
     </Nav>
