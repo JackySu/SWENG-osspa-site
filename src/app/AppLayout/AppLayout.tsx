@@ -7,9 +7,15 @@ import {
   Nav,
   NavList,
   NavItem,
-  SkipToContent
+  SkipToContent,
+  PageHeaderTools,
+  PageHeaderToolsGroup,
+  PageHeaderToolsItem,
+  Avatar
+
 } from '@patternfly/react-core';
-import logo from '@app/bgimages/logo.png';
+import rhlogo from '@app/bgimages/logo_redhat.png';
+import palogo from '@app/bgimages/palogo.png';
 interface IAppLayout {
   children: React.ReactNode;
 }
@@ -29,10 +35,16 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
       history.push('/');
     }
     return (
-      <img src={logo} width="200" height="60" onClick={handleClick} alt="PA Logo" />
+      <img src={rhlogo} width="200" height="60" onClick={handleClick} alt="Red Hat Logo" />
      
     );
   }
+
+  const headerTools = (
+    <PageHeaderTools>
+      <img src={palogo} width="150" height="50" alt="Red Hat Logo" />
+    </PageHeaderTools>
+  );
 
   const menuContent =(
     
@@ -61,8 +73,11 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     <PageHeader
       logo={<LogoImg />}
       topNav={menuContent}
+      headerTools={headerTools}
     />
   );
+
+  
 
   
 
