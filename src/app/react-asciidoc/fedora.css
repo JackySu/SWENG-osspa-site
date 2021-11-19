@@ -63,3 +63,57 @@ div.paragraph {
 }
 
 
+.contribute_title_desc {
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.contribute_title_desc p {
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .contribute_title_desc h1  {
+    font-size: 5em;
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .halfsize {
+    -moz-transform:scale(0.5);
+    -webkit-transform:scale(0.5);
+    transform:scale(0.5);
+}
+
+.contributecardimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.contributecardtitle{
+    display: block;
+    color: black;
+    font-size: 1.15em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contributecardfooter{
+    display: block;
+    color: black;
+    font-size: 1em;
+    text-align: center;
+}
