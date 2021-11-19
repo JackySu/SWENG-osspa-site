@@ -2,7 +2,7 @@ import * as React from 'react';
 import { 
   JumpLinks, JumpLinksItem,
   Page, PageSection, PageSectionVariants,
-  Split, SplitItem,
+  List, ListItem,
   Grid, GridItem,
   Card, CardTitle, CardBody, CardFooter, CardHeader,CardHeaderMain,Brand,
   Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
@@ -54,7 +54,7 @@ class Contribute extends React.Component {
           <Sidebar hasGutter orientation={'split'}>
           <SidebarPanel variant="sticky">
           <GridItem span={3} rowSpan={11}>
-            <JumpLinks isVertical label="<b>Jump to section</b>">
+            <JumpLinks isVertical label="Jump to section">
               <JumpLinksItem key="xx "href="/contribute#_buildingPA" isActive>What is Portfolio Architecture</JumpLinksItem>
               <JumpLinksItem key="xx "href="/contribute#_paprocess" >Portfolio Architecture Process</JumpLinksItem>
               <JumpLinksItem key="xx "href="/contribute#_gettingstartedPA">Getting Started</JumpLinksItem>
@@ -153,11 +153,32 @@ class Contribute extends React.Component {
             <GridItem span={9} rowSpan={1} id="_contribute">
               <br/>
               <h2>Contribute to Portfolio Architecture</h2>
-              <Card isRounded={true} >
-                <CardBody>
-                  <img src="/images/pa-process.png"/>
-                </CardBody>
-              </Card>
+              
+              <p>We are always very happy to have contributions, whether for a complete set of diagrams or simply tell us more about how you built the system with multiple Red Hat products. <br/>
+                  
+                The preferred way of submitting your contribution is through creating an issue on the repository.  You can find many resources online explaining how to work on Gitlab projects and how to submit work to these projects.
+
+              </p>
+
+              <p> 
+              There are several project you can help: 
+
+              <List>
+                <ListItem>Contribute to create a new <a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples">Portfolio Architecture</a>, it can be in many form:
+                  <List>
+                    <ListItem>A completed Portfolio architecture with Logical, schematic and detail diagrams (see Getting Started section). And a documentation briefly explaining each diagram.</ListItem>
+                    <ListItem>We know everyone is busy, you can always share any implementation that you have done. And an architect from our team will reach out to help guide you through the next step(s). </ListItem>
+                    <ListItem>All submissions need to contain at least three or more Red Hat products. </ListItem>
+                  </List>
+                </ListItem>
+                <ListItem>Help us enhance the <a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-tooling">Tool</a>. We use draw.io as the base tool.</ListItem>
+                <ListItem>Making the <a href="https://gitlab.com/osspa/osspa-site">website</a> better. </ListItem>
+              </List>
+
+
+              </p>
+
+                
               <br/>
             </GridItem>
             
