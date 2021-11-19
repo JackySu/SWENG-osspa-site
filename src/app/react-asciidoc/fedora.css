@@ -117,3 +117,17 @@ div.paragraph {
     font-size: 1em;
     text-align: center;
 }
+
+.footertext{
+    text-align: center;
+    font-size: 0.75em;
+    color: white;
+    position: relative;
+}
+
+.footerCopyRighttext{
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+    position: relative;
+}
