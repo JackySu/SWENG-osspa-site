@@ -24,6 +24,7 @@ import ModuleIcon from '@patternfly/react-icons/dist/js/icons/module-icon';
 import RHlogo from '@app/bgimages/Logo-RedHat.png';
 import { ControlledCheckbox } from '@app/ArchitectureList/ControlledCheckbox';
 import { PACatalog } from '@app/ArchitectureList/PACatalog';
+import { Footer } from '@app/AppLayout/Footer';
 import SelectedListProvider from './SelectedList';
 const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
 const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
@@ -79,8 +80,8 @@ class ArchitectureList extends React.Component {
             
             </Split>
           </SelectedListProvider>
+          <Footer/>
           
-          <PageSection variant={PageSectionVariants.dark}><div class="pf-u-text-align-right">Contact Us:</div></PageSection>
         </Page>
       </React.Fragment>
     );

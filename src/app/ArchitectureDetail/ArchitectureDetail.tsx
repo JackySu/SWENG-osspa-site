@@ -15,15 +15,10 @@ import {
   GridItem
   
 } from '@patternfly/react-core';
-import { css } from '@patternfly/react-styles';
-import CodeBranchIcon from '@patternfly/react-icons/dist/esm/icons/code-branch-icon';
-import LayerGroupIcon from '@patternfly/react-icons/dist/esm/icons/layer-group-icon';
-import CubeIcon from '@patternfly/react-icons/dist/esm/icons/cube-icon';
-import { withRouter } from 'react-router-dom';
+import { Footer } from '@app/AppLayout/Footer';
 const qs = require('query-string');
 import  detailLinks  from './DetailLink.csv';
 import Papa from 'papaparse';
-import RHlogo from '@app/bgimages/Logo-RedHat.png';
 const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
 const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
 import { Asciidoc } from '@app/ArchitectureDetail/AsciiDoc';
@@ -168,7 +163,7 @@ class ArchitectureDetail extends React.Component {
           </PageSection>
           <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => this.scrollTo("_title_top")} />
           
-          <PageSection variant={PageSectionVariants.dark}>Footer</PageSection>
+          <Footer/>
         </Page>
       </React.Fragment>
     );

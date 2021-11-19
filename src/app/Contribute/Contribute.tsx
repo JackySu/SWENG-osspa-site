@@ -6,7 +6,7 @@ import {
   Grid, GridItem,
   Card, CardTitle, CardBody, CardFooter, CardHeader,CardHeaderMain,Brand,
   Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
-
+import { Footer } from '@app/AppLayout/Footer';
   const titlediv =   (
       <div class="pf-l-grid pf-m-all-10-col-on-sm pf-m-all-10-col-on-md pf-m-all-10-col-on-lg pf-m-all-10-col-on-xl pf-m-all-4-row-on-sm pf-m-all-4-row-on-md pf-m-all-4-row-on-lg pf-m-all-4-row-on-xl" 
         style={{backgroundImage:"url(/images/contributebackground.jpeg)", height:400, backgroundSize: "cover"}}>
@@ -54,7 +54,7 @@ class Contribute extends React.Component {
           <Sidebar hasGutter orientation={'split'}>
           <SidebarPanel variant="sticky">
           <GridItem span={3} rowSpan={11}>
-            <JumpLinks isVertical label="Jump to section">
+            <JumpLinks isVertical label="<b>Jump to section</b>">
               <JumpLinksItem key="xx "href="/contribute#_buildingPA" isActive>What is Portfolio Architecture</JumpLinksItem>
               <JumpLinksItem key="xx "href="/contribute#_paprocess" >Portfolio Architecture Process</JumpLinksItem>
               <JumpLinksItem key="xx "href="/contribute#_gettingstartedPA">Getting Started</JumpLinksItem>
@@ -103,8 +103,8 @@ class Contribute extends React.Component {
             </GridItem>
             <GridItem span={9} rowSpan={1} id="_paprocess">
               <br/>
+              <h2>Portfolio Architecture Process</h2>
               <Card isRounded={true} >
-                <h2>Portfolio Architecture Process</h2>
                 <CardBody>
                   <img src="/images/pa-process.png"/>
                 </CardBody>
@@ -122,7 +122,7 @@ class Contribute extends React.Component {
                               <Brand className="contributecardimage" src="/images/contribute_workshop.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle">Getting Started Workshop</CardTitle>
+                      <CardTitle className="contributecardtitle"> <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-template">Getting Started Workshop</a></CardTitle>
                       <CardFooter className="contributecardfooter">Architecture development process and templates</CardFooter>    
                   </Card>
                 </GridItem>
@@ -133,7 +133,7 @@ class Contribute extends React.Component {
                               <Brand className="contributecardimage" src="/images/contribute_tools.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle">Diagram Tooling Workshop</CardTitle>
+                      <CardTitle className="contributecardtitle"><a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-workshops/#/">Diagram Tooling Workshop</a></CardTitle>
                       <CardFooter className="contributecardfooter">how to use, design, and create architectural diagrams based on the draw.io tooling and Red Hat Portfolio Architecture design elements.</CardFooter>    
                   </Card>
                 </GridItem>
@@ -144,18 +144,28 @@ class Contribute extends React.Component {
                               <Brand className="contributecardimage" src="/images/contribute_repo.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle">Browse Example Repository</CardTitle>
+                      <CardTitle className="contributecardtitle"><a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples">Browse Example Repository</a></CardTitle>
                       <CardFooter className="contributecardfooter">Examples of customer implementations using Red Hat product portfolio.</CardFooter>    
                   </Card>
                 </GridItem>
               </Grid>
+            </GridItem>
+            <GridItem span={9} rowSpan={1} id="_contribute">
+              <br/>
+              <h2>Contribute to Portfolio Architecture</h2>
+              <Card isRounded={true} >
+                <CardBody>
+                  <img src="/images/pa-process.png"/>
+                </CardBody>
+              </Card>
+              <br/>
             </GridItem>
             
           </SidebarContent>
           </Sidebar>
         </Grid>
         </PageSection>
-
+          <Footer/>
         
 
         </Page>
