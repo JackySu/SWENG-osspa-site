@@ -4,7 +4,7 @@ import "@patternfly/react-core/dist/styles/base.css";
 
 import React from 'react';
 import { Checkbox,Tile } from '@patternfly/react-core';
-
+import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table'; 
 
 import Papa from 'papaparse';
 import productlist from "./ProductList.csv";
@@ -103,52 +103,52 @@ class ControlledCheckbox extends React.Component {
     return (
       <React.Fragment>
         
-        <table >
-          <thead>
-          <tr>
-            <th>Solution<br/><br/></th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
+        <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
+          <Thead>
+          <Tr>
+            <Th>Solution<br/></Th>
+          </Tr>
+          </Thead>
+          <Tbody>
+          <Tr>
+            <Td>
               {this.solutionArray.map( item =>
                 <Checkbox label={item.sname} aria-label={item.sname} id={item.sid} name={item.sid} key={item.sid} onChange={ e=> {this.handleSolutionChange(e, item.sid) ; updateSolution(item.sid);}} isChecked={this.checkIfSelected("solution",item.sid)}/>
               )}
-            </td>
-          </tr>
-          </tbody>
+            </Td>
+          </Tr>
+          </Tbody>
         
-          <thead>
-          <tr>
-            <th>Products<br/><br/></th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
+          <Thead>
+          <Tr>
+            <th>Products<br/></th>
+          </Tr>
+          </Thead>
+          <Tbody>
+          <Tr>
+            <Td>
               {this.productArray.map( item =>
                 <Checkbox label={item.pname} aria-label={item.pname}  id={item.pid} name={item.pid} key={item.pid} onChange={ e=> {this.handleProductChange(e, item.pid) ; updateProduct(item.pid);}} isChecked={this.checkIfSelected("product",item.pid)}/>
               )}
-            </td>
-          </tr>
-          </tbody>
+            </Td>
+          </Tr>
+          </Tbody>
         
-          <thead>
-          <tr>
-            <th>Vertical<br/><br/></th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
+          <Thead>
+          <Tr>
+            <Th>Vertical<br/></Th>
+          </Tr>
+          </Thead>
+          <Tbody>
+          <Tr>
+            <Td>
               {this.verticalArray.map( item =>
                 <Checkbox label={item.vname} aria-label={item.vname}  id={item.vid} name={item.vid} key={item.vid} onChange={ e=> {this.handleVerticalChange(e, item.vid) ; updateVertical(item.vid);}} isChecked={this.checkIfSelected("vertical",item.vid)}/>
               )}
-            </td>
-          </tr>
-          </tbody>
-        </table>
+            </Td>
+          </Tr>
+          </Tbody>
+        </TableComposable>
     </React.Fragment>
     );
   }

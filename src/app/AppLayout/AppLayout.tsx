@@ -29,6 +29,13 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     setIsMobileView(props.mobileView);
   };
 
+  function openRedHatWindow(e) {
+    window.open("https://www.redhat.com/en/technologies/all-products");
+  }
+  function openToolWindow(e) {
+    window.open("https://redhatdemocentral.gitlab.io/portfolio-architecture-tooling/");
+  }
+
   function LogoImg() {
     const history = useHistory();
     function handleClick() {
@@ -46,6 +53,8 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     </PageHeaderTools>
   );
 
+  
+
   const menuContent =(
     
     <Nav variant="horizontal">
@@ -53,14 +62,14 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
           <NavItem key={0} itemId={0} isActive={false} href="/">
             <a href="/">Portfolio Architecture</a>
           </NavItem>
-          <NavItem key={1} itemId={1} isActive={false}  href="https://www.redhat.com/en/technologies/all-products">
-            <a href="https://www.redhat.com/en/technologies/all-products">Red Hat Solutions</a>
+          <NavItem key={1} itemId={1} isActive={false}  href="/">
+            <a href="/contribute">Learn More</a>
           </NavItem>
-          <NavItem key={2} itemId={2} isActive={false}  href="https://redhatdemocentral.gitlab.io/portfolio-architecture-tooling/">
-            <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-tooling/">Our Tool</a>
+          <NavItem key={2} itemId={2} isActive={false}  onClick={openToolWindow}>
+            Our Tool
           </NavItem>
-          <NavItem key={3} itemId={3} isActive={false}  href="#">
-            <a href="/contribute">About Us</a>
+          <NavItem key={3} itemId={3} isActive={false}  onClick={openRedHatWindow}>
+            Red Hat Solutions
           </NavItem>
         </NavList>
     </Nav>
@@ -83,9 +92,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
 
   const location = useLocation();
 
-  const Sidebar = (
-   < p /> 
-  );
+  
 
   const pageId = 'primary-app-container';
 
@@ -102,7 +109,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     <Page
       mainContainerId={pageId}
       header={Header}
-      sidebar={Sidebar}
+      //sidebar={Sidebar}
       onPageResize={onPageResize}
       skipToContent={PageSkipToContent}>
       {children}
