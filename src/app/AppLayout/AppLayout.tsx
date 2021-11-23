@@ -33,7 +33,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     window.open("https://www.redhat.com/en/technologies/all-products");
   }
   function openToolWindow(e) {
-    window.open("https://redhatdemocentral.gitlab.io/portfolio-architecture-tooling/");
+    window.open("https://tool.osspa.org/");
   }
 
   function LogoImg() {
