@@ -126,41 +126,43 @@ class ArchitectureDetail extends React.Component {
           }}
         >
           
-          <PageSection name="detail_top_section" tabIndex={0}>
-            <Breadcrumb> 
-              <BreadcrumbItem to="#">Portfolio Architecture</BreadcrumbItem>
-              <BreadcrumbItem to="#" isActive>{title}</BreadcrumbItem>
-            </Breadcrumb>
-          </PageSection>
-          <PageSection>
+          
+          
           <Grid hasGutter>
               <GridItem span={3}>
-                <PageSection>
+                <PageSection className="tablepadding" >
                   <PageGroup>
                   { tempdisplay.map( item =>
-                    <Tile title={item.description} isDisplayLarge onClick={event => window.open(item.url)}>
-                       <img src={item.image_link}></img>
-                       <br/>
-                       {item.type}
-                     </Tile>   
+                    
+                    <Tile title={item.description} isDisplayLarge={false} onClick={event => window.open(item.url)}>
+                     <img src={item.image_link} />
+                     <br/>
+                     {item.type}
+                   </Tile> 
                   )}
                   </PageGroup>
                     
                 </PageSection>
               </GridItem>
               <GridItem span={7}>
-                  <Title headingLevel="h1" id="_title_top">{title}</Title>
-                <br/><br/>
+                <PageSection>
+                  <Breadcrumb> 
+                    <BreadcrumbItem to="#">Portfolio Architecture</BreadcrumbItem>
+                    <BreadcrumbItem to="#" isActive>{title}</BreadcrumbItem>
+                  </Breadcrumb>
+                  <br/>
+                  <br/>
+                    <Title headingLevel="h1" id="_title_top">{title}</Title>
                 
-                <Asciidoc>{this.state.data}</Asciidoc>
-                
+                  <Asciidoc>{this.state.data}</Asciidoc>
+                </PageSection>
               </GridItem>
               
           </Grid >
               
         
         
-          </PageSection>
+          
           <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => this.scrollTo("_title_top")} />
           
           <Footer/>

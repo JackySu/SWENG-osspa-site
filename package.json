@@ -87,6 +87,7 @@
     "@patternfly/react-core": "^4.128.2",
     "@patternfly/react-icons": "^4.10.11",
     "@patternfly/react-styles": "^4.10.11",
+    "@patternfly/react-table": "^4.44.4",
     "@storybook/builder-webpack5": "^6.2.9",
     "connect-history-api-fallback": "^1.6.0",
     "http-proxy-middleware": "^2.0.1",

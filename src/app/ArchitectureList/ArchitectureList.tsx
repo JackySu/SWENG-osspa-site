@@ -10,11 +10,11 @@ import {
   PageSectionVariants,
   PageGroup,
   SkipToContent,
-  TextContent,
-  Text,
-  PageNavigation,
-  Split,
-  SplitItem
+  SidebarContent,
+  Sidebar,
+  SidebarPanel,
+  Grid,
+  GridItem
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import BellIcon from '@patternfly/react-icons/dist/js/icons/bell-icon';
@@ -65,20 +65,35 @@ class ArchitectureList extends React.Component {
         >
            
           <SelectedListProvider>
-            <Split hasGutter>
-              <SplitItem>
-                <PageSection >
+            <Grid >
+            <Sidebar hasGutter orientation={'split'}>
+            <SidebarPanel variant="sticky">
+              <GridItem span={3} rowSpan={12}>
+                <PageSection className="tablepadding">
                     <ControlledCheckbox /> 
                 </PageSection>
-              </SplitItem>
-              <SplitItem isFilled>
-                <PageSection>
-                  <PACatalog />
+              </GridItem>
+              </SidebarPanel>
+              <SidebarContent hasNoBackground>
+              <GridItem span={9} rowSpan={1}>
+                <PageSection className="banner" >
+                <div style={{backgroundImage:"url(/images/list_banner.png)", height:300, backgroundSize: "cover"}}>
+                  <Grid>
+                    <GridItem span={5} rowSpan={12} className="contribute_banner_desc"><p></p></GridItem>
+                    <GridItem span={7} rowSpan={12} className="contribute_banner_desc"><p><br/><br/><br/><br/>Need input from Will on brief intro on what is PA?</p></GridItem>
+                  </Grid>
+                </div>
                 </PageSection>
-
-              </SplitItem>
+              </GridItem>
+                <GridItem span={9} rowSpan={11}>
+                  <PageSection>
+                    <PACatalog />
+                  </PageSection>
+                </GridItem>
+              </SidebarContent>
+             </Sidebar>
+            </Grid>
             
-            </Split>
           </SelectedListProvider>
           <Footer/>
           

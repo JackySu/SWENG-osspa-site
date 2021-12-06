@@ -77,8 +77,18 @@ div.paragraph {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+.contribute_banner_desc p {
+    text-align: center;
+    color: white;
+    margin: 0;
+    position: relative;
+    top: 75%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
   .contribute_title_desc h1  {
-    font-size: 5em;
+    font-size: 4em;
     color: white;
     margin: 0;
     position: absolute;
@@ -99,6 +109,12 @@ div.paragraph {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.bannerimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contributecardtitle{
@@ -130,4 +146,14 @@ div.paragraph {
     font-size: 0.9em;
     color: white;
     position: relative;
+}
+section.tablepadding{
+    padding-top: 10%;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 5%;
+}
+
+section.banner{
+    padding-bottom: 0;
 }

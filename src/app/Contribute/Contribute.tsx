@@ -46,11 +46,9 @@ class Contribute extends React.Component {
           
        
         <PageSection variant={PageSectionVariants.light}>
-        {titlediv}
-        <Grid  >
-          <GridItem span={12} rowSpan={11}>
-            <br/><br/>
-          </GridItem>
+        
+        <Grid>
+          
           <Sidebar hasGutter orientation={'split'}>
           <SidebarPanel variant="sticky">
           <GridItem span={3} rowSpan={11}>
@@ -63,6 +61,9 @@ class Contribute extends React.Component {
           </GridItem>
           </SidebarPanel>
           <SidebarContent hasNoBackground>
+            <GridItem span={9} rowSpan={1} id="_topbanner">
+              {titlediv}
+            </GridItem>
             <GridItem span={9} rowSpan={3} id="_buildingPA">
               <h2>What is Portfolio Architecture ?</h2>
               <Grid hasGutter >
