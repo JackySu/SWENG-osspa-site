@@ -17,6 +17,7 @@ stages:          # List of stages for jobs, and their order of execution
   - build
   - test
   - deploy
+  - scan
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
@@ -44,6 +45,7 @@ deploy-job:      # This job runs in the deploy stage.
     - echo "Deploying application..."
     - echo "Application successfully deployed."
 sonarqube-check:
+  stage: scan
   image: 
     name: sonarsource/sonar-scanner-cli:latest
     entrypoint: [""]
