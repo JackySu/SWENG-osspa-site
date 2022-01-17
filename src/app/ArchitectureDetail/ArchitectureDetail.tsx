@@ -10,10 +10,11 @@ import {
   PageSectionVariants,
   SkipToContent,
   Title,
-  Tile,
   Grid,
-  GridItem
-  
+  GridItem,
+  SidebarContent,
+  Sidebar,
+  SidebarPanel
 } from '@patternfly/react-core';
 import { Footer } from '@app/AppLayout/Footer';
 const qs = require('query-string');
@@ -21,9 +22,17 @@ import  detailLinks  from './DetailLink.csv';
 import Papa from 'papaparse';
 const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
 const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
-import { Asciidoc } from '@app/ArchitectureDetail/AsciiDoc';
+import { Asciidoc, } from '@app/ArchitectureDetail/AsciiDoc';
+import ExternalLinkSquareAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-square-alt-icon';
+import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
+import EditIcon from '@patternfly/react-icons/dist/esm/icons/edit-icon';
+import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
+import GitLabIcon from '@patternfly/react-icons/dist/esm/icons/gitlab-icon';
+import MonitoringIcon from '@patternfly/react-icons/dist/esm/icons/monitoring-icon';
+
 import '@app/react-asciidoc/fedora.css';
 import { array } from 'prop-types';
+import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
 var title;
 var ppid;
 var resourcelist;
@@ -74,6 +83,18 @@ class ArchitectureDetail extends React.Component {
     
   }
 
+  iconfinder(icontype){
+    if(icontype=="Blog")
+      return <EditIcon/>;
+    else if(icontype=="Video")
+      return <MonitoringIcon/>;
+    else if(icontype=="Demo")
+      return <GithubIcon/>;
+    else if(icontype=="DemoGitlab")
+      return <GitLabIcon/>;
+    else 
+      return <InfoCircleIcon/>;
+  }
   
 
   componentDidMount() {
@@ -127,38 +148,58 @@ class ArchitectureDetail extends React.Component {
         >
           
           
+
+          <Grid >
+            <Sidebar hasGutter orientation={'split'}>
+            <SidebarPanel variant="sticky">
+              <GridItem span={3} rowSpan={12}>
+              <PageSection className="tablepadding">
+                  <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
+                      <Thead>
+                      <Tr>
+                        <Th colSpan="2" >Other Resources<br/></Th>
+                      </Tr>
+                      </Thead>
+                      <Tbody>
+                          { tempdisplay.map( item =>
+                            <Tr>
+                              <Td>
+                                  {this.iconfinder(item.type)}
+                              </Td>
+                              <Td>
+                                {item.description}  <a onClick={event => window.open(item.url)}><ExternalLinkSquareAltIcon/></a>
+                              </Td>
+                            </Tr>
+                          )}
+                        
+                      </Tbody>
+                  </TableComposable>
           
-          <Grid hasGutter>
-              <GridItem span={3}>
-                <PageSection className="tablepadding" >
-                  <PageGroup>
-                  { tempdisplay.map( item =>
-                    
-                    <Tile title={item.description} isDisplayLarge={false} onClick={event => window.open(item.url)}>
-                     <img src={item.image_link} />
-                     <br/>
-                     {item.type}
-                   </Tile> 
-                  )}
-                  </PageGroup>
-                    
                 </PageSection>
               </GridItem>
-              <GridItem span={7}>
-                <PageSection>
-                  <Breadcrumb> 
-                    <BreadcrumbItem to="#">Portfolio Architecture</BreadcrumbItem>
-                    <BreadcrumbItem to="#" isActive>{title}</BreadcrumbItem>
-                  </Breadcrumb>
-                  <br/>
-                  <br/>
+              </SidebarPanel>
+              <SidebarContent hasNoBackground>
+              <GridItem span={9} rowSpan={1}>
+                <PageSection className="banner" >
+                    <Breadcrumb> 
+                      <BreadcrumbItem to="#">Portfolio Architecture</BreadcrumbItem>
+                      <BreadcrumbItem to="#" isActive>{title}</BreadcrumbItem>
+                    </Breadcrumb>
+                    <br/>
+                    <br/>
                     <Title headingLevel="h1" id="_title_top">{title}</Title>
+                </PageSection>
+              </GridItem>
+                <GridItem span={9} rowSpan={11}>
+                <PageSection>
+                  
                 
                   <Asciidoc>{this.state.data}</Asciidoc>
                 </PageSection>
-              </GridItem>
-              
-          </Grid >
+                </GridItem>
+              </SidebarContent>
+             </Sidebar>
+            </Grid>
               
         
         
