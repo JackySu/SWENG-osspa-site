@@ -1,14 +1,11 @@
 import * as React from 'react';
 import { ExclamationTriangleIcon } from '@patternfly/react-icons';
 import {
-  Avatar,
-  Button,
-  ButtonVariant,
+
   
   Page,
   PageSection,
-  PageSectionVariants,
-  PageGroup,
+
   SkipToContent,
   SidebarContent,
   Sidebar,
@@ -17,11 +14,7 @@ import {
   GridItem
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
-import BellIcon from '@patternfly/react-icons/dist/js/icons/bell-icon';
-import CogIcon from '@patternfly/react-icons/dist/js/icons/cog-icon';
-import HelpIcon from '@patternfly/react-icons/dist/js/icons/help-icon';
-import ModuleIcon from '@patternfly/react-icons/dist/js/icons/module-icon';
-import RHlogo from '@app/bgimages/Logo-RedHat.png';
+
 import { ControlledCheckbox } from '@app/ArchitectureList/ControlledCheckbox';
 import { PACatalog } from '@app/ArchitectureList/PACatalog';
 import { Footer } from '@app/AppLayout/Footer';
@@ -77,12 +70,8 @@ class ArchitectureList extends React.Component {
               <SidebarContent hasNoBackground>
               <GridItem span={9} rowSpan={1}>
                 <PageSection className="banner" >
-                <div style={{backgroundImage:"url(/images/list_banner.png)", height:300, backgroundSize: "cover"}}>
-                  <Grid>
-                    <GridItem span={5} rowSpan={12} className="contribute_banner_desc"><p></p></GridItem>
-                    <GridItem span={7} rowSpan={12} className="contribute_banner_desc"><p><br/><br/><br/><br/>Need input from Will on brief intro on what is PA?</p></GridItem>
-                  </Grid>
-                </div>
+                <img src="/images/list_banner.png" alt="HTML5 Icon" width="100%"/>
+                
                 </PageSection>
               </GridItem>
                 <GridItem span={9} rowSpan={11}>
