@@ -1,0 +1,25 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: pawebsite
+  namespace: osspa--ext
+  labels:
+    app: pawebsite
+    app.kubernetes.io/component: pawebsite
+    app.kubernetes.io/instance: pawebsite
+    app.kubernetes.io/name: pawebsite
+    app.kubernetes.io/part-of: pawebsite
+    app.openshift.io/runtime-version: latest
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+    - name: 8443-tcp
+      protocol: TCP
+      port: 8443
+      targetPort: 8443
+  selector:
+    app: pawebsite
+    deploymentconfig: pawebsite

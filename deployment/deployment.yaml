@@ -1,0 +1,67 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: pawebsite
+  namespace: osspa--ext
+  labels:
+    app: pawebsite
+    app.kubernetes.io/component: pawebsite
+    app.kubernetes.io/instance: pawebsite
+    app.kubernetes.io/name: pawebsite
+    app.kubernetes.io/part-of: pawebsite
+    app.openshift.io/runtime: nodejs
+    app.openshift.io/runtime-namespace: osspa--runtime-int
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pawebsite
+  template:
+    metadata:
+      labels:
+        app: pawebsite
+        deploymentconfig: pawebsite
+    spec:
+      volumes:
+        - name: cert
+          secret:
+            secretName: osspa-cert
+            defaultMode: 420
+      containers:
+        - name: pawebsite
+          image: 'quay.io/osspa/pawebsite:latest'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
+        - resources: {}
+          terminationMessagePath: /dev/termination-log
+          name: sslhttpd
+          ports:
+            - containerPort: 8443
+              protocol: TCP
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: cert
+              mountPath: /usr/local/apache2/conf/extra/openshift
+          terminationMessagePolicy: File
+          envFrom:
+            - secretRef:
+                name: osspa-cert
+          image: 'quay.io/osspa/sslhttpd:latest'
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  paused: true
+  progressDeadlineSeconds: 600

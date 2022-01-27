@@ -1,0 +1,13 @@
+apiVersion: tenant.paas.redhat.com/v1alpha1
+kind: TenantNamespace
+metadata:
+  labels:
+    paas.redhat.com/appcode: OSPA-001
+    tenant.paas.redhat.com/namespace-type: runtime
+    tenant.paas.redhat.com/tenant: osspa
+  name: ext
+  namespace: osspa--config
+spec:
+  network:
+    security-zone: external
+  type: runtime

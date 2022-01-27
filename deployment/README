@@ -1,0 +1,29 @@
+```
+oc create -f external-tanent-ns.yaml 
+```
+
+Create service
+```
+oc create -f service.yaml
+```
+Annotate service to create secert 
+https://docs.openshift.com/container-platform/4.8/security/certificates/service-serving-certificate.html#add-service-certificate_service-serving-certificate
+
+```
+oc annotate service pawebsite service.beta.openshift.io/serving-cert-secret-name=osspa-cert
+```
+
+Create deployment 
+```
+oc create -f deployment.yaml 
+```
+
+Route:
+- Re-encrypt
+- Use the cert gernerated by OpenShift  (Stored in secrets)
+
+Note, 
+
+https://source.redhat.com/groups/public/itpaas/it_paas_kb/it_paas_clusters_by_service
+
+https://source.redhat.com/groups/public/itpaas/managedplatformplushub/mppluswiki/user_tenant_onboarding_and_administration#ingress-shards
