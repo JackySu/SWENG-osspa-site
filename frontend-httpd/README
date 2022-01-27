@@ -30,7 +30,7 @@ docker build -t sslhttpd .
 Running locally
 
 ```
-docker run -it --name my-apache-app -p 8443:443  -v "$PWD/extra/openshift/":/usr/local/apache2/conf/extra/openshift sslhttpd
+docker run -it --name sslhttpd -p 8443:8443  -v "$PWD/extra/openshift/":/usr/local/apache2/conf/extra/openshift sslhttpd
 ```
 
 Pushing to quay.io/
@@ -38,7 +38,7 @@ Pushing to quay.io/
 
 ## Running directlry 
 ```
-docker run -it --name my-apache-app -p 8443:443  -v "$PWD/extra/openshift/":/usr/local/apache2/conf/extra/openshift sslhttpd
+docker run -it --name sslhttpd -p 8443:8443  -v "$PWD/extra/openshift/":/usr/local/apache2/conf/extra/openshift sslhttpd
 ```
 
 
