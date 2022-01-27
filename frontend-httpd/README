@@ -1,0 +1,47 @@
+#Front end Apache HTTPD server for SSL 
+
+Red Hat IT prefer to have passthrough or re-encrpyt route. Therefore we will be using re-encrpyt
+
+
+Gernerate under folder frontend-httpd/extra/openshift
+
+```
+tls.crt
+tls.key 
+
+```
+
+Can use Certbot or Cert operator, here I am using the 'service-ca' controller
+https://docs.openshift.com/container-platform/4.8/security/certificates/service-serving-certificate.html#add-service-certificate_service-serving-certificate
+
+```
+oc annotate service pawebsite service.beta.openshift.io/serving-cert-secret-name=osspa-cert
+```
+
+
+## Building things from scratch
+
+Building the container
+
+```
+docker build -t sslhttpd . 
+```
+
+Running locally
+
+```
+docker run -it --name my-apache-app -p 8443:443  -v "$PWD/extra/openshift/":/usr/local/apache2/conf/extra/openshift sslhttpd
+```
+
+Pushing to quay.io/
+
+
+## Running directlry 
+```
+docker run -it --name my-apache-app -p 8443:443  -v "$PWD/extra/openshift/":/usr/local/apache2/conf/extra/openshift sslhttpd
+```
+
+
+#Current version under
+
+https://quay.io/repository/osspa/sslhttpd
