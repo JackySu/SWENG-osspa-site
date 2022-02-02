@@ -60,7 +60,7 @@ class ArchitectureList extends React.Component {
           <SelectedListProvider>
             <Grid >
             <Sidebar hasGutter orientation={'split'}>
-            <SidebarPanel variant="sticky">
+              <SidebarPanel variant="sticky">
               <GridItem span={3} rowSpan={12}>
                 <PageSection className="tablepadding">
                     <ControlledCheckbox /> 
@@ -70,8 +70,7 @@ class ArchitectureList extends React.Component {
               <SidebarContent hasNoBackground>
               <GridItem span={9} rowSpan={1}>
                 <PageSection className="banner" >
-                <img src="/images/list_banner.png" alt="HTML5 Icon" width="100%"/>
-                
+                  <img src="/images/list_banner.png" alt="HTML5 Icon" width="100%"/>
                 </PageSection>
               </GridItem>
                 <GridItem span={9} rowSpan={11}>

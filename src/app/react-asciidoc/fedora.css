@@ -16,7 +16,9 @@
 --linkcoloralternate:#db3279; /* Friends Magneta */
 --white:#FFFFFF;
 --black:#000000;
+
 }
+
 
 /* Text styles 
 
@@ -56,6 +58,12 @@ h3{
 span.image {
     display:inline-block;
     padding-bottom:30px; 
+    transition: transform ease-in-out 0.3s;
+}
+
+span.image:hover {
+    position: relative; 
+    transform: scale(1.5) translate(30%,-30%);
 }
 
 div.paragraph {
