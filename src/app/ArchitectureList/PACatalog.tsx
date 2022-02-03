@@ -53,7 +53,7 @@ class PACatalog extends React.Component {
                           <Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" style={{ width: '600px' }} />
                         </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle><Link to={DETAIL_URL+'?docname='+item.DetailPage+'&title='+item.Heading+'&ppid='+item.ppid} >{item.Heading}</Link></CardTitle>
+                      <CardTitle><Link to={DETAIL_URL+'?ppid='+item.ppid} >{item.Heading}</Link></CardTitle>
                       <CardBody>{item.Summary}</CardBody>
                       <CardFooter>
                         <LabelGroup numLabels={20}>

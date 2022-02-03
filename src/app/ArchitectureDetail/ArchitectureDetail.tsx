@@ -7,7 +7,7 @@ import {
   Page,
   PageSection,
   PageGroup,
-  PageSectionVariants,
+  ExpandableSection,
   SkipToContent,
   Title,
   Grid,
@@ -33,15 +33,43 @@ import MonitoringIcon from '@patternfly/react-icons/dist/esm/icons/monitoring-ic
 import '@app/react-asciidoc/fedora.css';
 import { array } from 'prop-types';
 import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
+
+import palist from "../ArchitectureList/PAList.csv";
+import productlist from "../ArchitectureList/ProductList.csv";
+
 var title;
 var ppid;
+var docname;
 var resourcelist;
+
 
 
 class ArchitectureDetail extends React.Component {
 
   detailMap = new Map();
+  productUsedArray = new Array();
+  usedproductarray = Array();
+  theProduct;
   
+  loadPA = () => Papa.parse(palist, {
+    header: true,
+    complete: (productresults) => {
+      for(var i = 0; i != productresults.data.length; i++) {
+        if(productresults.data[i].ppid == ppid){
+          docname = productresults.data[i].DetailPage;
+          title = productresults.data[i].Heading;
+
+          this.theProduct = productresults.data[i];
+          this.productUsedArray=this.theProduct.Product.split(',');
+          
+          
+        }
+          
+      }
+      
+    }
+  });
+
   loadMap = () => Papa.parse(detailLinks, {
       header: true,
       complete: (results) => {
@@ -58,6 +86,33 @@ class ArchitectureDetail extends React.Component {
         }
         
       }
+  });
+
+  
+  loadProductList = () => Papa.parse(productlist, {
+
+    header: true,
+    complete: (presults) => {
+      
+      for(var i = 0; i != presults.data.length; i++) {
+        //
+        for(var usedIndex = 0; usedIndex != this.productUsedArray.length; usedIndex++) {
+           
+            //console.log("result stringify:["+presults.data[i].pid == JSON.stringify(this.theProduct.Product[usedIndex])+"]" );
+            var productid = this.productUsedArray[usedIndex].toString();
+            if(presults.data[i].pid.valueOf() === productid){
+              console.log("FOUND..");
+              this.usedproductarray.push(presults.data[i]);
+            }
+          
+        
+        
+        }
+      }
+      console.log("Used Products Array===-> "+this.usedproductarray);
+      
+    }
+
   });
 
   scrollTo(hash) {
@@ -98,13 +153,14 @@ class ArchitectureDetail extends React.Component {
   
 
   componentDidMount() {
-    this.loadMap();
-    const parsed = qs.parse(location.search);
-    console.log("Access doc name -> "+parsed.docname);
-    title = parsed.title;
-    ppid = parsed.ppid;
     
-    fetch("/osspa/osspa-content/-/raw/main/"+parsed.docname,{
+    const parsed = qs.parse(location.search);
+    ppid = parsed.ppid;
+    this.loadPA();
+    this.loadMap();
+    this.loadProductList();
+    
+    fetch("/osspa/osspa-content/-/raw/main/"+docname,{
       headers : { 
           method: "get",
           'Accept': 'text/asciidoc'
@@ -128,8 +184,14 @@ class ArchitectureDetail extends React.Component {
     
     
     let tempdisplay = [] as any;
+    let productdisplaylist = [] as any;
     if(Array.isArray(resourcelist) ){
       tempdisplay=resourcelist;
+      
+    }
+
+    if(Array.isArray(this.usedproductarray) ){
+      productdisplaylist=this.usedproductarray;
       
     }
 
@@ -150,16 +212,17 @@ class ArchitectureDetail extends React.Component {
           
 
           <Grid >
-            <Sidebar hasGutter orientation={'split'}>
-            <SidebarPanel variant="sticky">
+              <Sidebar hasGutter orientation={'split'}>
+              <SidebarPanel variant="sticky">
               <GridItem span={3} rowSpan={12}>
               <PageSection className="tablepadding">
                   <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
                       <Thead>
                       <Tr>
-                        <Th colSpan="2" >Other Resources<br/></Th>
+                        <Th colSpan="2" ></Th>
                       </Tr>
                       </Thead>
+                      <ExpandableSection toggleText="Other Resources"  displaySize="large" isWidthLimited >
                       <Tbody>
                           { tempdisplay.map( item =>
                             <Tr>
@@ -173,6 +236,25 @@ class ArchitectureDetail extends React.Component {
                           )}
                         
                       </Tbody>
+                      </ExpandableSection>
+
+                      <Thead>
+                      <Tr>
+                        <Th ></Th>
+                      </Tr>
+                      </Thead>
+                      <ExpandableSection toggleText="Products"  displaySize="large" isWidthLimited >
+                      <Tbody>
+                        { productdisplaylist.map( item =>
+                            <Tr>
+                              <Td colSpan="2" >
+                              {item.pname}  <a onClick={event => window.open(item.plink)}><ExternalLinkSquareAltIcon/></a>
+                              </Td>
+                            </Tr>
+                          )}
+                        
+                      </Tbody>
+                      </ExpandableSection>
                   </TableComposable>
           
                 </PageSection>

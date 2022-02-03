@@ -5,7 +5,9 @@ import {
   List, ListItem,
   Grid, GridItem,
   Card, CardTitle, CardBody, CardFooter, CardHeader,CardHeaderMain,Brand,
+  ExpandableSection,
   Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
+import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
 import { Footer } from '@app/AppLayout/Footer';
   const titlediv =   (
       <div class="pf-l-grid pf-m-all-10-col-on-sm pf-m-all-10-col-on-md pf-m-all-10-col-on-lg pf-m-all-10-col-on-xl pf-m-all-4-row-on-sm pf-m-all-4-row-on-md pf-m-all-4-row-on-lg pf-m-all-4-row-on-xl" 
@@ -51,13 +53,33 @@ class Contribute extends React.Component {
           
           <Sidebar hasGutter orientation={'split'}>
           <SidebarPanel variant="sticky">
-          <GridItem span={3} rowSpan={11}>
-            <JumpLinks isVertical label="Jump to section">
-              <JumpLinksItem key="xx "href="/contribute#_buildingPA">What is Portfolio Architecture</JumpLinksItem>
-              <JumpLinksItem key="xx "href="/contribute#_paprocess" >Portfolio Architecture Process</JumpLinksItem>
-              <JumpLinksItem key="xx "href="/contribute#_gettingstartedPA">Getting Started</JumpLinksItem>
-              <JumpLinksItem key="xx "href="/contribute#_contribute">Contribute</JumpLinksItem>
-            </JumpLinks>
+          <GridItem span={3} rowSpan={12}>
+            <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
+                      <Thead>
+                      <Tr>
+                        <Th></Th>
+                      </Tr>
+                      </Thead>
+                      <ExpandableSection toggleText="Jump to Sections"  isExpanded={true} displaySize="large" isWidthLimited >
+                      <Tbody>
+                          
+                            <Tr>
+                              <Td><a href="/contribute#_buildingPA">What is Portfolio Architecture</a></Td>
+                            </Tr>
+                            <Tr>
+                              <Td><a href="/contribute#_paprocess">Portfolio Architecture Process</a></Td>
+                            </Tr>
+                            <Tr>
+                              <Td><a href="/contribute#_gettingstartedPA">Getting Started</a></Td>
+                            </Tr>
+                            <Tr>
+                              <Td><a href="/contribute#_contribute">Contribute</a></Td>
+                            </Tr>
+                          
+                        
+                      </Tbody>
+                      </ExpandableSection>
+            </TableComposable>
           </GridItem>
           </SidebarPanel>
           <SidebarContent hasNoBackground>

@@ -3,7 +3,7 @@ import "@patternfly/react-core/dist/styles/base.css";
 
 
 import React from 'react';
-import { Checkbox,Tile } from '@patternfly/react-core';
+import { Checkbox,Tile, ExpandableSection } from '@patternfly/react-core';
 import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table'; 
 
 import Papa from 'papaparse';
@@ -14,6 +14,7 @@ import verticallist from "./VerticalList.csv";
 var selectedProduct=[] as any;
 var selectedSolution=[] as any;
 var selectedVertical=[] as any;
+var isExpanded  = true;
 
 import { SelectedList } from './SelectedList';
 
@@ -97,7 +98,7 @@ class ControlledCheckbox extends React.Component {
   };
 
   render() {
-
+    
     this.startload();
     const {updateProduct, updateSolution,updateVertical} =  this.context;
     return (
@@ -106,48 +107,58 @@ class ControlledCheckbox extends React.Component {
         <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
           <Thead>
           <Tr>
-            <Th>Solution<br/></Th>
+            <Th></Th>
           </Tr>
           </Thead>
-          <Tbody>
-          <Tr>
-            <Td>
-              {this.solutionArray.map( item =>
-                <Checkbox label={item.sname} aria-label={item.sname} id={item.sid} name={item.sid} key={item.sid} onChange={ e=> {this.handleSolutionChange(e, item.sid) ; updateSolution(item.sid);}} isChecked={this.checkIfSelected("solution",item.sid)}/>
-              )}
-            </Td>
-          </Tr>
-          </Tbody>
+          <ExpandableSection toggleText="Solution"  displaySize="large" isWidthLimited >
+            <Tbody>
+              <Tr>
+                <Td>
+                  {this.solutionArray.map( item =>
+                    <Checkbox label={item.sname} aria-label={item.sname} id={item.sid} name={item.sid} key={item.sid} onChange={ e=> {this.handleSolutionChange(e, item.sid) ; updateSolution(item.sid);}} isChecked={this.checkIfSelected("solution",item.sid)}/>
+                  )}
+                </Td>
+              </Tr>
+            </Tbody>
+            
+          </ExpandableSection>
+
+
+          
         
           <Thead>
           <Tr>
-            <th>Products<br/></th>
+            <th></th>
           </Tr>
           </Thead>
-          <Tbody>
-          <Tr>
-            <Td>
-              {this.productArray.map( item =>
-                <Checkbox label={item.pname} aria-label={item.pname}  id={item.pid} name={item.pid} key={item.pid} onChange={ e=> {this.handleProductChange(e, item.pid) ; updateProduct(item.pid);}} isChecked={this.checkIfSelected("product",item.pid)}/>
-              )}
-            </Td>
-          </Tr>
-          </Tbody>
-        
+          <ExpandableSection toggleText="Products" displaySize="large" isWidthLimited >
+          
+            <Tbody>
+            <Tr>
+              <Td>
+                {this.productArray.map( item =>
+                  <Checkbox label={item.pname} aria-label={item.pname}  id={item.pid} name={item.pid} key={item.pid} onChange={ e=> {this.handleProductChange(e, item.pid) ; updateProduct(item.pid);}} isChecked={this.checkIfSelected("product",item.pid)}/>
+                )}
+              </Td>
+            </Tr>
+            </Tbody>
+          </ExpandableSection>
           <Thead>
           <Tr>
-            <Th>Vertical<br/></Th>
+            <Th></Th>
           </Tr>
           </Thead>
-          <Tbody>
-          <Tr>
-            <Td>
-              {this.verticalArray.map( item =>
-                <Checkbox label={item.vname} aria-label={item.vname}  id={item.vid} name={item.vid} key={item.vid} onChange={ e=> {this.handleVerticalChange(e, item.vid) ; updateVertical(item.vid);}} isChecked={this.checkIfSelected("vertical",item.vid)}/>
-              )}
-            </Td>
-          </Tr>
-          </Tbody>
+          <ExpandableSection toggleText="Vertical"  displaySize="large" isWidthLimited >
+              <Tbody>
+              <Tr>
+                <Td>
+                  {this.verticalArray.map( item =>
+                    <Checkbox label={item.vname} aria-label={item.vname}  id={item.vid} name={item.vid} key={item.vid} onChange={ e=> {this.handleVerticalChange(e, item.vid) ; updateVertical(item.vid);}} isChecked={this.checkIfSelected("vertical",item.vid)}/>
+                  )}
+                </Td>
+              </Tr>
+              </Tbody>
+          </ExpandableSection>
         </TableComposable>
     </React.Fragment>
     );
