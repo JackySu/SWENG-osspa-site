@@ -3,7 +3,7 @@ import "@patternfly/react-core/dist/styles/base.css";
 
 
 import React from 'react';
-import { Checkbox,Tile, ExpandableSection } from '@patternfly/react-core';
+import { Checkbox} from '@patternfly/react-core';
 import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table'; 
 
 import Papa from 'papaparse';
@@ -107,10 +107,10 @@ class ControlledCheckbox extends React.Component {
         <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
           <Thead>
           <Tr>
-            <Th></Th>
+            <Th colSpan="2">Solution</Th>
           </Tr>
           </Thead>
-          <ExpandableSection toggleText="Solution"  displaySize="large" isWidthLimited >
+          
             <Tbody>
               <Tr>
                 <Td>
@@ -120,19 +120,11 @@ class ControlledCheckbox extends React.Component {
                 </Td>
               </Tr>
             </Tbody>
-            
-          </ExpandableSection>
-
-
-          
-        
           <Thead>
           <Tr>
-            <th></th>
+            <th colSpan="2" >Products</th>
           </Tr>
           </Thead>
-          <ExpandableSection toggleText="Products" displaySize="large" isWidthLimited >
-          
             <Tbody>
             <Tr>
               <Td>
@@ -142,13 +134,11 @@ class ControlledCheckbox extends React.Component {
               </Td>
             </Tr>
             </Tbody>
-          </ExpandableSection>
           <Thead>
           <Tr>
-            <Th></Th>
+            <Th colSpan="2">Vertical</Th>
           </Tr>
           </Thead>
-          <ExpandableSection toggleText="Vertical"  displaySize="large" isWidthLimited >
               <Tbody>
               <Tr>
                 <Td>
@@ -158,7 +148,6 @@ class ControlledCheckbox extends React.Component {
                 </Td>
               </Tr>
               </Tbody>
-          </ExpandableSection>
         </TableComposable>
     </React.Fragment>
     );

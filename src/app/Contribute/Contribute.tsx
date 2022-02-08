@@ -5,7 +5,6 @@ import {
   List, ListItem,
   Grid, GridItem,
   Card, CardTitle, CardBody, CardFooter, CardHeader,CardHeaderMain,Brand,
-  ExpandableSection,
   Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
 import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
 import { Footer } from '@app/AppLayout/Footer';
@@ -57,10 +56,10 @@ class Contribute extends React.Component {
             <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
                       <Thead>
                       <Tr>
-                        <Th></Th>
+                        <Th colSpan="2" >Jump to Sections</Th>
                       </Tr>
                       </Thead>
-                      <ExpandableSection toggleText="Jump to Sections"  isExpanded={true} displaySize="large" isWidthLimited >
+                     
                       <Tbody>
                           
                             <Tr>
@@ -78,7 +77,7 @@ class Contribute extends React.Component {
                           
                         
                       </Tbody>
-                      </ExpandableSection>
+          
             </TableComposable>
           </GridItem>
           </SidebarPanel>

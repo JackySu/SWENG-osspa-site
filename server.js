@@ -51,7 +51,7 @@ app.use(
     target: "https://gitlab.com/",
     changeOrigin: true,
     pathRewrite: {
-      '^/images/intro-marketectures':'redhatdemocentral/portfolio-architecture-examples/-/raw/main/images/intro-marketectures' 
+      '^/images/intro-marketectures':'osspa/osspa-content/-/raw/main/images/intro-marketectures' 
     }
   })
 );
@@ -62,7 +62,7 @@ app.use(
     target: "https://gitlab.com/",
     changeOrigin: true,
     pathRewrite: {
-      '^/images/logical-diagrams':'redhatdemocentral/portfolio-architecture-examples/-/raw/main/images/logical-diagrams' 
+      '^/images/logical-diagrams':'osspa/osspa-content/-/raw/main/images/logical-diagrams' 
     }
   })
 );
@@ -73,7 +73,7 @@ app.use(
     target: "https://gitlab.com/",
     changeOrigin: true,
     pathRewrite: {
-      '^/images/schematic-diagrams':'redhatdemocentral/portfolio-architecture-examples/-/raw/main/images/schematic-diagrams' 
+      '^/images/schematic-diagrams':'osspa/osspa-content/-/raw/main/images/schematic-diagrams' 
     }
   })
 );
@@ -84,7 +84,7 @@ app.use(
     target: "https://gitlab.com/",
     changeOrigin: true,
     pathRewrite: {
-      '^/images/detail-diagrams':'redhatdemocentral/portfolio-architecture-examples/-/raw/main/images/detail-diagrams' 
+      '^/images/detail-diagrams':'osspa/osspa-content/-/raw/main/images/detail-diagrams' 
     }
   })
 );

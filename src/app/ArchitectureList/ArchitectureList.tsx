@@ -5,7 +5,7 @@ import {
   
   Page,
   PageSection,
-
+  BackToTop,
   SkipToContent,
   SidebarContent,
   Sidebar,
@@ -25,6 +25,11 @@ const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106
 
 
 class ArchitectureList extends React.Component {
+  
+  scrollTo(hash) {
+    location.hash = "#" + hash;
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -60,7 +65,7 @@ class ArchitectureList extends React.Component {
           <SelectedListProvider>
             <Grid >
             <Sidebar hasGutter orientation={'split'}>
-              <SidebarPanel variant="sticky">
+              <SidebarPanel variant="static">
               <GridItem span={3} rowSpan={12}>
                 <PageSection className="tablepadding">
                     <ControlledCheckbox /> 
@@ -70,7 +75,7 @@ class ArchitectureList extends React.Component {
               <SidebarContent hasNoBackground>
               <GridItem span={9} rowSpan={1}>
                 <PageSection className="banner" >
-                  <img src="/images/list_banner.png" alt="HTML5 Icon" width="100%"/>
+                  <img src="/images/list_banner.png" alt="HTML5 Icon" width="100%" id="_top"/>
                 </PageSection>
               </GridItem>
                 <GridItem span={9} rowSpan={11}>
@@ -83,6 +88,7 @@ class ArchitectureList extends React.Component {
             </Grid>
             
           </SelectedListProvider>
+          <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => this.scrollTo("_top")} />
           <Footer/>
           
         </Page>

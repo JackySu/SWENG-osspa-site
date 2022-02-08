@@ -68,7 +68,10 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
           <NavItem key={2} itemId={2} isActive={false}  onClick={openToolWindow}>
             Our Tool
           </NavItem>
-          <NavItem key={3} itemId={3} isActive={false}  onClick={openRedHatWindow}>
+          <NavItem key={1} itemId={3} isActive={false}  href="/">
+            <a href="/contribute#_contribute">Contribute</a>
+          </NavItem>
+          <NavItem key={3} itemId={4} isActive={false}  onClick={openRedHatWindow}>
             Red Hat Solutions
           </NavItem>
         </NavList>

@@ -7,7 +7,6 @@ import {
   Page,
   PageSection,
   PageGroup,
-  ExpandableSection,
   SkipToContent,
   Title,
   Grid,
@@ -213,16 +212,16 @@ class ArchitectureDetail extends React.Component {
 
           <Grid >
               <Sidebar hasGutter orientation={'split'}>
-              <SidebarPanel variant="sticky">
+              <SidebarPanel variant="static">
               <GridItem span={3} rowSpan={12}>
               <PageSection className="tablepadding">
                   <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
                       <Thead>
                       <Tr>
-                        <Th colSpan="2" ></Th>
+                        <Th colSpan="2" >Resources</Th>
                       </Tr>
                       </Thead>
-                      <ExpandableSection toggleText="Other Resources"  displaySize="large" isWidthLimited >
+                      
                       <Tbody>
                           { tempdisplay.map( item =>
                             <Tr>
@@ -230,31 +229,31 @@ class ArchitectureDetail extends React.Component {
                                   {this.iconfinder(item.type)}
                               </Td>
                               <Td>
-                                {item.description}  <a onClick={event => window.open(item.url)}><ExternalLinkSquareAltIcon/></a>
+                              <a onClick={event => window.open(item.url)}>{item.description}<ExternalLinkSquareAltIcon/></a>
                               </Td>
                             </Tr>
                           )}
                         
                       </Tbody>
-                      </ExpandableSection>
+                      
 
                       <Thead>
                       <Tr>
-                        <Th ></Th>
+                        <Th colSpan="2">Products</Th>
                       </Tr>
                       </Thead>
-                      <ExpandableSection toggleText="Products"  displaySize="large" isWidthLimited >
+                     
                       <Tbody>
                         { productdisplaylist.map( item =>
                             <Tr>
                               <Td colSpan="2" >
-                              {item.pname}  <a onClick={event => window.open(item.plink)}><ExternalLinkSquareAltIcon/></a>
+                              <a onClick={event => window.open(item.plink)}>{item.pname}<ExternalLinkSquareAltIcon/></a>
                               </Td>
                             </Tr>
                           )}
                         
                       </Tbody>
-                      </ExpandableSection>
+                      
                   </TableComposable>
           
                 </PageSection>
