@@ -3,8 +3,8 @@ import "@patternfly/react-core/dist/styles/base.css";
 
 
 import React from 'react';
-import { Checkbox} from '@patternfly/react-core';
-import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table'; 
+import { Checkbox, Nav, NavList, NavExpandable, NavItem } from '@patternfly/react-core';
+import { TableComposable, Thead, Tbody, Tr, Th, Td} from '@patternfly/react-table'; 
 
 import Papa from 'papaparse';
 import productlist from "./ProductList.csv";
@@ -103,7 +103,6 @@ class ControlledCheckbox extends React.Component {
     const {updateProduct, updateSolution,updateVertical} =  this.context;
     return (
       <React.Fragment>
-        
         <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
           <Thead>
           <Tr>

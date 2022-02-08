@@ -5,20 +5,11 @@ import {
   List, ListItem,
   Grid, GridItem,
   Card, CardTitle, CardBody, CardFooter, CardHeader,CardHeaderMain,Brand,
-  Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
+  SkipToContent, Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
 import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
 import { Footer } from '@app/AppLayout/Footer';
-  const titlediv =   (
-      <div class="pf-l-grid pf-m-all-10-col-on-sm pf-m-all-10-col-on-md pf-m-all-10-col-on-lg pf-m-all-10-col-on-xl pf-m-all-4-row-on-sm pf-m-all-4-row-on-md pf-m-all-4-row-on-lg pf-m-all-4-row-on-xl" 
-        style={{backgroundImage:"url(/images/contributebackground.jpeg)", height:400, backgroundSize: "cover"}}>
-        <div class="pf-l-grid__item pf-m-7-col-on-sm pf-m-7-col-on-lg pf-m-7-col-on-xl contribute_title_desc">
-          <h1>Portfolio Architecture</h1> 
-          <br/>
-          <p> provide a common repeatable process, visual language and tool set, presentations, and architecture diagrams. These document real deployments of three or more products that continuously advance successful use cases.</p>
-        </div>
-        <div class="pf-l-grid__item pf-m-3-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl"></div>
-      </div>
-    );
+import { css } from '@patternfly/react-styles';
+import '@app/react-asciidoc/fedora.css';
   
 class Contribute extends React.Component {
   constructor(props) {
@@ -30,29 +21,27 @@ class Contribute extends React.Component {
   
 
   render() {
+    const pageId = 'main-content-page-layout-tertiary-nav';
+    const PageSkipToContent = <SkipToContent href={`#${pageId}`}>Skip to content</SkipToContent>;
     return  <React.Fragment>
         
         <Page
           isManagedSidebar
-          
-          mainContainerId='contribute'
-          //additionalGroupedContent={headerContent}
+          skipToContent={PageSkipToContent}
+          mainContainerId={pageId}
+          //additionalGroupedContent ={[headerContent,menuContent]}
           groupProps={{
             sticky: 'top'
           }}
         >
-        
-          
-        
-          
        
-        <PageSection variant={PageSectionVariants.light}>
+        <PageSection>
         
         <Grid>
-          
           <Sidebar hasGutter orientation={'split'}>
           <SidebarPanel variant="sticky">
           <GridItem span={3} rowSpan={12}>
+          
             <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
                       <Thead>
                       <Tr>
@@ -79,11 +68,18 @@ class Contribute extends React.Component {
                       </Tbody>
           
             </TableComposable>
+            
           </GridItem>
           </SidebarPanel>
           <SidebarContent hasNoBackground>
             <GridItem span={9} rowSpan={1} id="_topbanner">
-              {titlediv}
+              
+                  <table >
+                    <tr>
+                      <td width="50%">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
+                      <td width="50%"><img src="/images/contribute_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
+                    </tr>
+                  </table>
             </GridItem>
             <GridItem span={9} rowSpan={3} id="_buildingPA">
               <h2>What is Portfolio Architecture ?</h2>

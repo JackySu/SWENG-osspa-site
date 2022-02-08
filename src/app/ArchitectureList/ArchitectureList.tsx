@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { ExclamationTriangleIcon } from '@patternfly/react-icons';
 import {
-
-  
   Page,
   PageSection,
   BackToTop,
@@ -42,9 +40,6 @@ class ArchitectureList extends React.Component {
 
   render() {
     
-      
-    
-   
     
     const pageId = 'main-content-page-layout-tertiary-nav';
     const PageSkipToContent = <SkipToContent href={`#${pageId}`}>Skip to content</SkipToContent>;
@@ -75,7 +70,12 @@ class ArchitectureList extends React.Component {
               <SidebarContent hasNoBackground>
               <GridItem span={9} rowSpan={1}>
                 <PageSection className="banner" >
-                  <img src="/images/list_banner.png" alt="HTML5 Icon" width="100%" id="_top"/>
+                  <table>
+                    <tr>
+                      <td width="50%"><img src="/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
+                      <td width="50%">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
+                    </tr>
+                  </table>
                 </PageSection>
               </GridItem>
                 <GridItem span={9} rowSpan={11}>
