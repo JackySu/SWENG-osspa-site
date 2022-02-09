@@ -1,21 +1,22 @@
 pid,pname,plink
-RHEL,Red Hat Enterprise Linux,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-OpenStack,Red Hat OpenStack,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Virtualization,Red Hat Virtualization,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Integration,Red Hat Integration,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-ProcessAutomation,Red Hat Process Automation,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Runtimes,Red Hat Runtimes,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Edge,Red Hat Edge,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Quay,Red Hat Quay,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Storage,Red Hat Ceph Storage,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Data,Red Hat Data Foundation,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Ansible,Red Hat Ansible Automation Platform,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-ACM,Red Hat Advance Cluster Management,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Insight,Red Hat Insight,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Satellite,Red Hat Satellite,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-SmartManagement,Red Hat Smart Management,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
+RHEL,Red Hat Enterprise Linux,https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux
+OpenStack,Red Hat OpenStack,https://www.redhat.com/en/technologies/linux-platforms/openstack-platform
+Virtualization,Red Hat Virtualization,https://www.redhat.com/en/technologies/virtualization/enterprise-virtualization
+Integration,Red Hat Integration,https://www.redhat.com/en/products/integration
+ProcessAutomation,Red Hat Process Automation,https://www.redhat.com/en/technologies/jboss-middleware/process-automation-manager
+Runtimes,Red Hat Runtimes,https://www.redhat.com/en/products/runtimes
+Edge,Red Hat Edge,https://www.redhat.com/en/topics/edge-computing/approach
+Quay,Red Hat Quay,https://www.redhat.com/en/technologies/cloud-computing/quay
+Storage,Red Hat Ceph Storage,https://www.redhat.com/en/technologies/storage/ceph
+Data,Red Hat Data Foundation,https://www.redhat.com/en/technologies/cloud-computing/openshift-data-foundation
+Ansible,Red Hat Ansible Automation Platform,https://www.redhat.com/en/technologies/management/ansible
+ACM,Red Hat Advance Cluster Management,https://www.redhat.com/en/technologies/management/advanced-cluster-management
+Insight,Red Hat Insight,https://www.redhat.com/en/technologies/management/insights
+Satellite,Red Hat Satellite,https://www.redhat.com/en/technologies/management/satellite
+SmartManagement,Red Hat Smart Management,https://www.redhat.com/en/technologies/management/smart-management
 OpenShift,Red Hat OpenShift Platform,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Consulting,Red Hat Consulting,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Training,Red Hat Training,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-Identity,Red Hat Identity Management,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-AMQ,Red Hat AMQ,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
+Consulting,Red Hat Consulting,https://www.redhat.com/en/services/consulting
+Training,Red Hat Training,https://www.redhat.com/en/services/training-and-certification
+Identity,Red Hat Identity Management,https://access.redhat.com/products/identity-management
+AMQ,Red Hat AMQ,https://www.redhat.com/en/technologies/jboss-middleware/amq
+3scale,Red Hat 3scale API Management,https://www.redhat.com/en/technologies/jboss-middleware/3scale
