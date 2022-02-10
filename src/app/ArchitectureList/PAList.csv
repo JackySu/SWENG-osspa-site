@@ -21,6 +21,3 @@ ppid,Heading,Summary,Product,Solutions,Vertical,Image1Url,Image2Url,DetailPage
 20,Supply Chain Integration,"Streamlining integration between different elements of a retail supply chain for on-premise, cloud, and other third-party ...","OpenShift,Integration,AMQ,RHEL,Consulting,Training",CloudNativeAppDEV,Retail,intro-marketectures/supply-chain-integration-marketing-slide.png,schematic-diagrams/retail-supply-chain-sd.png,supplychainintegration.adoc
 21,Telco 5G Core: On-Premise,"Ultra-reliable, immersive experiences for people and objects when and where it matters most.","OpenShift,AMQ,Ansible,SmartManagement,Identity,Quay,RHEL,Consulting,Training",Hybrid,Telco,intro-marketectures/telco-5g-on-premise-marketing-slide.png,schematic-diagrams/telco-5g-sd.png,telco-on-premise.adoc
 22,Telco 5G with Hyperscalers,"Build an adaptable, on-demand infrastructure services for 5G Core that can deliver across diverse use cases with minimal CAPEX and OPEX.","Data,Identity,ProcessAutomation,OpenShift,ACM,RHEL,Consulting,Training",Hybrid,Telco,intro-marketectures/telco-5g-core-hyperscalers-marketing-slide.png,intro-marketectures/telco-5g-core-hyperscalers-marketing-slide.png,telco-5g-with-hyperscalers.adoc
-
-
-
