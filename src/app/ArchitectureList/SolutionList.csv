@@ -1,7 +1,7 @@
 sid,sname
-Hybrid,Hybrid Cloud
-CloudNativeAppDEV,Cloud Native App Dev
+Hybrid,Infrastructure
+CloudNativeAppDEV,Application Development
 SAP,SAP
-Edge,Edge/IoT
+Edge,Edge/AI/ML/Data Science
 AppDev,AppDev
-Automation,Automation and Management
+Automation,Automation
