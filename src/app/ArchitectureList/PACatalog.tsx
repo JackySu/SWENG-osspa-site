@@ -21,7 +21,7 @@ import InfoCircleIcon from '@patternfly/react-icons/dist/js/icons/info-circle-ic
 import Papa from 'papaparse';
 import { SelectedList } from './SelectedList';
 
-const CARD_IMG_URL = "https://gitlab.com/redhatdemocentral/portfolio-architecture-examples/-/raw/main/images/"
+const CARD_IMG_URL = "https://gitlab.com/osspa/osspa-content/-/raw/main/images/"
 const isExpanded = false;
 const DETAIL_URL = '/architecturedetail'
 
@@ -50,7 +50,7 @@ class PACatalog extends React.Component {
                     <Card isHoverable key={item.ppid} isCompact={true} >
                       <CardHeader>
                         <CardHeaderMain>
-                          <Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" style={{ width: '500px' }} />
+                        <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" style={{ width: '500px' }} /></Link>
                         </CardHeaderMain>
                       </CardHeader>
                       <CardTitle><Link to={DETAIL_URL+'?ppid='+item.ppid} >{item.Heading}</Link></CardTitle>
