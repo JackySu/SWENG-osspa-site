@@ -54,7 +54,7 @@ class ArchitectureDetail extends React.Component {
     header: true,
     complete: (productresults) => {
       for(var i = 0; i != productresults.data.length; i++) {
-        if(productresults.data[i].ppid == ppid){
+        if(productresults.data[i].ppid == ppid && productresults.data[i].islive == "TRUE"){
           docname = productresults.data[i].DetailPage;
           title = productresults.data[i].Heading;
 
@@ -100,7 +100,6 @@ class ArchitectureDetail extends React.Component {
             //console.log("result stringify:["+presults.data[i].pid == JSON.stringify(this.theProduct.Product[usedIndex])+"]" );
             var productid = this.productUsedArray[usedIndex].toString();
             if(presults.data[i].pid.valueOf() === productid){
-              console.log("FOUND..");
               this.usedproductarray.push(presults.data[i]);
             }
           
@@ -108,7 +107,6 @@ class ArchitectureDetail extends React.Component {
         
         }
       }
-      console.log("Used Products Array===-> "+this.usedproductarray);
       
     }
 
