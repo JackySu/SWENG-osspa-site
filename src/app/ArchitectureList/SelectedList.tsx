@@ -5,16 +5,26 @@ export const SelectedList = React.createContext();
 
 class SelectedListProvider extends React.Component{
     
+          
     loadlist = () => Papa.parse(listfile, {
         header: true,
         complete: (results) => {
-            
           return results.data;
         }
     });
+
+    loadLive = () =>{
+        var livelist=[] as any;
+        this.loadlist().data.forEach(element => {
+            if(element.islive=="TRUE"){
+                livelist.push(element);
+            }
+          })
+        return livelist;
+    }
     
     state = {
-        currentlist:this.loadlist().data,
+        currentlist:this.loadLive(),
         selectedProduct: [] as any,
         selectedSolution: [] as any,
         selectedVertical: [] as any
@@ -24,7 +34,7 @@ class SelectedListProvider extends React.Component{
         
         //this.setState({currentlist:{currentlist:newlist}});
 
-        this.loadlist().data.forEach(element => {
+        this.loadLive().forEach(element => {
             var shouldPush = true;
             if(this.state.selectedProduct.length > 0){
                 console.log("element",element.Product);
