@@ -59,8 +59,8 @@ span.image {
     display:inline-block;
     padding-bottom:30px; 
     transition: transform ease-in-out 0.3s;
-    border-width:medium;
-    border-color: black;
+    border: 1px solid #555;
+    border-width: thin;
 }
 
 span.image:hover {
