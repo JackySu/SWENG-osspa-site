@@ -153,6 +153,11 @@ class ArchitectureDetail extends React.Component {
     this.loadPA();
     this.loadMap();
     this.loadProductList();
+
+    if(""==docname || null==docname){
+      alert("Portfolio Architecture Not Found!")
+      window.location.replace("/");
+    }
     
     fetch("/osspa/osspa-content/-/raw/main/"+docname,{
       headers : { 
