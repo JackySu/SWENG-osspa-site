@@ -50,7 +50,7 @@ class PACatalog extends React.Component {
                     <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Card isHoverable key={item.ppid} isCompact={true} >
                       <CardHeader>
                         <CardHeaderMain>
-                        <Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" style={{ width: '500px' }} />
+                        <Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" style={{ width: '500px', border: 1px solid #555, border-width: thin }} />
                         </CardHeaderMain>
                       </CardHeader>
                       <CardTitle>{item.Heading}</CardTitle>
