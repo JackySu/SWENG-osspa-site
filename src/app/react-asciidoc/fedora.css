@@ -55,6 +55,20 @@ h3{
     font-weight: bold;
 }
 
+.videoblock {
+    position: relative;
+    height: 600px;
+    width: 1200px;
+    overflow: hidden;
+  }
+.videoblock .content iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+}
+
 span.image {
     display:inline-block;
     transition: transform ease-in-out 0.3s;
