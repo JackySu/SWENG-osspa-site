@@ -146,7 +146,7 @@ class ArchitectureDetail extends React.Component {
   }
   
 
-  componentDidMount() {
+  async componentDidMount() {
     
     const parsed = qs.parse(location.search);
     ppid = parsed.ppid;
@@ -165,10 +165,25 @@ class ArchitectureDetail extends React.Component {
           'Accept': 'text/asciidoc'
        }
       })
-      .then(response => response.text())
-      .then(data => this.setState({ data: data }));
+      .then((response) => {
+        if(response.ok  )
+          return response.text(); 
+        else{
+          alert("Detail Document unavalible!")
+          window.location.replace("/");
+        }
+      })
+      
+      .then(data => this.setState({ data: data }))
+      .catch(error => {
+        console.log("error---->"+error);
+        return Promise.reject()
+      })
+      ;
         //.then(data => console.log("data->",data));
         //.then(data => this.setState({ totalReactPackages: data.total }));
+    
+    
   }
 
   render() {
