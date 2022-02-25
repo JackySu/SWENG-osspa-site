@@ -35,6 +35,9 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
   function openToolWindow(e) {
     window.open("https://tool.osspa.org/");
   }
+  function openArchitectWindow(e) {
+    window.open("https://www.redhat.com/architect/");
+  }
 
   function LogoImg() {
     const history = useHistory();
@@ -53,7 +56,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     </PageHeaderTools>
   );
 
-  
+//enable architect  
 
   const menuContent =(
     
@@ -70,6 +73,9 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
           </NavItem>
           <NavItem key={1} itemId={3} isActive={false}  href="/">
             <a href="/contribute#_contribute">Contribute</a>
+          </NavItem>
+          <NavItem key={1} itemId={3} isActive={false}  onClick={openArchitectWindow}>
+            Enable Architect
           </NavItem>
           <NavItem key={3} itemId={4} isActive={false}  onClick={openRedHatWindow}>
             Red Hat Solutions
