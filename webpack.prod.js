@@ -21,7 +21,7 @@ module.exports = merge(common('production'), {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'architect/portfolio/[name].css',
       chunkFilename: '[name].bundle.css'
     })
   ],

@@ -28,6 +28,9 @@ if(process.env.NODE_ENV === "production"){
 app.get('/api',function(req,res){  
     res.send('<p>This is a api Data</p>');  
 }); 
+const root = express();
+const contextPath='/architect/portfolio';  
+root.use(contextPath, app)
 
 app.use(
   "/redhatdemocentral",
@@ -52,6 +55,16 @@ app.use(
     changeOrigin: true,
     pathRewrite: {
       '^/images/intro-marketectures':'osspa/osspa-content/-/raw/main/images/intro-marketectures' 
+    }
+  })
+);
+app.use(
+  "/architect/images/intro-marketectures",
+  createProxyMiddleware({
+    target: "https://gitlab.com/",
+    changeOrigin: true,
+    pathRewrite: {
+      '^/architect/images/intro-marketectures':'osspa/osspa-content/-/raw/main/images/intro-marketectures' 
     }
   })
 );

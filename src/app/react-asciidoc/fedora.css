@@ -180,3 +180,24 @@ section.tablepadding{
 section.banner{
     padding-bottom: 0;
 }
+
+#footer
+
+.bg-dark-gray {
+    background-color: #262626 !important;
+}
+
+.page__colophon {
+    font-size: 0.9rem;
+    color: #b3b5b7;
+    
+}
+.footerdiv {
+    display: block;
+    box-sizing: border-box;
+}
+
+.py-4 {
+    padding-bottom: 1.5rem !important;
+    padding-top: 1.5rem !important;
+}
