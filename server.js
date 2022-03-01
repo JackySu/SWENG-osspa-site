@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/asset'));
 app.use(history());
 
 if(process.env.NODE_ENV === "production"){
-  app.use(express.static(path.join(__dirname, "dist")));
+  app.use(express.static(path.join(__dirname, "dist/architect/portfolio")));
   
 }else{
   PORT=8081;
