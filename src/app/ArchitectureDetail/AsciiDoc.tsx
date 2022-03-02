@@ -21,7 +21,7 @@ export default class Asciidoc extends React.PureComponent {
         const asciidoctor = Asciidoctor();
         let convertedhtml= asciidoctor.convert(this.props.children)+"";
         let pattern = /<li><a href=\"#/g;
-        let result = pattern.test(convertedhtml);
+        //let result = pattern.test(convertedhtml);
         //console.log("result-->"+result);
         
         var filteredhtml = convertedhtml.replace(pattern,"<li><a href=\""+window.location+"#");
@@ -33,6 +33,20 @@ export default class Asciidoc extends React.PureComponent {
         filteredhtml=filteredhtml.replace('video::','<div class="youtubeframe"><p><iframe src="https://www.youtube.com/embed/');
         filteredhtml=filteredhtml.replace('[youtube]','" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></p></div>');
            
+        let imgpattern = /<img src="(.*?)"/g;
+        let result = filteredhtml.match(imgpattern);
+
+        for(var i=0;result!=null&&i<result.length; i++ ){
+            
+            var imagelocation=result[i].replace('<img src="','');     
+            imagelocation=imagelocation.replace('"','');  
+            console.log('imagelocation-->window.open("'+imagelocation+'");');
+            
+            filteredhtml=filteredhtml.replace(imagelocation+'"',imagelocation+'"'+'onclick="window.open(\''+imagelocation+'\');"')
+        }
+       
+
+
         //console.log("filteredhtml-->"+filteredhtml);
         return (
             

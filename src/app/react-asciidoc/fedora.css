@@ -76,10 +76,6 @@ span.image {
     border-width: thin;
 }
 
-span.image:hover {
-    position: relative; 
-    transform: scale(1.5) translate(30%,-30%);
-}
 
 div.paragraph {
     padding-top:30px; 
