@@ -63,7 +63,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     <Nav variant="horizontal">
         <NavList>
           <NavItem key={0} itemId={0} isActive={false} href="/">
-            <a href="/">Portfolio Architecture</a>
+            <a href="/architect/portfolio">Portfolio Architecture</a>
           </NavItem>
           <NavItem key={1} itemId={1} isActive={false}  href="/">
             <a href="/architect/portfolio/contribute">Learn More</a>

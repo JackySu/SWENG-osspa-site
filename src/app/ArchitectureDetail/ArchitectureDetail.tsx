@@ -69,19 +69,20 @@ class ArchitectureDetail extends React.Component {
     }
   });
 
-  loadMap = () => Papa.parse(detailLinks, {
+  loadResources = () => Papa.parse(detailLinks, {
       header: true,
       complete: (results) => {
+        var newarray = [] as any;
         for(var i = 0; i != results.data.length; i++) {
           
-          if(this.detailMap.has(results.data[i].pid)){
-            newarray = this.detailMap.get(results.data[i].pid);
+          if(this.detailMap.has(results.data[i].ppid)){
+            newarray = this.detailMap.get(results.data[i].ppid);
           }else{
-            var newarray = [] as any;
+            newarray = [] as any;
           }
-
           newarray.push(results.data[i]);
-          this.detailMap.set(results.data[i].pid,newarray);
+          this.detailMap.set(results.data[i].ppid,newarray);
+          
         }
         
       }
@@ -151,7 +152,7 @@ class ArchitectureDetail extends React.Component {
     const parsed = qs.parse(location.search);
     ppid = parsed.ppid;
     this.loadPA();
-    this.loadMap();
+    this.loadResources();
     this.loadProductList();
 
     if(""==docname || null==docname){

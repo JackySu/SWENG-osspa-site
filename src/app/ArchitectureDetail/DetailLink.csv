@@ -1,9 +1,33 @@
-pid,description,url,type
-7,A Study of Hosting and Managing on Hybrid Multi-Cloud,https://dzone.com/articles/a-study-of-hosting-and-managing-on-hybrid-multi-cl,Blog
-7,Overview of Making Hybrid Multi-Cloud GitOps Work ,https://dzone.com/articles/overview-of-making-hybrid-multi-cloud-gitops-works,Blog
-7,Hybrid Multi-Cloud Dynamic Security Management ,https://dzone.com/articles/hybrid-multi-cloud-dynamic-security-management,Blog
-7,Observability in Hybrid Multi-Cloud Environment ,https://dzone.com/articles/observability-in-hybrid-multi-cloud-environment,Blog
-10,Near Zero Downtime Maintenance,https://www.redhat.com/en/blog/near-zero-downtime-maintenance-rhel-sap-solutions,Blog
+ppid,description,url,type
+2,Cloud Adoption Architectural Introduction,https://dzone.com/articles/cloud-adoption-an-architectural-introduction,Blog 
+2,Overview of Cloud Adoption Elements,https://dzone.com/articles/cloud-adoption-common-architectural-elements,Blog 
+2,Example Cloud Adoption Architectures ,https://dzone.com/articles/cloud-adoption-example-adoption-architecture,Blog
+3,Cloud Factory Introduction,https://dzone.com/articles/cloud-factory-architectural-introduction,Blog
+3,Overview of Cloud Adoption Elements,https://dzone.com/articles/cloud-factory-common-architectural-elements,Blog
+3,Example Cloud Factory Architectures ,https://dzone.com/articles/cloud-factory-example-factory-deployment,Blog
+4,Cloud Native Development Blueprint,https://dzone.com/articles/cloud-native-development-a-blueprint,Blog
+4,Cloud Native Development on Local Containers,https://dzone.com/articles/cloud-native-development-on-local-containers,Blog
+4,Cloud Native Development on Remote Containers,https://dzone.com/articles/cloud-native-development-on-remote-containers,Blog
+4,Advanced Cloud Native Deployment,https://dzone.com/articles/cloud-native-development-an-advanced-deployment-bl,Blog
+4,Overview of Cloud Native Development Elements,https://dzone.com/articles/cloud-native-development-common-architectural-elem,Blog
+5,Integration Key to Experience,https://dzone.com/articles/integration-key-to-experience-an-introduction-part,Blog
+5,Proces Integration,https://dzone.com/articles/integration-key-to-customer-example-process-integr,Blog
+5,Mobile Integration,https://dzone.com/articles/integration-key-to-customer-experience-example-mob,Blog
+5,Service Integration,https://dzone.com/articles/integration-key-to-experience-service-integration,Blog
+6,Edge Medical Introduction,https://dzone.com/articles/edge-medical-diagnosis-architectural-introduction,Blog
+6,Overview of Edge Medical Diagnosis Elements,https://dzone.com/articles/edge-medical-diagnosis-common-architectural-elemen,Blog
+6,Predictive Analysis,https://dzone.com/articles/edge-medical-diagnosis-example-predictive-analysis,Blog
+6,Medical Diagnosis with GitOps,https://dzone.com/articles/edge-medical-diagnosis-example-architecture-with-g,Blog
+8,A Study of Hosting and Managing on Hybrid Multi-Cloud,https://dzone.com/articles/a-study-of-hosting-and-managing-on-hybrid-multi-cl,Blog
+8,Overview of Making Hybrid Multi-Cloud GitOps Work ,https://dzone.com/articles/overview-of-making-hybrid-multi-cloud-gitops-works,Blog
+8,Hybrid Multi-Cloud Dynamic Security Management ,https://dzone.com/articles/hybrid-multi-cloud-dynamic-security-management,Blog
+8,Observability in Hybrid Multi-Cloud Environment ,https://dzone.com/articles/observability-in-hybrid-multi-cloud-environment,Blog
+9,Introduction to iDaas,https://dzone.com/articles/intelligent-data-as-a-service-idaas-architectural,Blog
+9,Elements of iDaas,https://dzone.com/articles/intelligent-data-as-a-service-idaas-common-archite,Blog
+9,iDaas Data Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-a,Blog
+9,HL7 and FHIR Integration,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-hl7-an,Blog
+9,Knowledge and Insight Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-i,Blog
+11,Near Zero Downtime Maintenance,https://www.redhat.com/en/blog/near-zero-downtime-maintenance-rhel-sap-solutions,Blog
 17,Self-healing infrastructure with Red Hat Insights and Ansible Automation Platform,https://www.redhat.com/en/blog/self-healing-infrastructure-red-hat-insights-and-ansible-automation-platform,Blog
-21,Building an adaptable 5G Core on an open source container platform,https://www.redhat.com/en/blog/building-adaptable-5g-core-open-source-container-platform,Blog
+21,Building an Adaptable 5G Core on an Open Source Container Platform,https://www.redhat.com/en/blog/building-adaptable-5g-core-open-source-container-platform,Blog
 18,Smart Management for SAP,https://www.redhat.com/en/blog/red-hat-smart-management-sap,Blog
