@@ -47,13 +47,13 @@ class PACatalog extends React.Component {
                 {
                   tempdisplay.map( item =>
                   <GalleryItem key={item.ppid}>
-                    <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Card isHoverable key={item.ppid} isCompact={true} >
+                   <Card isHoverable={false} key={item.ppid} isCompact={true} >
                       <CardHeader>
                         <CardHeaderMain>
-                        <Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" style={{ width: '500px' }} />
+                        <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" style={{ width: '500px' }} /></Link>
                         </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle>{item.Heading}</CardTitle>
+                      <Link to={DETAIL_URL+'?ppid='+item.ppid} ><CardTitle>{item.Heading}</CardTitle></Link>
                       <CardBody>{item.Summary}</CardBody>
                       <CardFooter>
                         <LabelGroup numLabels={20}>
@@ -71,7 +71,7 @@ class PACatalog extends React.Component {
                               )}
                               </LabelGroup>
                         </CardFooter>
-                    </Card></Link>
+                    </Card>
                   </GalleryItem>
                 )}
           </Gallery>
