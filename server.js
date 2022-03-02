@@ -41,10 +41,13 @@ app.use(
 );
 
 app.use(
-  "/osspa",
+  "/architect/portfolio/osspa",
   createProxyMiddleware({
     target: "https://gitlab.com/",
-    changeOrigin: true
+    changeOrigin: true,
+    pathRewrite: {
+      '^/architect/portfolio/osspa':'https://gitlab.com/osspa' 
+    }
   })
 );
 
@@ -79,9 +82,30 @@ app.use(
     }
   })
 );
+app.use(
+  "/architect/images/logical-diagrams",
+  createProxyMiddleware({
+    target: "https://gitlab.com/",
+    changeOrigin: true,
+    pathRewrite: {
+      '^/images/logical-diagrams':'osspa/osspa-content/-/raw/main/images/logical-diagrams' 
+    }
+  })
+);
 
 app.use(
   "/images/schematic-diagrams",
+  createProxyMiddleware({
+    target: "https://gitlab.com/",
+    changeOrigin: true,
+    pathRewrite: {
+      '^/images/schematic-diagrams':'osspa/osspa-content/-/raw/main/images/schematic-diagrams' 
+    }
+  })
+);
+
+app.use(
+  "/architect/images/schematic-diagrams",
   createProxyMiddleware({
     target: "https://gitlab.com/",
     changeOrigin: true,
@@ -101,6 +125,18 @@ app.use(
     }
   })
 );
+
+app.use(
+  "/architect/images/detail-diagrams",
+  createProxyMiddleware({
+    target: "https://gitlab.com/",
+    changeOrigin: true,
+    pathRewrite: {
+      '^/images/detail-diagrams':'osspa/osspa-content/-/raw/main/images/detail-diagrams' 
+    }
+  })
+);
+
 
 
 app.listen(PORT, () => console.log('Portfolio Public Site listening on port 8081!'))

@@ -14,8 +14,8 @@ import {
   Avatar
 
 } from '@patternfly/react-core';
-import rhlogo from '@app/bgimages/logo_redhat.png';
-import palogo from '@app/bgimages/palogo.png';
+
+
 interface IAppLayout {
   children: React.ReactNode;
 }
@@ -45,14 +45,14 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
       history.push('/');
     }
     return (
-      <img src={rhlogo} width="200" height="60" onClick={handleClick} alt="Red Hat Logo" />
+      <img src="/architect/portfolio/images/logo_redhat.png" width="200" height="60" onClick={handleClick} alt="Red Hat Logo" />
      
     );
   }
 
   const headerTools = (
     <PageHeaderTools>
-      <img src={palogo} width="150" height="50" alt="Red Hat Logo" />
+      <img src="/architect/portfolio/images/palogo.png" width="150" height="50" alt="Red Hat Logo" />
     </PageHeaderTools>
   );
 
@@ -66,13 +66,13 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
             <a href="/">Portfolio Architecture</a>
           </NavItem>
           <NavItem key={1} itemId={1} isActive={false}  href="/">
-            <a href="/contribute">Learn More</a>
+            <a href="/architect/portfolio/contribute">Learn More</a>
           </NavItem>
           <NavItem key={2} itemId={2} isActive={false}  onClick={openToolWindow}>
             Our Tool
           </NavItem>
           <NavItem key={1} itemId={3} isActive={false}  href="/">
-            <a href="/contribute#_contribute">Contribute</a>
+            <a href="/architect/portfolio/contribute#_contribute">Contribute</a>
           </NavItem>
           <NavItem key={1} itemId={3} isActive={false}  onClick={openArchitectWindow}>
             Enable Architect

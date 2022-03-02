@@ -23,6 +23,7 @@ const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106
 
 
 class ArchitectureList extends React.Component {
+ 
   
   scrollTo(hash) {
     location.hash = "#" + hash;
@@ -72,7 +73,7 @@ class ArchitectureList extends React.Component {
                 <PageSection className="banner" >
                   <table>
                     <tr>
-                      <td width="50%"><img src="/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
+                      <td width="50%"><img src="/architect/portfolio/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
                       <td width="50%">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
                     </tr>
                   </table>

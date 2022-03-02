@@ -52,16 +52,16 @@ class Contribute extends React.Component {
                       <Tbody>
                           
                             <Tr>
-                              <Td><a href="/contribute#_buildingPA">What is Portfolio Architecture</a></Td>
+                              <Td><a href="/architect/portfolio/contribute#_buildingPA">What is Portfolio Architecture</a></Td>
                             </Tr>
                             <Tr>
-                              <Td><a href="/contribute#_paprocess">Portfolio Architecture Process</a></Td>
+                              <Td><a href="/architect/portfolio/contribute#_paprocess">Portfolio Architecture Process</a></Td>
                             </Tr>
                             <Tr>
-                              <Td><a href="/contribute#_gettingstartedPA">Getting Started</a></Td>
+                              <Td><a href="/architect/portfolio/contribute#_gettingstartedPA">Getting Started</a></Td>
                             </Tr>
                             <Tr>
-                              <Td><a href="/contribute#_contribute">Contribute</a></Td>
+                              <Td><a href="/architect/portfolio/contribute#_contribute">Contribute</a></Td>
                             </Tr>
                           
                         
@@ -77,7 +77,7 @@ class Contribute extends React.Component {
                   <table >
                     <tr>
                       <td width="50%">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
-                      <td width="50%"><img src="/images/contribute_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
+                      <td width="50%"><img src="/architect/portfolio/images/contribute_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
                     </tr>
                   </table>
             </GridItem>
@@ -88,7 +88,7 @@ class Contribute extends React.Component {
                   <Card isCompact={true}>
                       <CardHeader>
                             <CardHeaderMain>
-                              <Brand className="contributecardimage" src="/images/pa-overview-evidence.png" alt="Card Image" />
+                              <Brand className="contributecardimage" src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle">Evidence based architectures reference</CardTitle>
@@ -99,7 +99,7 @@ class Contribute extends React.Component {
                   <Card isCompact={true}>
                       <CardHeader>
                             <CardHeaderMain>
-                              <Brand className="contributecardimage" src="/images/pa-overview-best-pattern.png" alt="Card Image" />
+                              <Brand className="contributecardimage" src="/architect/portfolio/images/pa-overview-best-pattern.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle">Combination of best practices and patterns</CardTitle>
@@ -110,7 +110,7 @@ class Contribute extends React.Component {
                   <Card isCompact={true}>
                       <CardHeader>
                             <CardHeaderMain>
-                              <Brand className="contributecardimage" src="/images/pa-overview-tools.png" alt="Card Image" />
+                              <Brand className="contributecardimage" src="/architect/portfolio/images/pa-overview-tools.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle">Tools to architect</CardTitle>
@@ -124,7 +124,7 @@ class Contribute extends React.Component {
               <h2>Portfolio Architecture Process</h2>
               <Card isRounded={true} >
                 <CardBody>
-                  <img src="/images/pa-process.png"/>
+                  <img src="/architect/portfolio/images/pa-process.png"/>
                 </CardBody>
               </Card>
               <br/>
@@ -137,7 +137,7 @@ class Contribute extends React.Component {
                   <Card isCompact={true}>
                       <CardHeader>
                             <CardHeaderMain>
-                              <Brand className="contributecardimage" src="/images/contribute_workshop.png" alt="Card Image" />
+                              <Brand className="contributecardimage" src="/architect/portfolio/images/contribute_workshop.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"> <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-template">Getting Started Workshop</a></CardTitle>
@@ -148,7 +148,7 @@ class Contribute extends React.Component {
                   <Card isCompact={true}>
                       <CardHeader>
                             <CardHeaderMain>
-                              <Brand className="contributecardimage" src="/images/contribute_tools.png" alt="Card Image" />
+                              <Brand className="contributecardimage" src="/architect/portfolio/images/contribute_tools.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"><a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-workshops/#/">Diagram Tooling Workshop</a></CardTitle>
@@ -159,7 +159,7 @@ class Contribute extends React.Component {
                   <Card isCompact={true}>
                       <CardHeader>
                             <CardHeaderMain>
-                              <Brand className="contributecardimage" src="/images/contribute_repo.png" alt="Card Image" />
+                              <Brand className="contributecardimage" src="/architect/portfolio/images/contribute_repo.png" alt="Card Image" />
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"><a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples">Browse Example Repository</a></CardTitle>

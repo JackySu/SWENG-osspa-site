@@ -40,7 +40,7 @@ module.exports = env => {
             options: {
               // Limit at 50k. larger files emited into separate files
               limit: 5000,
-              outputPath: 'fonts',
+              outputPath: 'architect/portfolio/fonts',
               name: '[name].[ext]',
             }
           }
@@ -53,7 +53,7 @@ module.exports = env => {
               loader: 'url-loader',
               options: {
                 limit: 5000,
-                outputPath: 'svgs',
+                outputPath: 'architect/portfolio/svgs',
                 name: '[name].[ext]',
               }
             }

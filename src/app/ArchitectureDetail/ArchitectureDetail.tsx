@@ -156,10 +156,10 @@ class ArchitectureDetail extends React.Component {
 
     if(""==docname || null==docname){
       alert("Portfolio Architecture Not Found!")
-      window.location.replace("/");
+      window.location.replace("/architect/portfolio");
     }
     
-    fetch("/osspa/osspa-content/-/raw/main/"+docname,{
+    fetch("/architect/portfolio/osspa/osspa-content/-/raw/main/"+docname,{
       headers : { 
           method: "get",
           'Accept': 'text/asciidoc'
@@ -170,7 +170,7 @@ class ArchitectureDetail extends React.Component {
           return response.text(); 
         else{
           alert("Detail Document unavalible!")
-          window.location.replace("/");
+          window.location.replace("/architect/portfolio");
         }
       })
       
