@@ -89,7 +89,7 @@ class ArchitectureList extends React.Component {
             </Grid>
             
           </SelectedListProvider>
-          <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => this.scrollTo("_top")} />
+          <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => {this.scrollTo("_top"); location.reload();}} />
           <Footer/>
           
         </Page>
