@@ -25,6 +25,9 @@ const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106
 class ArchitectureList extends React.Component {
  
   
+  
+ 
+  
   scrollTo(hash) {
     location.hash = "#" + hash;
   }
@@ -34,17 +37,63 @@ class ArchitectureList extends React.Component {
     this.state = {
       isDropdownOpen: false,
       isKebabDropdownOpen: false,
-      activeItem: 0
+      activeItem: 0,
+      isMobileView: false
     };
     
   }
 
   render() {
+    const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
+      console.log("mobileView:==>"+props.mobileView);
+      this.setState({ isMobileView: props.mobileView });
     
+    };
     
     const pageId = 'main-content-page-layout-tertiary-nav';
     const PageSkipToContent = <SkipToContent href={`#${pageId}`}>Skip to content</SkipToContent>;
 
+    if(this.state.isMobileView === true) {
+      return (
+        <React.Fragment>
+          <Page
+          isManagedSidebar
+          skipToContent={PageSkipToContent}
+          mainContainerId={pageId}
+          onPageResize={onPageResize}
+          //additionalGroupedContent ={[headerContent,menuContent]}
+          groupProps={{
+            sticky: 'top'
+          }}
+        ></Page>
+        <SelectedListProvider>
+            <Grid >
+            
+                  <GridItem span={9} rowSpan={1}>
+                  <PageSection width="100%" >
+                    <table>
+                      <tr>
+                        <td width="100%" ><img src="/architect/portfolio/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
+                      </tr>
+                      <tr>
+                        <td width="100%" >The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
+                      </tr>
+                    </table>
+                  </PageSection>
+                  </GridItem>
+                  <GridItem span={9} rowSpan={11}>
+                    <PageSection>
+                      <PACatalog />
+                    </PageSection>
+                  </GridItem>
+              
+            </Grid>
+            
+          </SelectedListProvider>
+        </React.Fragment>
+        
+      );
+    } else{
     return (
       <React.Fragment>
         
@@ -52,6 +101,7 @@ class ArchitectureList extends React.Component {
           isManagedSidebar
           skipToContent={PageSkipToContent}
           mainContainerId={pageId}
+          onPageResize={onPageResize}
           //additionalGroupedContent ={[headerContent,menuContent]}
           groupProps={{
             sticky: 'top'
@@ -60,30 +110,30 @@ class ArchitectureList extends React.Component {
            
           <SelectedListProvider>
             <Grid >
-            <Sidebar hasGutter orientation={'split'}>
-              <SidebarPanel variant="static">
+            <Sidebar hasGutter orientation={'split'} >
+              <SidebarPanel variant="static" >
               <GridItem span={3} rowSpan={12}>
-                <PageSection className="tablepadding">
+                <PageSection className="tablepadding" id="catalog-controll">
                     <ControlledCheckbox /> 
                 </PageSection>
               </GridItem>
               </SidebarPanel>
               <SidebarContent hasNoBackground>
-              <GridItem span={9} rowSpan={1}>
-                <PageSection className="banner" >
-                  <table>
-                    <tr>
-                      <td width="50%"><img src="/architect/portfolio/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
-                      <td width="50%">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
-                    </tr>
-                  </table>
-                </PageSection>
-              </GridItem>
-                <GridItem span={9} rowSpan={11}>
-                  <PageSection>
-                    <PACatalog />
+                <GridItem span={9} rowSpan={1}>
+                  <PageSection className="banner" >
+                    <table>
+                      <tr>
+                        <td width="50%"><img src="/architect/portfolio/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
+                        <td width="50%">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
+                      </tr>
+                    </table>
                   </PageSection>
                 </GridItem>
+                  <GridItem span={9} rowSpan={11}>
+                    <PageSection>
+                      <PACatalog />
+                    </PageSection>
+                  </GridItem>
               </SidebarContent>
              </Sidebar>
             </Grid>
@@ -95,6 +145,7 @@ class ArchitectureList extends React.Component {
         </Page>
       </React.Fragment>
     );
+    }
   }
 }
 export { ArchitectureList};
