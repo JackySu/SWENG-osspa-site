@@ -301,7 +301,7 @@ class ArchitectureDetail extends React.Component {
         
         
           
-          <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => this.scrollTo("_title_top")} />
+          <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => {this.scrollTo("_title_top"); location.reload();}} />
           
           <Footer/>
         </Page>
