@@ -50,7 +50,7 @@ class PACatalog extends React.Component {
     var cardPAsize ="100%";
     if(Array.isArray(currentlist) )
       tempdisplay=currentlist;
-    if(this.state.isMobileView === true) {cardPAImagesize="450px";cardPAsize ="100%"}
+    if(this.state.isMobileView === true) {cardPAImagesize="350px";cardPAsize ="100%"}
     return (
       <React.Fragment>
         <Page
