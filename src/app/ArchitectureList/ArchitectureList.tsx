@@ -45,7 +45,7 @@ class ArchitectureList extends React.Component {
 
   render() {
     const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
-      console.log("mobileView:==>"+props.mobileView);
+      
       this.setState({ isMobileView: props.mobileView });
     
     };
@@ -69,9 +69,9 @@ class ArchitectureList extends React.Component {
         <SelectedListProvider>
             <Grid >
             
-                  <GridItem span={9} rowSpan={1}>
-                  <PageSection width="100%" >
-                    <table>
+                  <GridItem >
+                  <PageSection >
+                    <table width="100%">
                       <tr>
                         <td width="100%" ><img src="/architect/portfolio/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
                       </tr>
@@ -81,7 +81,7 @@ class ArchitectureList extends React.Component {
                     </table>
                   </PageSection>
                   </GridItem>
-                  <GridItem span={9} rowSpan={11}>
+                  <GridItem>
                     <PageSection>
                       <PACatalog />
                     </PageSection>

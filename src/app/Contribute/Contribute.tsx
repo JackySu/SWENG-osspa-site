@@ -14,22 +14,67 @@ import '@app/react-asciidoc/fedora.css';
 class Contribute extends React.Component {
   constructor(props) {
     super(props);
-    
+    this.state = {
+      isMobileView: false
+    };
     
   }
   
   
 
   render() {
+    const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
+      this.setState({ isMobileView: props.mobileView });
+    };
+
     const pageId = 'main-content-page-layout-tertiary-nav';
     const PageSkipToContent = <SkipToContent href={`#${pageId}`}>Skip to content</SkipToContent>;
+    var sidebarPanel = <SidebarPanel variant="sticky">
+    <GridItem span={3} rowSpan={12}>
+    
+      <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
+                <Thead>
+                <Tr>
+                  <Th colSpan="2" >Jump to Sections</Th>
+                </Tr>
+                </Thead>
+               
+                <Tbody>
+                    
+                      <Tr>
+                        <Td><a href="/architect/portfolio/contribute#_buildingPA">What is Portfolio Architecture</a></Td>
+                      </Tr>
+                      <Tr>
+                        <Td><a href="/architect/portfolio/contribute#_paprocess">Portfolio Architecture Process</a></Td>
+                      </Tr>
+                      <Tr>
+                        <Td><a href="/architect/portfolio/contribute#_gettingstartedPA">Getting Started</a></Td>
+                      </Tr>
+                      <Tr>
+                        <Td><a href="/architect/portfolio/contribute#_contribute">Contribute</a></Td>
+                      </Tr>
+                    
+                  
+                </Tbody>
+    
+      </TableComposable>
+      
+    </GridItem>
+    </SidebarPanel>
+
+    var contentGridItemSpan=9; 
+    if(this.state.isMobileView === true) {
+      sidebarPanel=<div></div>
+      contentGridItemSpan=12;
+    }
+
     return  <React.Fragment>
         
         <Page
           isManagedSidebar
           skipToContent={PageSkipToContent}
           mainContainerId={pageId}
-          //additionalGroupedContent ={[headerContent,menuContent]}
+          onPageResize={onPageResize}
           groupProps={{
             sticky: 'top'
           }}
@@ -39,38 +84,7 @@ class Contribute extends React.Component {
         
         <Grid>
           <Sidebar hasGutter orientation={'split'}>
-          <SidebarPanel variant="sticky">
-          <GridItem span={3} rowSpan={12}>
-          
-            <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
-                      <Thead>
-                      <Tr>
-                        <Th colSpan="2" >Jump to Sections</Th>
-                      </Tr>
-                      </Thead>
-                     
-                      <Tbody>
-                          
-                            <Tr>
-                              <Td><a href="/architect/portfolio/contribute#_buildingPA">What is Portfolio Architecture</a></Td>
-                            </Tr>
-                            <Tr>
-                              <Td><a href="/architect/portfolio/contribute#_paprocess">Portfolio Architecture Process</a></Td>
-                            </Tr>
-                            <Tr>
-                              <Td><a href="/architect/portfolio/contribute#_gettingstartedPA">Getting Started</a></Td>
-                            </Tr>
-                            <Tr>
-                              <Td><a href="/architect/portfolio/contribute#_contribute">Contribute</a></Td>
-                            </Tr>
-                          
-                        
-                      </Tbody>
-          
-            </TableComposable>
-            
-          </GridItem>
-          </SidebarPanel>
+          {sidebarPanel}
           <SidebarContent hasNoBackground>
             <GridItem span={9} rowSpan={1} id="_topbanner">
               
@@ -81,7 +95,7 @@ class Contribute extends React.Component {
                     </tr>
                   </table>
             </GridItem>
-            <GridItem span={9} rowSpan={3} id="_buildingPA">
+            <GridItem span={contentGridItemSpan} rowSpan={3} id="_buildingPA">
               <h2>What is Portfolio Architecture ?</h2>
               <Grid hasGutter >
                 <GridItem span={4}>
@@ -119,7 +133,7 @@ class Contribute extends React.Component {
                 </GridItem>
               </Grid>
             </GridItem>
-            <GridItem span={9} rowSpan={1} id="_paprocess">
+            <GridItem span={contentGridItemSpan} rowSpan={1} id="_paprocess">
               <br/>
               <h2>Portfolio Architecture Process</h2>
               <Card isRounded={true} >
@@ -129,7 +143,7 @@ class Contribute extends React.Component {
               </Card>
               <br/>
             </GridItem>
-            <GridItem span={9} rowSpan={3} id="_gettingstartedPA">
+            <GridItem span={contentGridItemSpan} rowSpan={3} id="_gettingstartedPA">
               <h2>Getting Started with Portfolio Architectures</h2>
 
               <Grid hasGutter >
@@ -168,7 +182,7 @@ class Contribute extends React.Component {
                 </GridItem>
               </Grid>
             </GridItem>
-            <GridItem span={9} rowSpan={1} id="_contribute">
+            <GridItem span={contentGridItemSpan} rowSpan={1} id="_contribute">
               <br/>
               <h2>Contribute to Portfolio Architecture</h2>
               

@@ -125,7 +125,8 @@ class ArchitectureDetail extends React.Component {
       isDropdownOpen: false,
       isKebabDropdownOpen: false,
       activeItem: 0,
-      data: 'Loading....'
+      data: 'Loading....',
+      isMobileView: false
     };
     props.history.listen(location=>{
       this.setState(location)
@@ -186,9 +187,16 @@ class ArchitectureDetail extends React.Component {
     
     
   }
+  
+
+  
 
   render() {
-      
+    const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
+      console.log("mobileView:==>"+props.mobileView);
+      this.setState({ isMobileView: props.mobileView });
+    
+    };
     
     var currentLocation = window.location;
     
@@ -209,42 +217,20 @@ class ArchitectureDetail extends React.Component {
       productdisplaylist=this.usedproductarray;
       
     }
-
-    return (
-
-      <React.Fragment>
-        
-        <Page
-          isManagedSidebar
-          skipToContent={PageSkipToContent}
-          mainContainerId={pageId}
-          //additionalGroupedContent={headerContent}
-          groupProps={{
-            sticky: 'top'
-          }}
-        >
-          
-          
-
-          <Grid >
-              <Sidebar hasGutter orientation={'split'}>
-              <SidebarPanel variant="static">
-              <GridItem span={3} rowSpan={12}>
+    var lefttable = 
               <PageSection className="tablepadding">
-                  <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
+                  <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
                       <Thead>
                       <Tr>
-                        <Th colSpan="2" >Resources</Th>
+                        <Th>Resources</Th>
                       </Tr>
                       </Thead>
                       
                       <Tbody>
                           { tempdisplay.map( item =>
                             <Tr>
-                              <Td>
-                                  {this.iconfinder(item.type)}
-                              </Td>
-                              <Td>
+                              
+                              <Td> {this.iconfinder(item.type)}&nbsp;&nbsp;
                               <a onClick={event => window.open(item.url)}>{item.description}<ExternalLinkSquareAltIcon/></a>
                               </Td>
                             </Tr>
@@ -255,14 +241,14 @@ class ArchitectureDetail extends React.Component {
 
                       <Thead>
                       <Tr>
-                        <Th colSpan="2">Products</Th>
+                        <Th >Products</Th>
                       </Tr>
                       </Thead>
                      
                       <Tbody>
                         { productdisplaylist.map( item =>
                             <Tr>
-                              <Td colSpan="2" >
+                              <Td>
                               <a onClick={event => window.open(item.plink)}>{item.pname}<ExternalLinkSquareAltIcon/></a>
                               </Td>
                             </Tr>
@@ -271,12 +257,44 @@ class ArchitectureDetail extends React.Component {
                       </Tbody>
                       
                   </TableComposable>
-          
+                  <br/><br/>
                 </PageSection>
-              </GridItem>
-              </SidebarPanel>
+     var leftmenu = <SidebarPanel variant="static">
+                      <GridItem span="3" rowSpan={12}>
+                        {lefttable}
+                      </GridItem>
+                    </SidebarPanel>
+     var lowMenu =<PageSection></PageSection>           
+    var contentGridItemSpan=9; 
+    if(this.state.isMobileView === true) {
+      lowMenu=lefttable;
+      leftmenu=<PageSection></PageSection>;
+      contentGridItemSpan=12;
+    }
+    
+    
+
+    return (
+
+      <React.Fragment>
+        
+        <Page
+          isManagedSidebar
+          skipToContent={PageSkipToContent}
+          mainContainerId={pageId}
+          onPageResize={onPageResize}
+          groupProps={{
+            sticky: 'top'
+          }}
+        >
+          
+          
+
+          <Grid >
+              <Sidebar hasGutter orientation={'split'}>
+              {leftmenu}
               <SidebarContent hasNoBackground>
-              <GridItem span={9} rowSpan={1}>
+              <GridItem span={contentGridItemSpan} rowSpan={1}>
                 <PageSection className="banner" >
                     <Breadcrumb> 
                       <BreadcrumbItem to="#">Portfolio Architecture</BreadcrumbItem>
@@ -287,12 +305,15 @@ class ArchitectureDetail extends React.Component {
                     <Title headingLevel="h1" id="_title_top">{title}</Title>
                 </PageSection>
               </GridItem>
-                <GridItem span={9} rowSpan={11}>
+                <GridItem span={contentGridItemSpan} rowSpan={11}>
                 <PageSection>
                   
                 
                   <Asciidoc>{this.state.data}</Asciidoc>
                 </PageSection>
+                </GridItem>
+                <GridItem>
+                  {lowMenu}
                 </GridItem>
               </SidebarContent>
              </Sidebar>

@@ -13,7 +13,7 @@ import {
   LabelGroup,
   Gallery,
   GalleryItem,
-  PageGroup,
+  Page,
   Label
 } from '@patternfly/react-core';
 import { Link } from "react-router-dom";
@@ -30,27 +30,40 @@ class PACatalog extends React.Component {
   
   constructor(props) {
     super(props);
+    this.state = {
+      isMobileView: false
+    };
   }
   
 
   render() {
     
     const {currentlist, selectedProduct, selectedSolution,selectedVertical} = this.context;
+    const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
+      this.setState({ isMobileView: props.mobileView });
     
+    };
+    
+
     var tempdisplay;
+    var cardPAImagesize ="500px";
+    var cardPAsize ="100%";
     if(Array.isArray(currentlist) )
       tempdisplay=currentlist;
-    
+    if(this.state.isMobileView === true) {cardPAImagesize="450px";cardPAsize ="100%"}
     return (
       <React.Fragment>
-         <Gallery hasGutter>
+        <Page
+          onPageResize={onPageResize}
+        >
+         <Gallery hasGutter >
                 {
                   tempdisplay.map( item =>
                   <GalleryItem key={item.ppid}>
-                   <Card isHoverable={false} key={item.ppid} isCompact={true} >
+                   <Card isHoverable={false} key={item.ppid} isCompact={true} width={cardPAsize} >
                       <CardHeader>
                         <CardHeaderMain>
-                        <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" style={{ width: '500px' }} /></Link>
+                        <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" width={cardPAImagesize} /></Link>
                         </CardHeaderMain>
                       </CardHeader>
                       <Link to={DETAIL_URL+'?ppid='+item.ppid} ><CardTitle>{item.Heading}</CardTitle></Link>
@@ -75,6 +88,7 @@ class PACatalog extends React.Component {
                   </GalleryItem>
                 )}
           </Gallery>
+          </Page>
       </React.Fragment>
     );
   }
