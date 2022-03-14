@@ -68,7 +68,7 @@ class ArchitectureList extends React.Component {
           }}
         >
         
-        <Banner variant="danger">Portfolio Architecture<br/><br/></Banner>
+        <Banner variant="danger">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</Banner>
         <SelectedListProvider>
             <Grid >
             
@@ -99,7 +99,7 @@ class ArchitectureList extends React.Component {
             sticky: 'top'
           }}
         >
-          <Banner variant="danger">Banner Placeholder<br/><br/><br/><br/></Banner>
+          <Banner variant="danger">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.<br/><br/><br/><br/></Banner>
           <SelectedListProvider>
             <Grid >
             <Sidebar hasGutter orientation={'split'} >
