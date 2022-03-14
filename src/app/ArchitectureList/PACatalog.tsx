@@ -31,7 +31,8 @@ class PACatalog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobileView: false
+      isMobileView: false,
+      windowSize: 0
     };
   }
   
@@ -40,7 +41,8 @@ class PACatalog extends React.Component {
     
     const {currentlist, selectedProduct, selectedSolution,selectedVertical} = this.context;
     const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
-      this.setState({ isMobileView: props.mobileView });
+      console.log("windowSize-->"+props.windowSize);
+      this.setState({ isMobileView: props.mobileView, windowSize: props.windowSize });
     
     };
     
@@ -50,7 +52,10 @@ class PACatalog extends React.Component {
     var cardPAsize ="100%";
     if(Array.isArray(currentlist) )
       tempdisplay=currentlist;
-    if(this.state.isMobileView === true) {cardPAImagesize="100%";cardPAsize ="100%"}
+    if(this.state.isMobileView === true) {
+      cardPAImagesize=(this.state.windowSize-30)+"px";
+      cardPAsize ="100%"
+    }
     return (
       <React.Fragment>
         <Page
