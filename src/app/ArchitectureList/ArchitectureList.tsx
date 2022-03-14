@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ExclamationTriangleIcon } from '@patternfly/react-icons';
 import {
+  Banner,
   Page,
   PageSection,
   BackToTop,
@@ -65,22 +66,12 @@ class ArchitectureList extends React.Component {
           groupProps={{
             sticky: 'top'
           }}
-        ></Page>
+        >
+        
+        <Banner variant="danger">Portfolio Architecture<br/><br/></Banner>
         <SelectedListProvider>
             <Grid >
             
-                  <GridItem >
-                  <PageSection >
-                    <table width="100%">
-                      <tr>
-                        <td width="100%" ><img src="/architect/portfolio/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
-                      </tr>
-                      <tr>
-                        <td width="100%" >The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
-                      </tr>
-                    </table>
-                  </PageSection>
-                  </GridItem>
                   <GridItem>
                     <PageSection>
                       <PACatalog />
@@ -90,6 +81,7 @@ class ArchitectureList extends React.Component {
             </Grid>
             
           </SelectedListProvider>
+          </Page>
         </React.Fragment>
         
       );
@@ -107,7 +99,7 @@ class ArchitectureList extends React.Component {
             sticky: 'top'
           }}
         >
-           
+          <Banner variant="danger">Banner Placeholder<br/><br/><br/><br/></Banner>
           <SelectedListProvider>
             <Grid >
             <Sidebar hasGutter orientation={'split'} >
@@ -120,14 +112,7 @@ class ArchitectureList extends React.Component {
               </SidebarPanel>
               <SidebarContent hasNoBackground>
                 <GridItem span={9} rowSpan={1}>
-                  <PageSection className="banner" >
-                    <table>
-                      <tr>
-                        <td width="50%"><img src="/architect/portfolio/images/list_banner_half.png" alt="Banner Logo" width="100%" height="100%" id="_top"/></td>
-                        <td width="50%">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</td>
-                      </tr>
-                    </table>
-                  </PageSection>
+                  
                 </GridItem>
                   <GridItem span={9} rowSpan={11}>
                     <PageSection>
