@@ -197,3 +197,16 @@ section.banner{
     padding-bottom: 1.5rem !important;
     padding-top: 1.5rem !important;
 }
+
+span.middle_content {
+    padding-right: 1em;
+}
+span.banner_link_learn_more{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.pf-c-divider {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}

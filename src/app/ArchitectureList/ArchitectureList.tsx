@@ -11,13 +11,17 @@ import {
   SidebarPanel,
   Grid,
   GridItem
+
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
+
 
 import { ControlledCheckbox } from '@app/ArchitectureList/ControlledCheckbox';
 import { PACatalog } from '@app/ArchitectureList/PACatalog';
 import { Footer } from '@app/AppLayout/Footer';
+import PABanner from '@app/ArchitectureList/PABanner';
 import SelectedListProvider from './SelectedList';
+
 const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
 const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
 
@@ -68,11 +72,11 @@ class ArchitectureList extends React.Component {
           }}
         >
         
-        <Banner variant="danger">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.</Banner>
+        <PABanner/>
         <SelectedListProvider>
             <Grid >
-            
-                  <GridItem>
+               
+                  <GridItem span={9} rowSpan={11}>
                     <PageSection>
                       <PACatalog />
                     </PageSection>
@@ -99,7 +103,8 @@ class ArchitectureList extends React.Component {
             sticky: 'top'
           }}
         >
-          <Banner variant="danger">The Red Hat Portfolio Architecture center showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.<br/><br/><br/><br/></Banner>
+          <PABanner/>
+          
           <SelectedListProvider>
             <Grid >
             <Sidebar hasGutter orientation={'split'} >
@@ -112,7 +117,7 @@ class ArchitectureList extends React.Component {
               </SidebarPanel>
               <SidebarContent hasNoBackground>
                 <GridItem span={9} rowSpan={1}>
-                  
+                
                 </GridItem>
                   <GridItem span={9} rowSpan={11}>
                     <PageSection>
