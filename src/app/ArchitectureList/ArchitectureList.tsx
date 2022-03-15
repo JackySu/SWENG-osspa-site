@@ -76,7 +76,7 @@ class ArchitectureList extends React.Component {
         <SelectedListProvider>
             <Grid >
                
-                  <GridItem span={9} rowSpan={11}>
+                  <GridItem>
                     <PageSection>
                       <PACatalog />
                     </PageSection>

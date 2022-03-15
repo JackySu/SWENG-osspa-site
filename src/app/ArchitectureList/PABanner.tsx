@@ -9,24 +9,45 @@ import {
   Button,
   Text,
   TextVariants,
-  Divider
+  Divider,
+  Page
 
 } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 
 class PABanner extends React.Component{
 
+  
   constructor(props) {
     super(props);
-    
+    this.state = {
+      isMobileView: false
+    };
    
 }
 
 
 
 render(){
+  const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
+    this.setState({ isMobileView: props.mobileView});
+  
+  };
+  var learnMoreButton=<span class="banner_link_learn_more">
+      <Button variant="link">
+        Learn More <ArrowRightIcon />
+      </Button>
+      </span>;
+      if(this.state.isMobileView === true) {
+        learnMoreButton=<div></div>
+        
+      }
     
     return(
+      <React.Fragment>
+        <Page
+          onPageResize={onPageResize}
+        >
       <Masthead id="light-masthead" backgroundColor="light">
       <MastheadMain>
         <MastheadBrand>Logo Placeholder</MastheadBrand>
@@ -39,13 +60,11 @@ render(){
           <Text component={TextVariants.h6}>PA Article ONE @Enable ARchitect</Text>
           <br/>
         </span>
-        <span class="banner_link_learn_more">
-        <Button variant="link">
-          Learn More <ArrowRightIcon />
-        </Button>
-        </span>
+        {learnMoreButton}
       </MastheadContent>
     </Masthead>
+    </Page>
+    </React.Fragment>
     );
 }
 
