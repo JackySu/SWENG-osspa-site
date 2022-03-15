@@ -97,7 +97,7 @@ class Contribute extends React.Component {
                   
             <PageSection>
               <h2>What is Portfolio Architecture ?</h2>
-              <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '300px', '2xl': '600px' }}>
+              <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }}>
                 <GalleryItem key="one" >
                   <Card isHoverable={false} key="xx" isCompact>
                       <CardHeader>
@@ -144,7 +144,7 @@ class Contribute extends React.Component {
                   </Card>
                 <br/>
                 <br/>
-              <Gallery hasGutter minWidths={{sm:'100px',  md: '200px', lg: '300px', '2xl': '600px' }}>
+                <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }}>
                 <GalleryItem key="one">
                   <Card isCompact={true}>
                       <CardHeader>
@@ -205,7 +205,7 @@ class Contribute extends React.Component {
                 <br/>
 
 
-              <Gallery hasGutter minWidths={{sm:'100px', md: '200px', lg: '300px', '2xl': '600px' }}>
+                <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }}>
                 <GalleryItem key="one">
                   <Card isCompact={true}>
                       <CardHeader>
