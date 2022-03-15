@@ -11,9 +11,10 @@ import {
   TextVariants,
   Divider,
   Page
-
 } from '@patternfly/react-core';
+import { Link } from "react-router-dom";
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
+
 
 class PABanner extends React.Component{
 
@@ -57,7 +58,7 @@ render(){
           <Text component={TextVariants.h2}>Red Hat Portfolio Architecture Center</Text>
           {" "}Showcases successful customer deployments of our open source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.
           <Divider component="div"/>
-          <Text component={TextVariants.h6}>PA Article ONE @Enable ARchitect</Text>
+          <a href="https://www.redhat.com/architect/ai-edge-microshift" target="_blank"><Text component={TextVariants.h6}>NEW POST: How MicroShift and Kubernetes help manage edge devices at scale</Text></a>
           <br/>
         </span>
         {learnMoreButton}
