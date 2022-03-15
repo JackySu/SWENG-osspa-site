@@ -210,3 +210,11 @@ span.banner_link_learn_more{
     padding-bottom: 1em;
     padding-top: 1em;
 }
+
+ol.olist.arabic{
+    padding-top: 1em;
+}
+
+div.ulist{
+    padding-top: 1em;
+}
