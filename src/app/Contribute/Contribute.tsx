@@ -66,7 +66,7 @@ class Contribute extends React.Component {
     var imagesize = (Math.round((this.state.windowSize-250)/3)-200);
     if(this.state.isMobileView === true) {
       sidebarPanel=<div></div>
-      imagesize=this.state.windowSize-100;
+      imagesize=this.state.windowSize-300;
     }
 
     
@@ -97,7 +97,7 @@ class Contribute extends React.Component {
                   
             <PageSection>
               <h2>What is Portfolio Architecture ?</h2>
-              <Gallery  hasGutter minWidths={{ md: '200px', lg: '300px', '2xl': '400px' }}>
+              <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '300px', '2xl': '600px' }}>
                 <GalleryItem key="one" >
                   <Card isHoverable={false} key="xx" isCompact>
                       <CardHeader>
@@ -144,7 +144,7 @@ class Contribute extends React.Component {
                   </Card>
                 <br/>
                 <br/>
-              <Gallery hasGutter minWidths={{ md: '200px', lg: '300px', '2xl': '400px' }}>
+              <Gallery hasGutter minWidths={{sm:'100px',  md: '200px', lg: '300px', '2xl': '600px' }}>
                 <GalleryItem key="one">
                   <Card isCompact={true}>
                       <CardHeader>
@@ -205,7 +205,7 @@ class Contribute extends React.Component {
                 <br/>
 
 
-              <Gallery hasGutter minWidths={{ md: '200px', lg: '300px', '2xl': '400px' }}>
+              <Gallery hasGutter minWidths={{sm:'100px', md: '200px', lg: '300px', '2xl': '600px' }}>
                 <GalleryItem key="one">
                   <Card isCompact={true}>
                       <CardHeader>
