@@ -135,21 +135,16 @@ div.paragraph {
     margin-left: auto;
     margin-right: auto;
 }
-
-.contributecardtitle{
+.pf-c-card__header{
     display: block;
-    color: black;
-    font-size: 1.15em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contributecardtitle{
     text-align: center;
 }
 
-.contributecardfooter{
-    display: block;
-    color: black;
-    font-size: 1em;
+.contributecardbody{
     text-align: center;
 }
 
