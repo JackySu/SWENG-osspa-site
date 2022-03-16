@@ -13,15 +13,14 @@ import {
 
 } from '@patternfly/react-core';
 
-import { useExternalScript } from "../utils/useExternalScript";
 
 interface IAppLayout {
   children: React.ReactNode;
 }
 
 const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
-  const externalScript = "https://www.redhat.com/ma/dpal.js";
-  const state = useExternalScript(externalScript);
+  //var externalScript = "https://www.redhat.com/ma/dpal-staging.js";
+  //const js_state = useExternalScript(externalScript);
 
   const [isMobileView, setIsMobileView] = React.useState(true);
 
@@ -121,20 +120,23 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
     if (document.createEvent && document.body.dispatchEvent) {
       var myEvent = document.createEvent('Event');
       myEvent.initEvent(evt, true, true); //can bubble, and is cancellable
+      
       document.body.dispatchEvent(myEvent);
+      console.log("New Event dispatched:["+myEvent+"]");
       //@ts-ignore
     } else if (window.CustomEvent && document.body.dispatchEvent) {
       //@ts-ignore
-        var event = new CustomEvent(evt,
-          { bubbles: true, cancelable: true }
-        );
-        document.body.dispatchEvent(event);
-      }
+      var event = new CustomEvent(evt,
+        { bubbles: true, cancelable: true }
+      );
+        
+      document.body.dispatchEvent(event);
+      console.log("CustomEvent dispatched:["+event+"]");
     }
+  }
 
     useEffect(() => {
       // Call sendCustomEvent function when a new page is loaded:
-      console.log("Call sendCustomEvent function when a new page is loaded:["+location.pathname+"] key:["+location.key+"] hash:["+location.hash+"]");
       sendCustomEvent("pageBottom");
     }, [location]);
   

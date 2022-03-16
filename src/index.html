@@ -2,13 +2,23 @@
 <html lang="en-US">
 
 <head>
+  <script>
+    var dpal_script = document.createElement("script");
+    dpal_script.type = "text/javascript";
+    dpal_script.id = "dpal";
+    if(window.location.hostname === "www.redhat.com") {
+      dpal_script.src = "https://www.redhat.com/ma/dpal.js";
+      
+    } else {
+      dpal_script.src = "https://www.redhat.com/ma/dpal-staging.js";
+    }
+    document.head.append(dpal_script);
+  </script>
   <meta charset="utf-8">
   <title>OSSPA - Red Hat Open Source Software Portfolio Architecture</title>
   <meta id="appName" name="application-name" content="Red Hat OSS Portfolio Architecture">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/architect/portfolio/images/favicon.png">
-  
-
   <base href="/architect/portfolio">
 </head>
 
