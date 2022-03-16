@@ -25,6 +25,8 @@ export default class Footer extends React.PureComponent {
                 © 2021 Red Hat, Inc.        <a href="https://www.redhat.com/en/about/privacy-policy">Privacy statement</a>        |        <a href="https://www.redhat.com/en/about/terms-use">Terms of use</a>        |        <a href="https://www.redhat.com/en/about/all-policies-guidelines">All policies and guidelines</a>        |        <a href="https://www.redhat.com/en/about/digital-accessibility">Digital accessibility</a>
                 <br/>
                 </Text>
+
+                
             </PageSection>
             
         );

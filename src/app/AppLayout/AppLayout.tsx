@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { NavLink, useLocation, useHistory } from 'react-router-dom';
+import { useEffect } from 'react';
+import { RouteComponentProps, useLocation, useHistory } from 'react-router-dom';
 import {
   
   Page,
@@ -8,22 +9,22 @@ import {
   NavList,
   NavItem,
   SkipToContent,
-  PageHeaderTools,
-  PageHeaderToolsGroup,
-  PageHeaderToolsItem,
-  Avatar
+  PageHeaderTools
 
 } from '@patternfly/react-core';
 
+import { useExternalScript } from "../utils/useExternalScript";
 
 interface IAppLayout {
   children: React.ReactNode;
 }
 
-const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
+const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
+  const externalScript = "https://www.redhat.com/ma/dpal.js";
+  const state = useExternalScript(externalScript);
+
   const [isMobileView, setIsMobileView] = React.useState(true);
 
-  
   
   const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
     setIsMobileView(props.mobileView);
@@ -53,6 +54,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
   const headerTools = (
     <PageHeaderTools>
       <img src="/architect/portfolio/images/palogo.png" width="150" height="50" alt="Red Hat Logo" />
+      
     </PageHeaderTools>
   );
 
@@ -114,6 +116,30 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
       Skip to Content
     </SkipToContent>
   );
+
+  function sendCustomEvent(evt: any) {
+    if (document.createEvent && document.body.dispatchEvent) {
+      var myEvent = document.createEvent('Event');
+      myEvent.initEvent(evt, true, true); //can bubble, and is cancellable
+      document.body.dispatchEvent(myEvent);
+      //@ts-ignore
+    } else if (window.CustomEvent && document.body.dispatchEvent) {
+      //@ts-ignore
+        var event = new CustomEvent(evt,
+          { bubbles: true, cancelable: true }
+        );
+        document.body.dispatchEvent(event);
+      }
+    }
+
+    useEffect(() => {
+      // Call sendCustomEvent function when a new page is loaded:
+      console.log("Call sendCustomEvent function when a new page is loaded:["+location.pathname+"] key:["+location.key+"] hash:["+location.hash+"]");
+      sendCustomEvent("pageBottom");
+    }, [location]);
+  
+  
+
   return (
     <Page
       mainContainerId={pageId}
@@ -122,6 +148,8 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
       onPageResize={onPageResize}
       skipToContent={PageSkipToContent}>
       {children}
+
+      
     </Page>
   );
 }
