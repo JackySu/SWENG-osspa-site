@@ -36,7 +36,8 @@ render(){
   };
   var learnMoreButton=<span class="banner_link_learn_more">
       <Button variant="link">
-        Learn More <ArrowRightIcon />
+      <iframe width="200" height="25" src="https://www.youtube.com/embed/HEemD0HpY9Q" frameborder="0" allowfullscreen></iframe>
+      <br/><a href="/architect/portfolio/contribute">Learn More <ArrowRightIcon /></a>
       </Button>
       </span>;
       if(this.state.isMobileView === true) {
@@ -51,7 +52,7 @@ render(){
         >
       <Masthead id="light-masthead" backgroundColor="light">
       <MastheadMain>
-        <MastheadBrand>Logo Placeholder</MastheadBrand>
+        <MastheadBrand><img src="/architect/portfolio/images/site-logo.png" width={"200px"}/></MastheadBrand>
       </MastheadMain>
       <MastheadContent>
         <span class="middle_content">
