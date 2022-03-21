@@ -52,7 +52,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
 
   const headerTools = (
     <PageHeaderTools>
-      <img src="/architect/portfolio/images/palogo.png" width="150" height="50" alt="Red Hat Logo" />
+      
       
     </PageHeaderTools>
   );
