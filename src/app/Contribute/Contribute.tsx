@@ -2,7 +2,7 @@ import * as React from 'react';
 import { 
   JumpLinks, JumpLinksItem,
   Page, PageSection, PageSectionVariants,
-  Split,SplitItem,
+  Flex,FlexItem,
   Gallery, GalleryItem,
   Card, CardTitle, CardBody, CardFooter, CardHeader,CardHeaderMain,Brand,
   SkipToContent, Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
@@ -62,7 +62,7 @@ class Contribute extends React.Component {
     
     </SidebarPanel>
 
-    var imagesize = (Math.round((this.state.windowSize-250)/4));
+    var imagesize = (Math.round((this.state.windowSize-250)/7));
     var iframewidth = (Math.round((this.state.windowSize)/2.5));
     var iframeheight= Math.round((iframewidth)*0.7);
     if(this.state.isMobileView === true) {
@@ -91,24 +91,28 @@ class Contribute extends React.Component {
           <Sidebar hasGutter orientation={'split'} >
           {sidebarPanel}
           <SidebarContent hasNoBackground>
-          <Split hasGutter>
-            <SplitItem isFilled>
-              <table >
-                <tr>
-                  <td height={iframeheight+"px"} width={iframewidth+"px"}>
-                    <iframe width={iframewidth+"px"} height={iframeheight+"px"} className="learn_more_iframe" src="https://www.youtube.com/embed/HEemD0HpY9Q" frameborder="0" allowfullscreen></iframe>
-                  </td>
-                </tr>
-              </table>
-            </SplitItem>
-            <SplitItem> The Red Hat Portfolio Architecture center showcases .... </SplitItem>
+          <div class='container '>
             
-          </Split>
+            <div class="left">
+              <table width="100%" height="381px" >
+                <thead>
+                  <tr>
+                  <iframe class="learn_more_iframe" src="https://www.youtube.com/embed/HEemD0HpY9Q" frameborder="0"></iframe>
+                  </tr>
+                </thead>
+              </table>
+              
+              </div>
+              <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas and more. With your help, we can become the go to reference for all architects that wanted to build their system with Red Hat solutions.
+              </div>
+          
+            
+          </div>
              
               <h2>What is Portfolio Architecture ?</h2><a id="_buildingPA"></a>
-              <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }}>
+              <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }} className="learn_more_gallery">
                 <GalleryItem key="one" >
-                  <Card isHoverable={false} key="xx" isCompact>
+                  <Card isHoverable={false} key="xx" isCompact isPlain>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" width={imagesize+"px"}/>
@@ -119,7 +123,7 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
-                  <Card isHoverable={false} key="xx" isCompact>
+                  <Card isHoverable={false} key="xx" isCompact isPlain>
                       <CardHeader  className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand src="/architect/portfolio/images/pa-overview-best-pattern.png" alt="Card Image" width={imagesize+"px"}/>
@@ -130,7 +134,7 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
-                  <Card isHoverable={false} key="yy" isCompact>
+                  <Card isHoverable={false} key="yy" isCompact isPlain>
                       <CardHeader  className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand src="/architect/portfolio/images/pa-overview-tools.png" alt="Card Image" width={imagesize+"px"}/>
@@ -143,24 +147,26 @@ class Contribute extends React.Component {
               </Gallery>
              
               <a id="_paprocess"><h2>Portfolio Architecture Process</h2></a>
-              <Gallery  hasGutter minWidths={{sm:'300px', md: '600px', lg: '750px', '2xl': '1200px' }}>
+              <Gallery  hasGutter minWidths={{sm:'200px', md: '500px', lg: '750px', '2xl': '1200px' }} className="learn_more_gallery">
                 <GalleryItem key="one">
-                  <Card isRounded={true} >
-                    <CardBody>
-                      <img src="/architect/portfolio/images/pa-process.png"/>
-                    </CardBody>
+                  <Card isRounded={true} isPlain>
+                    <CardHeader className="contribute_card_header">
+                      <CardHeaderMain>
+                        <Brand src="/architect/portfolio/images/pa-process.png" alt="Card Image" width={(imagesize*6)+"px"}/>
+                      </CardHeaderMain>
+                    </CardHeader>
                   </Card>
                   </GalleryItem>
               </Gallery>
                 <br/>
                 <br/>
                 <a id="_gettingstartedPA"></a>
-                <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }}>
+                <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }} className="learn_more_gallery">
                 <GalleryItem key="one">
-                  <Card isCompact={true}>
+                  <Card isCompact isPlain>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_workshop.png" alt="Card Image" />
+                              <Brand src="/architect/portfolio/images/contribute_workshop.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"> <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-template">Getting Started Workshop</a></CardTitle>
@@ -168,10 +174,10 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
-                  <Card isCompact={true}>
+                  <Card isCompact isPlain>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_tools.png" alt="Card Image" />
+                              <Brand src="/architect/portfolio/images/contribute_tools.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"><a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-workshops/#/">Diagram Tooling Workshop</a></CardTitle>
@@ -179,10 +185,10 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
-                  <Card isCompact={true}>
+                  <Card isCompact isPlain>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_repo.png" alt="Card Image" />
+                              <Brand src="/architect/portfolio/images/contribute_repo.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"><a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples">Browse Example Repository</a></CardTitle>
@@ -198,9 +204,9 @@ class Contribute extends React.Component {
                 <br/>
                 </p>
 
-              <Gallery  hasGutter minWidths={{sm:'300px', md: '600px', lg: '750px', '2xl': '1200px' }}>
+              <Gallery  hasGutter minWidths={{sm:'300px', md: '600px', lg: '750px', '2xl': '1200px' }} className="learn_more_gallery">
                 <GalleryItem key="one">
-              <Card isRounded={true} >
+                  <Card isRounded={true} isPlain>
                     <CardBody>
                     Placeholder for process images
                     </CardBody>
@@ -214,12 +220,12 @@ class Contribute extends React.Component {
                 <br/>
 
 
-                <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }}>
+                <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }} className="learn_more_gallery">
                 <GalleryItem key="one">
-                  <Card isCompact={true}>
+                  <Card isCompact isPlain>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_pa.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/contribute_pa.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"> <a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples/-/issues/new?issue">Portfolio Architecture</a></CardTitle>
@@ -227,10 +233,10 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
-                  <Card isCompact={true}>
+                  <Card isCompact isPlain>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand  src="/architect/portfolio/images/contribute_helptool.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand  src="/architect/portfolio/images/contribute_helptool.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"><a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-tooling"> Enhance Our Tool</a> </CardTitle>
@@ -238,10 +244,10 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
-                  <Card isCompact={true}>
+                  <Card isCompact isPlain>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_website.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/contribute_website.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardTitle className="contributecardtitle"><a href="https://gitlab.com/osspa/osspa-site">P.A. Center</a>  </CardTitle>
