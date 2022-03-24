@@ -48,27 +48,26 @@ class PACatalog extends React.Component {
     
 
     var tempdisplay;
-    var cardPAImagesize ="1000px";
-    var cardPAsize ="100%";
+    //var cardPAImagesize =this.state.windowSize/4;
     if(Array.isArray(currentlist) )
       tempdisplay=currentlist;
     if(this.state.isMobileView === true) {
-      cardPAImagesize=(this.state.windowSize-30)+"px";
-      cardPAsize ="100%"
+      //cardPAImagesize=(this.state.windowSize-30)+"px";
+      
     }
     return (
       <React.Fragment>
         <Page
           onPageResize={onPageResize}
         >
-         <Gallery hasGutter >
+         <Gallery hasGutter className='catalog_gallery'>
                 {
                   tempdisplay.map( item =>
                   <GalleryItem key={item.ppid}>
-                   <Card isHoverable={false} key={item.ppid} isCompact={true} width={cardPAsize} >
+                   <Card isHoverable={false} key={item.ppid} isCompact  >
                       <CardHeader>
                         <CardHeaderMain>
-                        <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" width={cardPAImagesize} /></Link>
+                        <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" className='catalog_card_img'/></Link>
                         </CardHeaderMain>
                       </CardHeader>
                       <Link to={DETAIL_URL+'?ppid='+item.ppid} ><CardTitle>{item.Heading}</CardTitle></Link>

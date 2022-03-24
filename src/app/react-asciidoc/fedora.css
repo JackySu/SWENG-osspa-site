@@ -224,7 +224,10 @@ section.banner{
     padding-bottom: 0;
 }
 
-#footer
+.footer_banner{
+    background-color: rgb(12 12 12);
+    width: 100%;
+}
 
 .bg-dark-gray {
     background-color: #262626 !important;
@@ -265,3 +268,49 @@ div.olist.arabic{
 div.ulist{
     padding-top: 1em;
 }
+
+@media (min-width: 768px) { .pf-c-page__main-section{
+    max-width: 750px;
+} }
+
+@media (min-width: 920px) { .pf-c-page__main-section{
+    max-width: 970px;
+} }
+
+@media (min-width: 1200px) { .pf-c-page__main-section{
+    max-width: 1170px;
+} }
+
+@media (min-width: 1400px){ .pf-c-page__main-section{
+    max-width: 1320px;
+} }
+
+@media (min-width: 2000px){ .pf-c-page__main-section{
+    max-width: 1840px;
+} }
+
+
+@media (min-width: 2400px){ .pf-c-page__main-section{
+    max-width: 2100px;
+   
+} }
+
+.pf-c-page__header{
+    width: 100%;
+}
+div.pf-l-gallery.pf-m-gutter.catalog_gallery{
+    --pf-l-gallery--GridTemplateColumns--min: 400px;
+}
+.catalog_card_img{
+    max-width: 400px;
+    min-width: 300px;
+}
+.pf-c-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+

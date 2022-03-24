@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { RouteComponentProps, useLocation, useHistory } from 'react-router-dom';
 import {
-  
+  Bullseye,
   Page,
   PageHeader,
   Nav,
@@ -149,10 +149,14 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
       //sidebar={Sidebar}
       onPageResize={onPageResize}
       skipToContent={PageSkipToContent}>
-      {children}
-
       
+        {children}
+
+        
+
+        
     </Page>
+    
   );
 }
 

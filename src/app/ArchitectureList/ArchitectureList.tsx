@@ -18,7 +18,7 @@ import { css } from '@patternfly/react-styles';
 
 import { ControlledCheckbox } from '@app/ArchitectureList/ControlledCheckbox';
 import { PACatalog } from '@app/ArchitectureList/PACatalog';
-import { Footer } from '@app/AppLayout/Footer';
+
 import PABanner from '@app/ArchitectureList/PABanner';
 import SelectedListProvider from './SelectedList';
 
@@ -73,6 +73,7 @@ class ArchitectureList extends React.Component {
         >
         
         <PABanner/>
+        <PageSection>
         <SelectedListProvider>
             <Grid >
                
@@ -85,6 +86,7 @@ class ArchitectureList extends React.Component {
             </Grid>
             
           </SelectedListProvider>
+          </PageSection>
           </Page>
         </React.Fragment>
         
@@ -92,7 +94,7 @@ class ArchitectureList extends React.Component {
     } else{
     return (
       <React.Fragment>
-        
+        <PABanner/>
         <Page
           isManagedSidebar
           skipToContent={PageSkipToContent}
@@ -103,8 +105,8 @@ class ArchitectureList extends React.Component {
             sticky: 'top'
           }}
         >
-          <PABanner/>
           
+          <PageSection>
           <SelectedListProvider>
             <Grid >
             <Sidebar hasGutter orientation={'split'} >
@@ -129,13 +131,15 @@ class ArchitectureList extends React.Component {
             </Grid>
             
           </SelectedListProvider>
-          <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => {this.scrollTo("_top"); location.reload();}} />
-          <Footer/>
           
+          </PageSection>
         </Page>
+        
       </React.Fragment>
     );
     }
   }
 }
 export { ArchitectureList};
+
+/**<BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => {this.scrollTo("_top"); location.reload();}} /> */

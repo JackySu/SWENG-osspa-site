@@ -15,7 +15,6 @@ import {
   Sidebar,
   SidebarPanel
 } from '@patternfly/react-core';
-import { Footer } from '@app/AppLayout/Footer';
 const qs = require('query-string');
 import  detailLinks  from './DetailLink.csv';
 import Papa from 'papaparse';
@@ -286,8 +285,9 @@ class ArchitectureDetail extends React.Component {
           groupProps={{
             sticky: 'top'
           }}
+          className="inline-page"
         >
-          
+          <PageSection name="scrolling-section">
           
 
           <Grid >
@@ -322,9 +322,9 @@ class ArchitectureDetail extends React.Component {
         
         
           
-          <BackToTop scrollableSelector='[name="main-content-page-layout-tertiary-nav"]' isAlwaysVisible={true} onClick={() => {this.scrollTo("_title_top"); location.reload();}} />
           
-          <Footer/>
+          </PageSection>
+          
         </Page>
       </React.Fragment>
     );
@@ -332,3 +332,4 @@ class ArchitectureDetail extends React.Component {
 }
 export { ArchitectureDetail};
 
+/**<BackToTop scrollableSelector='[name="scrolling-section"]' isAlwaysVisible={true} onClick={() => {this.scrollTo("_title_top"); location.reload();}} /> */

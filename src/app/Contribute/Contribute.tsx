@@ -7,7 +7,7 @@ import {
   Card, CardTitle, CardBody, CardFooter, CardHeader,CardHeaderMain,Brand,
   SkipToContent, Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
 import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
-import { Footer } from '@app/AppLayout/Footer';
+
 import { css } from '@patternfly/react-styles';
 import '@app/react-asciidoc/fedora.css';
 import LearnMoreBanner from '@app/Contribute/LearnMoreBanner';
@@ -82,7 +82,9 @@ class Contribute extends React.Component {
           onPageResize={onPageResize}
           groupProps={{
             sticky: 'top'
-          }}>
+          }}
+          
+          >
             
         
         
@@ -112,7 +114,7 @@ class Contribute extends React.Component {
               <h2>What is Portfolio Architecture ?</h2><a id="_buildingPA"></a>
               <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }} className="learn_more_gallery">
                 <GalleryItem key="one" >
-                  <Card isHoverable={false} key="xx" isCompact isPlain>
+                  <Card isHoverable={false} key="xx" isCompact isPlain >
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" width={imagesize+"px"}/>
@@ -255,18 +257,12 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   </Gallery>
-
-              
-
-
-              
-            
             
           </SidebarContent>
           </Sidebar>
           
         </PageSection>
-          <Footer/>
+
         
 
         </Page>
