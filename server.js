@@ -33,7 +33,7 @@ const contextPath='/architect/portfolio';
 root.use(contextPath, app)
 
 app.use(
-  "/redhatdemocentral",
+  "/osspa",
   createProxyMiddleware({
     target: "https://gitlab.com/",
     changeOrigin: true
