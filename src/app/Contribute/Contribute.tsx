@@ -11,6 +11,7 @@ import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-tab
 import { css } from '@patternfly/react-styles';
 import '@app/react-asciidoc/fedora.css';
 import LearnMoreBanner from '@app/Contribute/LearnMoreBanner';
+import { Link } from 'react-router-dom';
   
 class Contribute extends React.Component {
   constructor(props) {
@@ -50,11 +51,12 @@ class Contribute extends React.Component {
                         <Td><a href="/architect/portfolio/contribute#_paprocess">Portfolio Architecture Process</a></Td>
                       </Tr>
                       <Tr>
-                        <Td><a href="/architect/portfolio/contribute#_gettingstartedPA">Getting Started</a></Td>
-                      </Tr>
-                      <Tr>
                         <Td><a href="/architect/portfolio/contribute#_contribute">Contribute</a></Td>
                       </Tr>
+                      <Tr>
+                        <Td><a href="/architect/portfolio/contribute#_other">Other Resources</a></Td>
+                      </Tr>
+                      
                 </Tbody>
     
       </TableComposable>
@@ -112,148 +114,177 @@ class Contribute extends React.Component {
           </div>
              
               <h2>What is Portfolio Architecture ?</h2><a id="_buildingPA"></a>
-              <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }} className="learn_more_gallery">
+              <Gallery  hasGutter minWidths={{sm:'90px', md: '150px', lg: '200px', '2xl': '300px' }} className="learn_more_gallery">
                 <GalleryItem key="one" >
                   <Card isHoverable={false} key="xx" isCompact isPlain >
+                      <CardTitle className="contributecardtitle">Evidence based architectures reference</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle">Evidence based architectures reference</CardTitle>
-                      <CardBody className="contributecardbody">Based on facts found in actual successful implementations. It contains diagrams for logical, schematic, and details on each components.</CardBody>    
+                      <CardBody className="contributecardbody">A portfolio architecture is built on facts found in successful customer implementations. It contains diagrams for logical, schematic, and details on each of the technical components.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
-                  <Card isHoverable={false} key="xx" isCompact isPlain>
+                  <Card isHoverable={false} key="yy" isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Combination of recommended practices and patterns</CardTitle>
                       <CardHeader  className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand src="/architect/portfolio/images/pa-overview-best-pattern.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle">Combination of best practices and patterns</CardTitle>
-                      <CardBody className="contributecardbody">Based on each scenario, provides recommendations, lessons learnt and best practices that use Red Hat solutions to architect the system.</CardBody>    
+                      <CardBody className="contributecardbody">Based on each scenario, a portfolio architecture provides recommendations, lessons learned, and best practices with using Red Hat products to architect the solution.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
-                  <Card isHoverable={false} key="yy" isCompact isPlain>
+                  <Card isHoverable={false} key="zz" isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Tools to help you create and architect your deployment</CardTitle>
                       <CardHeader  className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand src="/architect/portfolio/images/pa-overview-tools.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle">Tools to architect</CardTitle>
-                      <CardBody className="contributecardbody">Build your own architecture diagrams, with standardized icons, diagrams for better team collabrations and communications. <br/></CardBody>    
+                      <CardBody className="contributecardbody">Build your own architecture diagrams, with standardized icons, for better team collaboration and communication</CardBody>    
                   </Card>
                 </GalleryItem>
               </Gallery>
              
-              <a id="_paprocess"><h2>Portfolio Architecture Process</h2></a>
-              <Gallery  hasGutter minWidths={{sm:'200px', md: '500px', lg: '750px', '2xl': '1200px' }} className="learn_more_gallery">
-                <GalleryItem key="one">
-                  <Card isRounded={true} isPlain>
-                    <CardHeader className="contribute_card_header">
-                      <CardHeaderMain>
-                        <Brand src="/architect/portfolio/images/pa-process.png" alt="Card Image" width={(imagesize*6)+"px"}/>
-                      </CardHeaderMain>
-                    </CardHeader>
-                  </Card>
-                  </GalleryItem>
-              </Gallery>
-                <br/>
-                <br/>
-                <a id="_gettingstartedPA"></a>
-                <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }} className="learn_more_gallery">
-                <GalleryItem key="one">
+              <a id="_paprocess"><h2>How are Portfolio Architectures Created</h2></a>
+
+               
+                <Gallery  hasGutter minWidths={{sm:'90px', md: '150px', lg: '200px', '2xl': '300px' }} className="learn_more_gallery">
+                <GalleryItem>
                   <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Review Submissions</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_workshop.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/contribute_pa_create_01.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle"> <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-template">Getting Started Workshop</a></CardTitle>
-                      <CardBody className="contributecardbody">Architecture development process and templates</CardBody>    
+                      <CardBody className="contributecardbody">Submissions come from the community, customers, and from Red Hatters who work with customers on their implementations.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
                   <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Genericize Technology</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_tools.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/contribute_pa_create_02.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle"><a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-workshops/#/">Diagram Tooling Workshop</a></CardTitle>
-                      <CardBody className="contributecardbody">how to use, design, and create architectural diagrams based on the draw.io tooling and Red Hat Portfolio Architecture design elements.</CardBody>    
+                      <CardBody className="contributecardbody">We take  specific deployment scenarios… and examining all products and parts of the PA leads us to build a generic solution that fits many customer and industry needs and allows for further customization with our industry leading awesome tool we built</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
                   <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Outline Architecture</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_repo.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/contribute_pa_create_03.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle"><a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples">Browse Example Repository</a></CardTitle>
-                      <CardBody className="contributecardbody">Examples of customer implementations using Red Hat product portfolio.</CardBody>    
+                      <CardBody className="contributecardbody">With the generic solution gathered, we develop design best practices giving you a form-fit solution that can be easily optimized to fit the specific business objectives of your organization, with your choice of open source technology</CardBody>    
+                  </Card>
+                  </GalleryItem>
+                  <GalleryItem>
+                  <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Complete Architecture</CardTitle>
+                      <CardHeader className="contribute_card_header" >
+                            <CardHeaderMain>
+                              <Brand src="/architect/portfolio/images/contribute_pa_create_04.png" alt="Card Image" width={imagesize+"px"}/>
+                            </CardHeaderMain>
+                      </CardHeader>
+                      <CardBody className="contributecardbody">Published portfolio architecture on the website and this ensures consistency or product scope and usage in various deployment scenarios.</CardBody>    
                   </Card>
                   </GalleryItem>
                   </Gallery>
                
+
+
                 <a id="_contribute"><h2>Contribute to Portfolio Architecture</h2></a>
                 <p>
-                  We are always very happy to have contributions, whether for a complete set of diagrams or simply tell us more about how you built the system with multiple Red Hat products. 
-                  <br/>  
+                    We welcome new contributions, whether for a complete set of diagrams or simply tell us more about how you built the system with multiple Red Hat products. Contribute to create a new Portfolio Architecture by simply share any implementation that you have done that contain at least three or more Red Hat products.
+                    <br/>
+                    <br/>
+                    The preferred way of submitting your contribution is through creating an issue on the repository. You can find many resources online explaining how to work on Gitlab projects and how to submit work to these projects.
+                </p>
+                <br/>
+                <p>
+                 
+                <Gallery  hasGutter minWidths={{sm:'90px', md: '400px', lg: '900px', '2xl': '1200px' }} className="learn_more_gallery">
+                  <GalleryItem>
+                  <p>
+                  Submit Idea
+
+                  <Brand src="/architect/portfolio/images/contribute_process_01.png" alt="Card Image" width={imagesize+"px"}/>
+                  Users share how they implemented multi-product solutions by following our design template, and submitting an issue in Gitlab.
+                  </p><p>
+                  Review
+                  <Brand src="/architect/portfolio/images/contribute_process_02.png" alt="Card Image" width={imagesize+"px"}/>
+                  A Red Hat Portfolio Architect will review your submission and determine where it fits within our portfolio.
+                  Feedback
+                  <Brand src="/architect/portfolio/images/contribute_process_03.png" alt="Card Image" width={imagesize+"px"}/>
+                  Once reviewed, the Architect will connect with feedback on what they’ve determined, and if necessary how to refactor to complete the architecture.
+                  </p><p>
+                  Life Cycle
+                  <Brand src="/architect/portfolio/images/contribute_process_04.png" alt="Card Image" width={imagesize+"px"}/>
+                  As the architecture is being developed, you will work with your Architect to standardize this solution.
+                  </p><p>
+                  Publishing
+                  <Brand src="/architect/portfolio/images/contribute_process_05.png" alt="Card Image" width={imagesize+"px"}/>
+                  The Architecture is ready for marketing and publishing on Red Hat channels.
+                  </p>
+                  </GalleryItem>
+                </Gallery> 
                 <br/>
                 </p>
 
-              <Gallery  hasGutter minWidths={{sm:'300px', md: '600px', lg: '750px', '2xl': '1200px' }} className="learn_more_gallery">
-                <GalleryItem key="one">
-                  <Card isRounded={true} isPlain>
-                    <CardBody>
-                    Placeholder for process images
-                    </CardBody>
-                  </Card>
-                  </GalleryItem>
-                  </Gallery>
+                <a id="_other"><h2>Other Resources</h2></a>
                 
-                <p>
-                  The preferred way of submitting your contribution is through creating an issue on the repository.  You can find many resources online explaining how to work on Gitlab projects and how to submit work to these projects.
-                  There are several projects you can help with: </p>
-                <br/>
-
 
                 <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }} className="learn_more_gallery">
                 <GalleryItem key="one">
                   <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle"> Workshops </CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_pa.png" alt="Card Image" width={(imagesize-30)+"px"}/>
+                              <Brand src="/architect/portfolio/images/contribute_other_01.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle"> <a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-examples/-/issues/new?issue">Portfolio Architecture</a></CardTitle>
-                      <CardBody className="contributecardbody">Contribute to create a new Portfolio Architecture by simply share any implementation that you have done that contain at least three or more Red Hat products. </CardBody>    
+                      <CardBody className="contributecardbody">
+                      <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-template">Getting started</a>
+                      <br/>
+                      Architecture development process and templates
+                      <br/>
+                      <br/>
+                      <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-workshops/#/"> Diagram Tooling</a>
+                      <br/>
+                      how to use, design, and create architectural diagrams based on the draw.io tooling and Red Hat Portfolio Architecture design elements.
+
+                      </CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
                   <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Feature Request </CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand  src="/architect/portfolio/images/contribute_helptool.png" alt="Card Image" width={(imagesize-30)+"px"}/>
+                              <Brand  src="/architect/portfolio/images/contribute_other_02.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle"><a href="https://gitlab.com/redhatdemocentral/portfolio-architecture-tooling"> Enhance Our Tool</a> </CardTitle>
-                      <CardBody className="contributecardbody">Help us enhance our architectural diagram tool, We use draw.io as the base. </CardBody>    
+                      <CardBody className="contributecardbody">Have suggestions or code contributions? Any feedback on how we can improve this website are all welcome.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
                   <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Tooling enhancement</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/contribute_website.png" alt="Card Image" width={(imagesize-30)+"px"}/>
+                              <Brand src="/architect/portfolio/images/contribute_other_03.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardTitle className="contributecardtitle"><a href="https://gitlab.com/osspa/osspa-site">P.A. Center</a>  </CardTitle>
-                      <CardBody className="contributecardbody">Any suggestion, code contribution on making this website better are all welcome.</CardBody>    
+                      <CardBody className="contributecardbody">Help us enhance our architectural diagram tool and PA Center</CardBody>    
                   </Card>
                   </GalleryItem>
                   </Gallery>
