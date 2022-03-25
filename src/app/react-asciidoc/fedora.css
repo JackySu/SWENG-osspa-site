@@ -188,6 +188,14 @@ div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
     margin-right: auto;
     
 }
+
+div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
+    --pf-l-gallery--GridTemplateColumns--min: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
 .learn_more_iframe{
     top: 0;
     bottom: 0;
@@ -277,6 +285,33 @@ div.olist.arabic{
 div.ulist{
     padding-top: 1em;
 }
+
+@media (min-width: 768px) { .learn_more_carousel{
+    max-width: 650px;
+} }
+
+@media (min-width: 920px) { .learn_more_carousel{
+    max-width: 870px;
+} }
+
+@media (min-width: 1200px) { .learn_more_carousel{
+    max-width: 1070px;
+} }
+
+@media (min-width: 1400px){ .learn_more_carousel{
+    max-width: 1220px;
+} }
+
+@media (min-width: 2000px){ .learn_more_carousel{
+    max-width: 1740px;
+} }
+
+
+@media (min-width: 2400px){ .learn_more_carousel{
+    max-width: 2100px;
+   
+} }
+
 
 @media (min-width: 768px) { .pf-c-page__main-section{
     max-width: 750px;

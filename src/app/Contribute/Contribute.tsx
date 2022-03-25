@@ -10,7 +10,7 @@ import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-tab
 
 import { css } from '@patternfly/react-styles';
 import '@app/react-asciidoc/fedora.css';
-import LearnMoreBanner from '@app/Contribute/LearnMoreBanner';
+import {SubmitCarousel} from '@app/Contribute/SubmitCarousel';
 import { Link } from 'react-router-dom';
   
 class Contribute extends React.Component {
@@ -210,29 +210,10 @@ class Contribute extends React.Component {
                 <br/>
                 <p>
                  
-                <Gallery  hasGutter className="learn_more_gallery">
+                <Gallery  hasGutter className="learn_more_carousel">
                   <GalleryItem>
-                  <p>
-                  Submit Idea
-
-                  <Brand src="/architect/portfolio/images/contribute_process_01.png" alt="Card Image" width={imagesize+"px"}/>
-                  Users share how they implemented multi-product solutions by following our design template, and submitting an issue in Gitlab.
-                  </p><p>
-                  Review
-                  <Brand src="/architect/portfolio/images/contribute_process_02.png" alt="Card Image" width={imagesize+"px"}/>
-                  A Red Hat Portfolio Architect will review your submission and determine where it fits within our portfolio.
-                  Feedback
-                  <Brand src="/architect/portfolio/images/contribute_process_03.png" alt="Card Image" width={imagesize+"px"}/>
-                  Once reviewed, the Architect will connect with feedback on what they’ve determined, and if necessary how to refactor to complete the architecture.
-                  </p><p>
-                  Life Cycle
-                  <Brand src="/architect/portfolio/images/contribute_process_04.png" alt="Card Image" width={imagesize+"px"}/>
-                  As the architecture is being developed, you will work with your Architect to standardize this solution.
-                  </p><p>
-                  Publishing
-                  <Brand src="/architect/portfolio/images/contribute_process_05.png" alt="Card Image" width={imagesize+"px"}/>
-                  The Architecture is ready for marketing and publishing on Red Hat channels.
-                  </p>
+                    <SubmitCarousel/>
+                  
                   </GalleryItem>
                 </Gallery> 
                 <br/>
