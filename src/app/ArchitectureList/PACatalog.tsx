@@ -21,7 +21,7 @@ import InfoCircleIcon from '@patternfly/react-icons/dist/js/icons/info-circle-ic
 import Papa from 'papaparse';
 import { SelectedList } from './SelectedList';
 
-const CARD_IMG_URL = "https://gitlab.com/osspa/osspa-content/-/raw/main/images/"
+const CARD_IMG_URL = "https://gitlab.com/osspa/portfolio-architecture-examples/-/raw/main/images/"
 const isExpanded = false;
 const DETAIL_URL = '/architecturedetail'
 
