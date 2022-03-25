@@ -175,9 +175,18 @@ div.paragraph {
     margin-right: auto;
 }
 
-.learn_more_gallery{
+div.pf-l-gallery.pf-m-gutter.learn_more_gallery_process{
+    --pf-l-gallery--GridTemplateColumns--min: 200px;
     margin-left: auto;
     margin-right: auto;
+    
+}
+
+div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
+    --pf-l-gallery--GridTemplateColumns--min: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 .learn_more_iframe{
     top: 0;

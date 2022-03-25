@@ -48,10 +48,10 @@ class Contribute extends React.Component {
                         <Td><a href="/architect/portfolio/contribute#_buildingPA">What is Portfolio Architecture</a></Td>
                       </Tr>
                       <Tr>
-                        <Td><a href="/architect/portfolio/contribute#_paprocess">Portfolio Architecture Process</a></Td>
+                        <Td><a href="/architect/portfolio/contribute#_paprocess">How are Portfolio Architectures Created</a></Td>
                       </Tr>
                       <Tr>
-                        <Td><a href="/architect/portfolio/contribute#_contribute">Contribute</a></Td>
+                        <Td><a href="/architect/portfolio/contribute#_contribute">Contribute to Portfolio Architecture</a></Td>
                       </Tr>
                       <Tr>
                         <Td><a href="/architect/portfolio/contribute#_other">Other Resources</a></Td>
@@ -113,8 +113,8 @@ class Contribute extends React.Component {
             
           </div>
              
-              <h2>What is Portfolio Architecture ?</h2><a id="_buildingPA"></a>
-              <Gallery  hasGutter minWidths={{sm:'90px', md: '150px', lg: '200px', '2xl': '300px' }} className="learn_more_gallery">
+              <h2>What is Portfolio Architecture</h2><a id="_buildingPA"></a>
+              <Gallery  hasGutter className="learn_more_gallery">
                 <GalleryItem key="one" >
                   <Card isHoverable={false} key="xx" isCompact isPlain >
                       <CardTitle className="contributecardtitle">Evidence based architectures reference</CardTitle>
@@ -151,9 +151,7 @@ class Contribute extends React.Component {
               </Gallery>
              
               <a id="_paprocess"><h2>How are Portfolio Architectures Created</h2></a>
-
-               
-                <Gallery  hasGutter minWidths={{sm:'90px', md: '150px', lg: '200px', '2xl': '300px' }} className="learn_more_gallery">
+                <Gallery  hasGutter className="learn_more_gallery_process">
                 <GalleryItem>
                   <Card isCompact isPlain>
                       <CardTitle className="contributecardtitle">Review Submissions</CardTitle>
@@ -212,7 +210,7 @@ class Contribute extends React.Component {
                 <br/>
                 <p>
                  
-                <Gallery  hasGutter minWidths={{sm:'90px', md: '400px', lg: '900px', '2xl': '1200px' }} className="learn_more_gallery">
+                <Gallery  hasGutter className="learn_more_gallery">
                   <GalleryItem>
                   <p>
                   Submit Idea
@@ -243,7 +241,7 @@ class Contribute extends React.Component {
                 <a id="_other"><h2>Other Resources</h2></a>
                 
 
-                <Gallery  hasGutter minWidths={{sm:'100px', md: '200px', lg: '250px', '2xl': '400px' }} className="learn_more_gallery">
+                <Gallery  hasGutter className="learn_more_gallery">
                 <GalleryItem key="one">
                   <Card isCompact isPlain>
                       <CardTitle className="contributecardtitle"> Workshops </CardTitle>
