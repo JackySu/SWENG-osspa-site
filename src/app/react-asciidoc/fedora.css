@@ -197,27 +197,32 @@ div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
     margin-left: auto;
     margin-right: auto;
 }
+
+.contributecardbody,
+.contributecardtitle,
+.pf-c-card__body {
+    --pf-c-card__body--FontSize: reset;
+}
+.contributecardbody,
 .contributecardtitle{
     text-align: center;
 }
 
-.contributecardbody{
-    text-align: center;
-}
-
+.footerCopyRighttext,
 .footertext{
     text-align: center;
     font-size: 0.75em;
     color: white;
     position: relative;
 }
-
 .footerCopyRighttext{
-    text-align: center;
     font-size: 0.9em;
-    color: white;
-    position: relative;
 }
+.footerdiv {
+    display: block;
+    box-sizing: border-box;
+}
+
 section.tablepadding{
     padding-top: 10%;
     padding-right: 0;
@@ -243,10 +248,7 @@ section.banner{
     color: #b3b5b7;
     
 }
-.footerdiv {
-    display: block;
-    box-sizing: border-box;
-}
+
 
 .py-4 {
     padding-bottom: 1.5rem !important;
@@ -275,31 +277,7 @@ div.ulist{
 }
 
 /*Main content setting*/
-@media (min-width: 768px) { .learn_more_carousel{
-    max-width: 650px;
-} }
 
-@media (min-width: 920px) { .learn_more_carousel{
-    max-width: 870px;
-} }
-
-@media (min-width: 1200px) { .learn_more_carousel{
-    max-width: 1070px;
-} }
-
-@media (min-width: 1400px){ .learn_more_carousel{
-    max-width: 1220px;
-} }
-
-@media (min-width: 2000px){ .learn_more_carousel{
-    max-width: 1740px;
-} }
-
-
-@media (min-width: 2400px){ .learn_more_carousel{
-    max-width: 2100px;
-   
-} }
 
 @media (min-width: 768px) { .pf-c-page__main-section{
     max-width: 750px;
@@ -428,46 +406,3 @@ div.pf-l-gallery.pf-m-gutter.catalog_gallery{
     height: auto;
 }
 
-
-.submitCarousel div>button[data-direction=left], 
-.submitCarousel div>button[data-direction=right] {
-    background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;
-    border: none;
-    cursor: pointer;
-    height: 80px;
-    outline: 0;
-    position: relative;
-    top: 80px;
-}
-
-.submitCarousel div>button[data-direction=left] {
-    left: -16px;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-@media (min-width: 768px) { .submitCarousel{
-    max-width: 600px;
-} }
-
-@media (min-width: 920px) { .submitCarousel{
-    max-width: 730px;
-} }
-
-@media (min-width: 1200px) { .submitCarousel{
-    max-width: 950px;
-} }
-
-@media (min-width: 1400px){ .submitCarousel{
-    max-width: 1000px;
-} }
-
-@media (min-width: 2000px){ .submitCarousel{
-    max-width: 1600px;
-} }
-
-
-@media (min-width: 2400px){ .submitCarousel{
-    max-width: 2000px;
-   
-} }

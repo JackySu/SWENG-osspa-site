@@ -37,6 +37,12 @@
     position: relative;
     top: 80px;
 }
+.title_carousel{
+    font-family: var(--pf-c-card__title--FontFamily);
+    font-size: var(--pf-c-card__title--FontSize);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
 
 .submitCarousel div>button[data-direction=left] {
     left: -16px;
