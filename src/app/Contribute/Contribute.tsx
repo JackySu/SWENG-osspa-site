@@ -113,7 +113,7 @@ class Contribute extends React.Component {
             
           </div>
              
-              <h2>What is Portfolio Architecture</h2><a id="_buildingPA"></a>
+              <a id="_buildingPA"></a><h2>What is Portfolio Architecture</h2>
               <Gallery  hasGutter className="learn_more_gallery">
                 <GalleryItem key="one" >
                   <Card isHoverable={false} key="xx" isCompact isPlain >
@@ -150,7 +150,7 @@ class Contribute extends React.Component {
                 </GalleryItem>
               </Gallery>
              
-              <a id="_paprocess"><h2>How are Portfolio Architectures Created</h2></a>
+              <a id="_paprocess"></a><h2>How are Portfolio Architectures Created</h2>
                 <Gallery  hasGutter className="learn_more_gallery_process">
                 <GalleryItem>
                   <Card isCompact isPlain>
@@ -200,7 +200,7 @@ class Contribute extends React.Component {
                
 
 
-                <a id="_contribute"><h2>Contribute to Portfolio Architecture</h2></a>
+                <a id="_contribute"></a><h2>Contribute to Portfolio Architecture</h2>
                 <p>
                     We welcome new contributions, whether for a complete set of diagrams or simply tell us more about how you built the system with multiple Red Hat products. Contribute to create a new Portfolio Architecture by simply share any implementation that you have done that contain at least three or more Red Hat products.
                     <br/>
@@ -219,7 +219,7 @@ class Contribute extends React.Component {
                 <br/>
                 </p>
 
-                <a id="_other"><h2>Other Resources</h2></a>
+                <a id="_other"></a><h2>Other Resources</h2>
                 
 
                 <Gallery  hasGutter className="learn_more_gallery">

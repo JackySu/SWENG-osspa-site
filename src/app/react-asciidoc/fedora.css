@@ -175,19 +175,7 @@ div.paragraph {
     margin-right: auto;
 }
 
-div.pf-l-gallery.pf-m-gutter.learn_more_gallery_process{
-    --pf-l-gallery--GridTemplateColumns--min: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 
-div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
-    --pf-l-gallery--GridTemplateColumns--min: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 
 div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
     --pf-l-gallery--GridTemplateColumns--min: 1200px;
@@ -286,6 +274,7 @@ div.ulist{
     padding-top: 1em;
 }
 
+/*Main content setting*/
 @media (min-width: 768px) { .learn_more_carousel{
     max-width: 650px;
 } }
@@ -312,13 +301,12 @@ div.ulist{
    
 } }
 
-
 @media (min-width: 768px) { .pf-c-page__main-section{
     max-width: 750px;
 } }
 
 @media (min-width: 920px) { .pf-c-page__main-section{
-    max-width: 970px;
+    max-width: 870px;
 } }
 
 @media (min-width: 1200px) { .pf-c-page__main-section{
@@ -339,9 +327,92 @@ div.ulist{
    
 } }
 
+/**card**/
+@media (min-width: 768px) { div.pf-l-gallery.pf-m-gutter.learn_more_gallery_process{
+    --pf-l-gallery--GridTemplateColumns--min: 400px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 920px) { div.pf-l-gallery.pf-m-gutter.learn_more_gallery_process{
+    --pf-l-gallery--GridTemplateColumns--min: 200px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 1200px) { div.pf-l-gallery.pf-m-gutter.learn_more_gallery_process{
+    --pf-l-gallery--GridTemplateColumns--min: 175px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 1400px){ div.pf-l-gallery.pf-m-gutter.learn_more_gallery_process{
+    --pf-l-gallery--GridTemplateColumns--min: 200px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 2000px){ div.pf-l-gallery.pf-m-gutter.learn_more_gallery_process{
+    --pf-l-gallery--GridTemplateColumns--min: 320px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+
+@media (min-width: 2400px){ div.pf-l-gallery.pf-m-gutter.learn_more_gallery_process{
+    --pf-l-gallery--GridTemplateColumns--min: 480px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 768px) { div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
+    --pf-l-gallery--GridTemplateColumns--min: 500px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 920px) { div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
+    --pf-l-gallery--GridTemplateColumns--min: 200px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 1200px) { div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
+    --pf-l-gallery--GridTemplateColumns--min: 250px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 1400px){ div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
+    --pf-l-gallery--GridTemplateColumns--min: 280px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+@media (min-width: 2000px){ div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
+    --pf-l-gallery--GridTemplateColumns--min: 400px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+
+@media (min-width: 2400px){ div.pf-l-gallery.pf-m-gutter.learn_more_gallery{
+    --pf-l-gallery--GridTemplateColumns--min: 600px;
+    margin-left: auto;
+    margin-right: auto;
+} }
+
+
+
+
+
+
+
 .pf-c-page__header{
     width: 100%;
 }
+
+/*main page*/
 div.pf-l-gallery.pf-m-gutter.catalog_gallery{
     --pf-l-gallery--GridTemplateColumns--min: 400px;
 }
@@ -358,3 +429,45 @@ div.pf-l-gallery.pf-m-gutter.catalog_gallery{
 }
 
 
+.submitCarousel div>button[data-direction=left], 
+.submitCarousel div>button[data-direction=right] {
+    background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 80px;
+    outline: 0;
+    position: relative;
+    top: 80px;
+}
+
+.submitCarousel div>button[data-direction=left] {
+    left: -16px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+@media (min-width: 768px) { .submitCarousel{
+    max-width: 600px;
+} }
+
+@media (min-width: 920px) { .submitCarousel{
+    max-width: 730px;
+} }
+
+@media (min-width: 1200px) { .submitCarousel{
+    max-width: 950px;
+} }
+
+@media (min-width: 1400px){ .submitCarousel{
+    max-width: 1000px;
+} }
+
+@media (min-width: 2000px){ .submitCarousel{
+    max-width: 1600px;
+} }
+
+
+@media (min-width: 2400px){ .submitCarousel{
+    max-width: 2000px;
+   
+} }

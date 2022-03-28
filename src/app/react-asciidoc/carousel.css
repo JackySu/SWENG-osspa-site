@@ -1,0 +1,71 @@
+@media (min-width: 768px) { .learn_more_carousel{
+    max-width: 650px;
+} }
+
+@media (min-width: 920px) { .learn_more_carousel{
+    max-width: 870px;
+} }
+
+@media (min-width: 1200px) { .learn_more_carousel{
+    max-width: 1070px;
+} }
+
+@media (min-width: 1400px){ .learn_more_carousel{
+    max-width: 1220px;
+} }
+
+@media (min-width: 2000px){ .learn_more_carousel{
+    max-width: 1740px;
+} }
+
+
+@media (min-width: 2400px){ .learn_more_carousel{
+    max-width: 2100px;
+   
+} }
+.submitCarousel{
+    text-align: center;
+
+}
+.submitCarousel div>button[data-direction=left], 
+.submitCarousel div>button[data-direction=right] {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTRweCIgaGVpZ2h0PSIzNHB4IiB2aWV3Qm94PSIwIDAgMTQgMzQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5QYXRoPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlN5bWJvbHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJCZW56ZXItw5xyw7xubGVyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE1OC4wMDAwMDAsIC0yNDAuMDAwMDAwKSIgZmlsbD0iIzY2NjY2NiI+CiAgICAgICAgICAgIDxnIGlkPSJuZXh0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTU4LjAwMDAwMCwgMjQwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTEzLjI5MDY1NjMsMTUuNzU3MTY4IEwxLjY4MTI1NjkyLDAuMjgyODA2MzI0IEMxLjMwNDE4MTgyLC0wLjA5NDI2ODc3NDcgMC42OTk0Mzg3MzUsLTAuMDk0MjY4Nzc0NyAwLjMyMjM2MzYzNiwwLjI4MjgwNjMyNCBDLTAuMDU0NzExNDYyNSwwLjY1OTg4MTQyMyAtMC4wNTQ3MTE0NjI1LDEuMjY0NjI0NTEgMC4zMjIzNjM2MzYsMS42NDE2OTk2IEwxMS42NTQzNzk0LDE2Ljk3MzcxNTQgTDAuMzIyMzYzNjM2LDMyLjMwNTczMTIgQy0wLjA1NDcxMTQ2MjUsMzIuNjgyODA2MyAtMC4wNTQ3MTE0NjI1LDMzLjI4NzU0OTQgMC4zMjIzNjM2MzYsMzMuNjY0NjI0NSBDMC41MDczNDM4NzQsMzMuODQ5NjA0NyAwLjc1NjM1NTczMSwzMy45NDkyMDk1IDAuOTk4MjUyOTY0LDMzLjk0OTIwOTUgQzEuMjQwMTUwMiwzMy45NDkyMDk1IDEuNDg5MTYyMDYsMzMuODU2NzE5NCAxLjY3NDE0MjI5LDMzLjY2NDYyNDUgTDEzLjI4MzU0MTcsMTguMTkwMjYyOCBDMTMuNTQ2OTQ4OCwxNy44MzkxNjMxIDEzLjY5MDQwOTMsMTcuNDEyNjMzNCAxMy42OTI3MTk0LDE2Ljk3MzcxNTQgTDEzLjY5MjcxOTQsMTYuOTczNzE1NCBDMTMuNjk1MDI3NCwxNi41MzUxOTI1IDEzLjU1MzgyNjQsMTYuMTA3OTUxNyAxMy4yOTA2NTYzLDE1Ljc1NzE2OCBaIiBpZD0iUGF0aCI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=) 50% no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 80px;
+    outline: 0;
+    position: relative;
+    top: 80px;
+}
+
+.submitCarousel div>button[data-direction=left] {
+    left: -16px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+@media (min-width: 768px) { .submitCarousel{
+    max-width: 600px;
+} }
+
+@media (min-width: 920px) { .submitCarousel{
+    max-width: 730px;
+} }
+
+@media (min-width: 1200px) { .submitCarousel{
+    max-width: 950px;
+} }
+
+@media (min-width: 1400px){ .submitCarousel{
+    max-width: 1000px;
+} }
+
+@media (min-width: 2000px){ .submitCarousel{
+    max-width: 1600px;
+} }
+
+
+@media (min-width: 2400px){ .submitCarousel{
+    max-width: 2000px;
+   
+} }
