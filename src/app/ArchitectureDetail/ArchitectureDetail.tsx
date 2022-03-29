@@ -217,7 +217,6 @@ class ArchitectureDetail extends React.Component {
       
     }
     var lefttable = 
-              <PageSection className="tablepadding">
                   <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
                       <Thead>
                       <Tr>
@@ -256,13 +255,15 @@ class ArchitectureDetail extends React.Component {
                       </Tbody>
                       
                   </TableComposable>
-                  <br/><br/>
-                </PageSection>
-     var leftmenu = <SidebarPanel variant="static">
+                 
+               
+     var leftmenu = 
                       <GridItem span="3" rowSpan={12}>
+                        <PageSection className="tablepadding" id="catalog-controll">
                         {lefttable}
+                        </PageSection>
                       </GridItem>
-                    </SidebarPanel>
+                    
      var lowMenu =<PageSection></PageSection>           
     var contentGridItemSpan=9; 
     if(this.state.isMobileView === true) {
@@ -288,12 +289,12 @@ class ArchitectureDetail extends React.Component {
           className="inline-page"
         >
           <PageSection name="scrolling-section">
-          
-
-          <Grid >
-              <Sidebar hasGutter orientation={'split'}>
+              <Grid >
+              
               {leftmenu}
-              <SidebarContent hasNoBackground>
+               
+             
+              
               <GridItem span={contentGridItemSpan} rowSpan={1}>
                 <PageSection className="banner" >
                     <Breadcrumb> 
@@ -307,16 +308,13 @@ class ArchitectureDetail extends React.Component {
               </GridItem>
                 <GridItem span={contentGridItemSpan} rowSpan={11}>
                 <PageSection>
-                  
-                
                   <Asciidoc>{this.state.data}</Asciidoc>
                 </PageSection>
                 </GridItem>
                 <GridItem>
                   {lowMenu}
                 </GridItem>
-              </SidebarContent>
-             </Sidebar>
+              
             </Grid>
               
         

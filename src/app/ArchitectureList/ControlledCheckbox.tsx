@@ -103,7 +103,7 @@ class ControlledCheckbox extends React.Component {
     const {updateProduct, updateSolution,updateVertical} =  this.context;
     return (
       <React.Fragment>
-        <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
+        <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100">
           <Thead>
           <Tr>
             <Th colSpan="2">Solution</Th>

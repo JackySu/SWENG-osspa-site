@@ -2,7 +2,7 @@ import * as React from 'react';
 import { 
   JumpLinks, JumpLinksItem,
   Page, PageSection, PageSectionVariants,
-  Flex,FlexItem,
+  Grid,GridItem,
   Gallery, GalleryItem,
   Card, CardTitle, CardBody, CardFooter, CardHeader,CardHeaderMain,Brand,
   SkipToContent, Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
@@ -32,10 +32,10 @@ class Contribute extends React.Component {
 
     const pageId = 'main-content-page-layout-tertiary-nav';
     const PageSkipToContent = <SkipToContent href={`#${pageId}`}>Skip to content</SkipToContent>;
-    var sidebarPanel = <SidebarPanel variant="sticky">
+    var sidebarPanel = 
     
     
-      <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" width={250}>
+      <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100">
                 <Thead>
                 <Tr>
                   <Th colSpan="2" >Jump to Sections</Th>
@@ -62,7 +62,7 @@ class Contribute extends React.Component {
       </TableComposable>
       
     
-    </SidebarPanel>
+
 
     var imagesize = (Math.round((this.state.windowSize-250)/7));
     var iframewidth = (Math.round((this.state.windowSize)/2.5));
@@ -92,9 +92,14 @@ class Contribute extends React.Component {
         
         <PageSection>
         
-          <Sidebar hasGutter orientation={'split'} >
-          {sidebarPanel}
-          <SidebarContent hasNoBackground>
+        <Grid >
+          <GridItem span={3} rowSpan={12}>
+              <PageSection className="tablepadding" id="catalog-controll">
+                {sidebarPanel}
+              </PageSection>
+          </GridItem>
+          <GridItem span={9} rowSpan={11}>
+          <PageSection>
           <div class='container '>
             
             <div class="left">
@@ -109,8 +114,6 @@ class Contribute extends React.Component {
               </div>
               <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas and more. With your help, we can become the go to reference for all architects that wanted to build their system with Red Hat solutions.
               </div>
-          
-            
           </div>
              
               <a id="_buildingPA"></a><h2>What is Portfolio Architecture</h2>
@@ -267,10 +270,9 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   </Gallery>
-            
-          </SidebarContent>
-          </Sidebar>
-          
+                  </PageSection>
+                  </GridItem>
+          </Grid>
         </PageSection>
 
         

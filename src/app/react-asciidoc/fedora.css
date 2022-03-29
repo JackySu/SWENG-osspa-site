@@ -381,7 +381,9 @@ div.ulist{
 } }
 
 
-
+.blank_card{
+    min-width: 3000px;
+}
 
 
 

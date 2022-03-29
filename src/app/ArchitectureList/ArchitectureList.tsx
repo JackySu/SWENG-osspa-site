@@ -109,25 +109,16 @@ class ArchitectureList extends React.Component {
           <PageSection>
           <SelectedListProvider>
             <Grid >
-            <Sidebar hasGutter orientation={'split'} >
-              <SidebarPanel variant="static" >
               <GridItem span={3} rowSpan={12}>
                 <PageSection className="tablepadding" id="catalog-controll">
                     <ControlledCheckbox /> 
                 </PageSection>
               </GridItem>
-              </SidebarPanel>
-              <SidebarContent hasNoBackground>
-                <GridItem span={9} rowSpan={1}>
-                
-                </GridItem>
-                  <GridItem span={9} rowSpan={11}>
+              <GridItem span={9} rowSpan={11}>
                     <PageSection>
                       <PACatalog />
                     </PageSection>
-                  </GridItem>
-              </SidebarContent>
-             </Sidebar>
+              </GridItem>
             </Grid>
             
           </SelectedListProvider>
