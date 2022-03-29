@@ -216,14 +216,13 @@ class ArchitectureDetail extends React.Component {
       productdisplaylist=this.usedproductarray;
       
     }
-    var lefttable = 
+    var lefttable = <div>
                   <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
                       <Thead>
                       <Tr>
                         <Th>Resources</Th>
                       </Tr>
                       </Thead>
-                      
                       <Tbody>
                           { tempdisplay.map( item =>
                             <Tr>
@@ -235,8 +234,9 @@ class ArchitectureDetail extends React.Component {
                           )}
                         
                       </Tbody>
-                      
-
+                      </TableComposable>
+                      <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
+                  
                       <Thead>
                       <Tr>
                         <Th >Products</Th>
@@ -255,7 +255,7 @@ class ArchitectureDetail extends React.Component {
                       </Tbody>
                       
                   </TableComposable>
-                 
+                  </div>
                
      var leftmenu = 
                       <GridItem span="3" rowSpan={12}>

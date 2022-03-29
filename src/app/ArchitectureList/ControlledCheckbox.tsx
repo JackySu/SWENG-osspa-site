@@ -119,6 +119,8 @@ class ControlledCheckbox extends React.Component {
                 </Td>
               </Tr>
             </Tbody>
+          </TableComposable>
+          <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
           <Thead>
           <Tr>
             <th colSpan="2" >Products</th>
@@ -133,6 +135,8 @@ class ControlledCheckbox extends React.Component {
               </Td>
             </Tr>
             </Tbody>
+          </TableComposable>
+          <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
           <Thead>
           <Tr>
             <Th colSpan="2">Vertical</Th>
