@@ -1,28 +1,30 @@
-@media (min-width: 768px) { .learn_more_carousel{
-    max-width: 650px;
+@media (min-width: 768px) { div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
+    --pf-l-gallery--GridTemplateColumns--min: 500px;
 } }
 
-@media (min-width: 920px) { .learn_more_carousel{
-    max-width: 870px;
+@media (min-width: 920px) { div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
+    --pf-l-gallery--GridTemplateColumns--min: 630px;
 } }
 
-@media (min-width: 1200px) { .learn_more_carousel{
-    max-width: 1070px;
+@media (min-width: 1200px) { div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
+    --pf-l-gallery--GridTemplateColumns--min: 770px;
 } }
 
-@media (min-width: 1400px){ .learn_more_carousel{
-    max-width: 1220px;
+@media (min-width: 1400px){ div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
+    --pf-l-gallery--GridTemplateColumns--min: 920px;
 } }
 
-@media (min-width: 2000px){ .learn_more_carousel{
-    max-width: 1740px;
+@media (min-width: 2000px){ div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
+    --pf-l-gallery--GridTemplateColumns--min: 1340px;
 } }
 
 
-@media (min-width: 2400px){ .learn_more_carousel{
-    max-width: 2100px;
+@media (min-width: 2400px){ div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
+    --pf-l-gallery--GridTemplateColumns--min: 1600px;
    
 } }
+
+
 .submitCarousel{
     text-align: center;
 
@@ -51,23 +53,23 @@
 }
 
 @media (min-width: 768px) { .submitCarousel{
-    max-width: 600px;
+    max-width: 580px;
 } }
 
 @media (min-width: 920px) { .submitCarousel{
-    max-width: 730px;
+    max-width: 710px;
 } }
 
 @media (min-width: 1200px) { .submitCarousel{
-    max-width: 950px;
+    max-width: 850px;
 } }
 
 @media (min-width: 1400px){ .submitCarousel{
-    max-width: 1000px;
+    max-width: 950px;
 } }
 
 @media (min-width: 2000px){ .submitCarousel{
-    max-width: 1600px;
+    max-width: 1500px;
 } }
 
 

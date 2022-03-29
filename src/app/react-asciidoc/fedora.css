@@ -177,12 +177,7 @@ div.paragraph {
 
 
 
-div.pf-l-gallery.pf-m-gutter.learn_more_carousel{
-    --pf-l-gallery--GridTemplateColumns--min: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
+
 
 .learn_more_iframe{
     top: 0;
