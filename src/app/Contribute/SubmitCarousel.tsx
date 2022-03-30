@@ -24,9 +24,9 @@ class SubmitCarousel extends React.Component {
         <Carousel show={2} slide={1} swiping={true} infinite={false}>
         <div>
           <div class="title_carousel">Submit Idea</div>
-          <Brand src="/architect/portfolio/images/contribute_process_01.png" alt="Submit process 1" width="200px"/>
+          <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank"><Brand src="/architect/portfolio/images/contribute_process_01.png" alt="Submit process 1" width="200px"/></a>
           <p>
-              Users share how they implemented multi-product solutions by following our design template, and submitting an issue in Gitlab.
+              Users share how they implemented multi-product solutions by following our design template, and <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">submitting an issue</a> in Gitlab.
           </p>
         </div>
         <div>

@@ -221,10 +221,10 @@ class Contribute extends React.Component {
 
                 <a id="_contribute"></a><h2>Contribute to Portfolio Architecture</h2>
                 <p>
-                    We welcome new contributions, whether for a complete set of diagrams or simply tell us more about how you built the system with multiple Red Hat products. Contribute to create a new Portfolio Architecture by simply share any implementation that you have done that contain at least three or more Red Hat products.
+                    We welcome new contributions, whether for a complete set of diagrams or simply tell us more about how you built the system with multiple Red Hat products. <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">Contribute</a> to create a new Portfolio Architecture by simply share any implementation that you have done that contain at least three or more Red Hat products.
                     <br/>
                     <br/>
-                    The preferred way of submitting your contribution is through creating an issue on the repository. You can find many resources online explaining how to work on Gitlab projects and how to submit work to these projects.
+                    The preferred way of <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">submitting your contribution</a> is through creating an issue on the repository. You can find many resources online explaining how to work on Gitlab projects and how to submit work to these projects.
                 </p>
                 <br/>
                 <p>
@@ -251,12 +251,12 @@ class Contribute extends React.Component {
                             </CardHeaderMain>
                       </CardHeader>
                       <CardBody className="contributecardbody">
-                      <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-template">Getting started</a>
+                      <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-template" target="_blank">Getting started</a>
                       <br/>
                       Architecture development process and templates
                       <br/>
                       <br/>
-                      <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-workshops/#/"> Diagram Tooling</a>
+                      <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-workshops/#/" target="_blank"> Diagram Tooling</a>
                       <br/>
                       how to use, design, and create architectural diagrams based on the draw.io tooling and Red Hat Portfolio Architecture design elements.
 
@@ -271,7 +271,7 @@ class Contribute extends React.Component {
                               <Brand  src="/architect/portfolio/images/contribute_other_02.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Have suggestions or code contributions? Any feedback on how we can improve this website are all welcome.</CardBody>    
+                      <CardBody className="contributecardbody">Have <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">suggestions or code contributions</a>? Any feedback on how we can improve the portfolio architecture are all welcome.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
@@ -282,7 +282,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/contribute_other_03.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Help us enhance our architectural diagram tool and PA Center</CardBody>    
+                      <CardBody className="contributecardbody">Help us enhance our <br/> <a href="https://gitlab.com/osspa/osspa-tool/-/issues/new" target="_blank">architectural diagram tool</a><br/> and <br/><a href="https://gitlab.com/osspa/osspa-site/-/issues/new?issuable_template=site_suggestions" target="_blank">PA Center</a></CardBody>    
                   </Card>
                   </GalleryItem>
                   </Gallery>
