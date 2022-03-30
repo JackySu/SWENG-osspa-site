@@ -1,14 +1,9 @@
 import * as React from 'react';
 import { ExclamationTriangleIcon } from '@patternfly/react-icons';
 import {
-  Banner,
   Page,
   PageSection,
-  BackToTop,
   SkipToContent,
-  SidebarContent,
-  Sidebar,
-  SidebarPanel,
   Grid,
   GridItem
 
@@ -76,15 +71,12 @@ class ArchitectureList extends React.Component {
         <PageSection>
         <SelectedListProvider>
             <Grid >
-               
-                  <GridItem>
-                    <PageSection>
-                      <PACatalog />
-                    </PageSection>
-                  </GridItem>
-              
+              <GridItem>
+                <PageSection>
+                  <PACatalog />
+                </PageSection>
+              </GridItem>
             </Grid>
-            
           </SelectedListProvider>
           </PageSection>
           </Page>
@@ -106,7 +98,7 @@ class ArchitectureList extends React.Component {
           }}
         >
           
-          <PageSection>
+          <PageSection className='main_content_section'>
           <SelectedListProvider>
             <Grid >
               <GridItem span={3} rowSpan={12}>

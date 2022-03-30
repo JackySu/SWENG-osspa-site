@@ -88,6 +88,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
   );
 
   const Header = (
+    
     <PageHeader
       logo={<LogoImg />}
       topNav={menuContent}

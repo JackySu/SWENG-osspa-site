@@ -1,8 +1,8 @@
 import React from "react";
 
 import {
+  Banner,
   Masthead,
-  MastheadToggle,
   MastheadMain,
   MastheadBrand,
   MastheadContent,
@@ -12,7 +12,6 @@ import {
   Divider,
   Page
 } from '@patternfly/react-core';
-import { Link } from "react-router-dom";
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 
 
@@ -49,7 +48,9 @@ render(){
       <React.Fragment>
         <Page
           onPageResize={onPageResize}
+          className="banner_page"
         >
+         
       <Masthead id="light-masthead" backgroundColor="light">
       <MastheadMain>
         <MastheadBrand><img src="/architect/portfolio/images/site-logo.png" width={"200px"}/></MastheadBrand>
@@ -65,6 +66,7 @@ render(){
         {learnMoreButton}
       </MastheadContent>
     </Masthead>
+    
     </Page>
     </React.Fragment>
     );

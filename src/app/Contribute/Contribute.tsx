@@ -122,7 +122,7 @@ class Contribute extends React.Component {
             
         
         
-        <PageSection>
+        <PageSection className='main_content_section'>
         
         <Grid >
           

@@ -5,3 +5,7 @@ html, body, #root {
 .pf-l-gallery {
   --pf-l-gallery--GridTemplateColumns--min: 600px
 }
+div.pf-c-back-to-top.back_to_top{
+  position: fixed;
+  z-index: 999999;
+}

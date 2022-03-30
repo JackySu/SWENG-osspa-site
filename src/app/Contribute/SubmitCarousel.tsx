@@ -21,7 +21,7 @@ class SubmitCarousel extends React.Component {
         
     
       <div class="submitCarousel">
-        <Carousel show={3} slide={1} swiping={true} infinite={false}>
+        <Carousel show={2} slide={1} swiping={true} infinite={false}>
         <div>
           <div class="title_carousel">Submit Idea</div>
           <Brand src="/architect/portfolio/images/contribute_process_01.png" alt="Submit process 1" width="200px"/>
