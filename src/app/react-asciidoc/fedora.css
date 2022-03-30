@@ -233,6 +233,7 @@ div.pf-c-banner.footer_banner{
     --pf-c-banner--BackgroundColor: rgb(12 12 12);
     width: 100%;
     font-size: 1em;
+    white-space: normal;
 }
 
 .footer-traditional-logo{
