@@ -3,17 +3,12 @@ import { ExclamationTriangleIcon } from '@patternfly/react-icons';
 import {
   Breadcrumb, 
   BreadcrumbItem,
-  BackToTop,
   Page,
   PageSection,
-  PageGroup,
   SkipToContent,
   Title,
   Grid,
-  GridItem,
-  SidebarContent,
-  Sidebar,
-  SidebarPanel
+  GridItem
 } from '@patternfly/react-core';
 const qs = require('query-string');
 import  detailLinks  from './DetailLink.csv';
@@ -21,7 +16,6 @@ import Papa from 'papaparse';
 const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
 const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
 import { Asciidoc, } from '@app/ArchitectureDetail/AsciiDoc';
-import ExternalLinkSquareAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-square-alt-icon';
 import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
 import EditIcon from '@patternfly/react-icons/dist/esm/icons/edit-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
@@ -228,7 +222,7 @@ class ArchitectureDetail extends React.Component {
                             <Tr>
                               
                               <Td> {this.iconfinder(item.type)}&nbsp;&nbsp;
-                              <a onClick={event => window.open(item.url)}>{item.description}<ExternalLinkSquareAltIcon/></a>
+                              <a onClick={event => window.open(item.url)}>{item.description}</a>
                               </Td>
                             </Tr>
                           )}
@@ -247,7 +241,7 @@ class ArchitectureDetail extends React.Component {
                         { productdisplaylist.map( item =>
                             <Tr>
                               <Td>
-                              <a onClick={event => window.open(item.plink)}>{item.pname}<ExternalLinkSquareAltIcon/></a>
+                              <a onClick={event => window.open(item.plink)}>{item.pname}</a>
                               </Td>
                             </Tr>
                           )}

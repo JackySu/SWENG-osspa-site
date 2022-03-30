@@ -74,6 +74,7 @@ span.image {
     transition: transform ease-in-out 0.3s;
     border: 1px solid #555;
     border-width: thin;
+    cursor: pointer;
 }
 
 
