@@ -1,4 +1,4 @@
-FROM docker.io/library/node:16
+FROM docker.io/library/node:17.8.0
 
 WORKDIR  /usr/src/publicwebsite
 
