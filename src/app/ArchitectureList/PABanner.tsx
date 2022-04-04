@@ -58,7 +58,7 @@ render(){
       <MastheadContent>
         <span class="middle_content">
           <Text component={TextVariants.h2}>Red Hat Portfolio Architecture Center</Text>
-          {" "}Showcases successful customer deployments of our open-source software, as well as architecture best practices and tools to meet your innovative datacenter and cloud based business objectives.
+          {" "}Showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
           <Divider component="div"/>
           <a href="https://www.redhat.com/architect/ai-edge-microshift" target="_blank"><Text component={TextVariants.h6}>NEW POST: How MicroShift and Kubernetes help manage edge devices at scale</Text></a>
           <br/>
