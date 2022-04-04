@@ -49,7 +49,7 @@ class Contribute extends React.Component {
                         <Td><a href="/architect/portfolio/contribute#_buildingPA">What is Portfolio Architecture</a></Td>
                       </Tr>
                       <Tr>
-                        <Td><a href="/architect/portfolio/contribute#_paprocess">How are Portfolio Architectures Created</a></Td>
+                        <Td><a href="/architect/portfolio/contribute#_paprocess">How Portfolio Architectures are created</a></Td>
                       </Tr>
                       <Tr>
                         <Td><a href="/architect/portfolio/contribute#_contribute">Contribute to Portfolio Architecture</a></Td>
@@ -76,7 +76,7 @@ class Contribute extends React.Component {
       </table>
       
       </div>
-      <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas and more. With your help, we can become the go to reference for all architects that wanted to build their system with Red Hat solutions.
+      <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more. With your help, we can become the go to reference for architects that wanted to build and innovate their systems with Red Hat solutions.
       </div>
   </div>
 
@@ -92,7 +92,7 @@ class Contribute extends React.Component {
       gridspan =12
 
       top_intro = <div>
-          <div >
+          <div>
             <table width="100%" height="381px" >
               <thead>
                 <tr>
@@ -101,7 +101,7 @@ class Contribute extends React.Component {
               </thead>
             </table>
           </div>
-          <div > The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas and more. With your help, we can become the go to reference for all architects that wanted to build their system with Red Hat solutions.
+          <div> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more. With your help, we can become the go to reference for architects that wanted to build and innovate their systems with Red Hat solutions.
           </div>
         </div>
     }
@@ -142,7 +142,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">A portfolio architecture is built on facts found in successful customer implementations. It contains diagrams for logical, schematic, and details on each of the technical components.</CardBody>    
+                      <CardBody className="contributecardbody">A Portfolio Architecture is built on facts found in successful customer implementations and documented deployments. It contains diagrams for logical, schematic, and details, on each of the technical components.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
@@ -153,7 +153,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/pa-overview-best-pattern.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Based on each scenario, a portfolio architecture provides recommendations, lessons learned, and best practices with using Red Hat products to architect the solution.</CardBody>    
+                      <CardBody className="contributecardbody">Based on a given deployment scenario and business drivers, a Portfolio Architecture provides recommendations, lessons learned, and best practices on how to use Red Hat products to architect the solution.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
@@ -164,12 +164,12 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/pa-overview-tools.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Build your own architecture diagrams, with standardized icons, for better team collaboration and communication</CardBody>    
+                      <CardBody className="contributecardbody">Build your own architecture diagrams with standardized icons for better team collaboration and communication</CardBody>    
                   </Card>
                 </GalleryItem>
               </Gallery>
              
-              <a id="_paprocess"></a><h2>How are Portfolio Architectures Created</h2>
+              <a id="_paprocess"></a><h2>How Portfolio Architectures are created</h2>
                 <Gallery  hasGutter className="learn_more_gallery_process">
                 <GalleryItem>
                   <Card isCompact isPlain>
@@ -190,7 +190,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/contribute_pa_create_02.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">We take  specific deployment scenarios… and examining all products and parts of the PA leads us to build a generic solution that fits many customer and industry needs and allows for further customization with our industry leading awesome tool we built</CardBody>    
+                      <CardBody className="contributecardbody">We take specific deployment scenarios and examine all products and parts of the solution leads us to build a generic architecture that fits many customer and industry needs, and allows for further customization with our open source diagramming tools.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
@@ -201,7 +201,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/contribute_pa_create_03.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">With the generic solution gathered, we develop design best practices giving you a form-fit solution that can be easily optimized to fit the specific business objectives of your organization, with your choice of open source technology</CardBody>    
+                      <CardBody className="contributecardbody">With a generic solution gathered and researched, we then develop and design best practices giving you a solution that can be easily optimized to fit the specific business objectives of your organization, with your choice of open source technologies.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
@@ -212,7 +212,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/contribute_pa_create_04.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Published portfolio architecture on the website and this ensures consistency or product scope and usage in various deployment scenarios.</CardBody>    
+                      <CardBody className="contributecardbody">Published Portfolio Architectures on the website ensure consistency in product scope and usage in various deployment scenarios.</CardBody>    
                   </Card>
                   </GalleryItem>
                   </Gallery>
@@ -221,10 +221,10 @@ class Contribute extends React.Component {
 
                 <a id="_contribute"></a><h2>Contribute to Portfolio Architecture</h2>
                 <p>
-                    We welcome new contributions, whether for a complete set of diagrams or simply tell us more about how you built the system with multiple Red Hat products. <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">Contribute</a> to create a new Portfolio Architecture by simply share any implementation that you have done that contain at least three or more Red Hat products.
+                    We welcome new contributions, whether for a complete set of diagrams or simply to tell us more about how you architected a system with multiple Red Hat products. <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">Contribute</a> to create a new Portfolio Architecture by simply share any implementation that you have done that contain at least three or more Red Hat products.
                     <br/>
                     <br/>
-                    The preferred way of <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">submitting your contribution</a> is through creating an issue on the repository. You can find many resources online explaining how to work on Gitlab projects and how to submit work to these projects.
+                    The preferred way of <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">submitting your contribution</a> is through creating an issue on the GitLab repository. You can find many resources online explaining how to work on GitLab projects and how to submit work to these projects. You will need an account at GitLab to submit.
                 </p>
                 <br/>
                 <p>
@@ -258,7 +258,7 @@ class Contribute extends React.Component {
                       <br/>
                       <a href="https://redhatdemocentral.gitlab.io/portfolio-architecture-workshops/#/" target="_blank"> Diagram Tooling</a>
                       <br/>
-                      how to use, design, and create architectural diagrams based on the draw.io tooling and Red Hat Portfolio Architecture design elements.
+                      how to use, design, and create architectural diagrams based on diagrams.net tooling and Red Hat Portfolio Architecture design elements.
 
                       </CardBody>    
                   </Card>
@@ -271,7 +271,7 @@ class Contribute extends React.Component {
                               <Brand  src="/architect/portfolio/images/contribute_other_02.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Have <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">suggestions or code contributions</a>? Any feedback on how we can improve the portfolio architecture are all welcome.</CardBody>    
+                      <CardBody className="contributecardbody">Have <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">suggestions or documentation and code contributions</a>? Feedback on how we can improve published Portfolio Architectures are welcome.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
@@ -282,7 +282,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/contribute_other_03.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Help us enhance our <br/> <a href="https://gitlab.com/osspa/osspa-tool/-/issues/new" target="_blank">architectural diagram tool</a><br/> and <br/><a href="https://gitlab.com/osspa/osspa-site/-/issues/new?issuable_template=site_suggestions" target="_blank">PA Center</a></CardBody>    
+                      <CardBody className="contributecardbody">Help us enhance our <br/> <a href="https://gitlab.com/osspa/osspa-tool/-/issues/new" target="_blank">architectural diagram tool</a><br/> and <br/><a href="https://gitlab.com/osspa/osspa-site/-/issues/new?issuable_template=site_suggestions" target="_blank">open-source software PA Center</a></CardBody>    
                   </Card>
                   </GalleryItem>
                   </Gallery>
