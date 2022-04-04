@@ -221,10 +221,10 @@ class Contribute extends React.Component {
 
                 <a id="_contribute"></a><h2>Contribute to Portfolio Architecture</h2>
                 <p>
-                    We welcome new contributions, whether for a complete set of diagrams or simply to tell us more about how you architected a system with multiple Red Hat products. <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">Contribute</a> to create a new Portfolio Architecture by simply share any implementation that you have done that contain at least three or more Red Hat products.
+                    We welcome new contributions, whether for a complete set of diagrams or simply to tell us more about how you architected a system with multiple Red Hat products. <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">Contribute</a> to create a new Portfolio Architecture by simply sharing any implementation that you have done that contains at least three or more Red Hat products.
                     <br/>
                     <br/>
-                    The preferred way of <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">submitting your contribution</a> is through creating an issue on the GitLab repository. You can find many resources online explaining how to work on GitLab projects and how to submit work to these projects. You will need an account at GitLab to submit.
+                    The preferred way of <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">submitting your contribution</a> is through creating an issue in the GitLab repository. You can find many resources online explaining how to work on GitLab projects and how to submit work to these projects. You will need an account at GitLab to submit.
                 </p>
                 <br/>
                 <p>
@@ -265,18 +265,18 @@ class Contribute extends React.Component {
                   </GalleryItem>
                   <GalleryItem>
                   <Card isCompact isPlain>
-                      <CardTitle className="contributecardtitle">Feature Request </CardTitle>
+                      <CardTitle className="contributecardtitle">Architecture Improvements</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand  src="/architect/portfolio/images/contribute_other_02.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Have <a href="https://gitlab.com/osspa/portfolio-architecture-examples/-/issues/new?issuable_template=Contribute" target="_blank">suggestions or documentation and code contributions</a>? Feedback on how we can improve published Portfolio Architectures are welcome.</CardBody>    
+                      <CardBody className="contributecardbody">If you have suggestions or documentation and code contributions to make for an <a href="https://gitlab.com/osspa/portfolio-architecture-examples" target="_blank">existing Portfolio Architecture</a>, please submit an issue against the architecture's associated .adoc. They're named as displayed in our catalogue. Feedback on how we can improve published Portfolio Architectures are welcome is welcome. </CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
                   <Card isCompact isPlain>
-                      <CardTitle className="contributecardtitle">Tooling enhancement</CardTitle>
+                      <CardTitle className="contributecardtitle">Tooling and website enhancement</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
                               <Brand src="/architect/portfolio/images/contribute_other_03.png" alt="Card Image" width={(imagesize-30)+"px"}/>
