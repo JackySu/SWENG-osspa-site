@@ -221,11 +221,16 @@ div.paragraph {
 }
 
 section.tablepadding{
-    padding-top: 10%;
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 5%;
 }
+
+table.pf-c-table.pf-m-width-100.contribute_table.pf-c-table.pf-m-grid-md.pf-m-compact.pf-m-no-border-rows{
+    position: fixed;
+    width: max-content;
+}
+
 
 section.banner{
     padding-bottom: 0;

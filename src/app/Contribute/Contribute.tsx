@@ -36,7 +36,7 @@ class Contribute extends React.Component {
     
     <GridItem span={3} rowSpan={12}>
               <PageSection className="tablepadding" id="catalog-controll">
-      <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100">
+      <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100 contribute_table">
                 <Thead>
                 <Tr>
                   <Th colSpan="2" >Jump to Sections</Th>
