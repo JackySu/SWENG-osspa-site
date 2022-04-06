@@ -30,7 +30,7 @@ echo "Checkout prod Branch......."
 git checkout prod
 
 echo ""
-echo "Merge main and  prod Branch...."
+echo "Merge main and prod Branch...."
 git merge main
 
 echo ""
@@ -40,6 +40,41 @@ git push https://rhosspa:$gitpwd@gitlab.com/osspa/osspa-site.git
 echo ""
 echo "-------------------------------------------------------------------------"
 echo "Release PROD complete"
+
+
+
+
+echo "Remove previous Tooling workspace"
+cd ~/prod
+rm -rf osspa-tool
+
+
+echo "Checkout prod branch"
+git clone https://gitlab.com/osspa/osspa-tool.git
+cd osspa-tool
+
+echo ""
+echo "Checkout tooling prod Branch......."
+git checkout prod
+
+echo ""
+echo "Merge tooling main and prod Branch...."
+git merge main
+
+echo ""
+echo "Push tooling merged commit......"
+git push https://rhosspa:$gitpwd@gitlab.com/osspa/osspa-tool.git
+
+cp -R images/ ../osspa-site/asset/architect/portfolio/tool/
+cp -R Libraries/ ../osspa-site/asset/architect/portfolio/tool/
+cp -R Templates/ ../osspa-site/asset/architect/portfolio/tool/
+cp -R index.html ../osspa-site/asset/architect/portfolio/tool/
+
+echo ""
+echo "-------------------------------------------------------------------------"
+echo "Release Tooling PROD complete"
+
+cd ~/prod/osspa-site
 
 podman image prune
 

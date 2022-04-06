@@ -2,16 +2,29 @@
   
 pm2 delete 0
 
-cd ../dev
+cd ~/dev
 
-rm -rf osspa-site-backup
-mv osspa-site/ osspa-site-backup
+rm -rf osspa-site
 
 git clone https://gitlab.com/osspa/osspa-site.git
 
-cd osspa-site
+echo "Remove previous Tooling workspace"
+cd ~/dev
+rm -rf osspa-tool
 
-npm install --legacy-peer-deps
+
+echo "Checkout prod branch"
+git clone https://gitlab.com/osspa/osspa-tool.git
+cd osspa-tool
+
+cp -R images/ ../osspa-site/asset/architect/portfolio/tool/
+cp -R Libraries/ ../osspa-site/asset/architect/portfolio/tool/
+cp -R Templates/ ../osspa-site/asset/architect/portfolio/tool/
+cp -R index.html ../osspa-site/asset/architect/portfolio/tool/
+
+cd ~/dev/osspa-site
+
+npm install
 
 npm run build
 
