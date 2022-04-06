@@ -43,6 +43,17 @@ app.use(
 );
 
 app.use(
+  "/architect/portfolio/tool/gitlab.com/osspa",
+  createProxyMiddleware({
+    target: "https://gitlab.com/",
+    changeOrigin: true,
+    pathRewrite: {
+      '^/architect/portfolio/tool/gitlab.com/osspa':'https://gitlab.com/osspa' 
+    }
+  })
+);
+
+app.use(
   "/architect/portfolio/osspa",
   createProxyMiddleware({
     target: "https://gitlab.com/",
@@ -52,6 +63,7 @@ app.use(
     }
   })
 );
+
 
 app.use(
   "/images/intro-marketectures",
@@ -155,8 +167,6 @@ if(os_hostname=="portfolio-wnix-us" && PORT==8081){
   HOSTNAME="dev.osspa.org"
 }else if(os_hostname=="portfolio-wnix-us"){
   HOSTNAME="osspa.org"
-}else if(!os_hostname.startsWith("pawebsite")){
-  HOSTNAME="localhost:"+PORT;
 }
 
 const xml_root = create({ version: '1.0' })
