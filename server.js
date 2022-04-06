@@ -161,13 +161,13 @@ if(os_hostname=="portfolio-wnix-us" && PORT==8081){
 
 const xml_root = create({ version: '1.0' })
   .ele('templates')
-    .ele('template', { section: 'Red Hat Templates' ,url: 'https://'+HOSTNAME+'/architect/portfolio/Templates/DetailDiagram.xml',title:'Detail Diagram',preview:'https://'+HOSTNAME+'/architect/portfolio/Templates/DetailDiagram.png',libs:''})
+    .ele('template', { section: 'Red Hat Templates' ,url: 'https://'+HOSTNAME+'/architect/portfolio/tool/Templates/DetailDiagram.xml',title:'Detail Diagram',preview:'https://'+HOSTNAME+'/architect/portfolio/tool/Templates/DetailDiagram.png',libs:''})
     .up()
-    .ele('template', { section: 'Red Hat Templates' ,url: 'https://'+HOSTNAME+'architect/portfolio/Templates/LogicalDiagram.xml',title:'Logical Diagram',preview:'https://'+HOSTNAME+'/architect/portfolio/Templates/LogicalDiagram.png',libs:''})
+    .ele('template', { section: 'Red Hat Templates' ,url: 'https://'+HOSTNAME+'architect/portfolio/tool/Templates/LogicalDiagram.xml',title:'Logical Diagram',preview:'https://'+HOSTNAME+'/architect/portfolio/tool/Templates/LogicalDiagram.png',libs:''})
     .up()
-    .ele('template', { section: 'Red Hat Templates' ,url: 'https://'+HOSTNAME+'/architect/portfolio/Templates/SchematicDiagram.xml',title:'Schematic Diagram',preview:'https://'+HOSTNAME+'/architect/portfolio/Templates/SchematicDiagram.png',libs:''})
+    .ele('template', { section: 'Red Hat Templates' ,url: 'https://'+HOSTNAME+'/architect/portfolio/tool/Templates/SchematicDiagram.xml',title:'Schematic Diagram',preview:'https://'+HOSTNAME+'/architect/portfolio/tool/Templates/SchematicDiagram.png',libs:''})
     .up()
-    .ele('template', { section: 'Red Hat Templates' ,url: 'https://'+HOSTNAME+'/architect/portfolio/Templates/RedHatAllAssets.xml',title:'All Diagrams',preview:'https://'+HOSTNAME+'/architect/portfolio/Templates/RedHatAllAssets.png',libs:''})
+    .ele('template', { section: 'Red Hat Templates' ,url: 'https://'+HOSTNAME+'/architect/portfolio/tool/Templates/RedHatAllAssets.xml',title:'All Diagrams',preview:'https://'+HOSTNAME+'/architect/portfolio/tool/Templates/RedHatAllAssets.png',libs:''})
   .up();
 
 
