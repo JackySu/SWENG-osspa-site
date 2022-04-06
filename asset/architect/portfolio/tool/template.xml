@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<templates>
+  <template section="Red Hat Templates" url="https://localhost:8081/architect/portfolio/Templates/DetailDiagram.xml" title="Detail Diagram" preview="https://localhost:8081/architect/portfolio/Templates/DetailDiagram.png" libs=""/>
+  <template section="Red Hat Templates" url="https://localhost:8081architect/portfolio/Templates/LogicalDiagram.xml" title="Logical Diagram" preview="https://localhost:8081/architect/portfolio/Templates/LogicalDiagram.png" libs=""/>
+  <template section="Red Hat Templates" url="https://localhost:8081/architect/portfolio/Templates/SchematicDiagram.xml" title="Schematic Diagram" preview="https://localhost:8081/architect/portfolio/Templates/SchematicDiagram.png" libs=""/>
+  <template section="Red Hat Templates" url="https://localhost:8081/architect/portfolio/Templates/RedHatAllAssets.xml" title="All Diagrams" preview="https://localhost:8081/architect/portfolio/Templates/RedHatAllAssets.png" libs=""/>
+</templates>
