@@ -17,6 +17,8 @@ RUN npm run build
 
 #clean up unwanted package after build 
 
+RUN chmod 777 -R ./asset/architect/portfolio/tool
+
 
 EXPOSE 8080
 
