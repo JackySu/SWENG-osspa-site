@@ -1,17 +1,16 @@
 ## Summary
 
-(Summarize the suggestion concisely)
+(What issue are you experiencing or feature can we add/make better? Please summarize the suggestion concisely.)
 
 
 ## Example
-If possible, please provide an example of the feature you requsted, even better, contribute your code. 
+If possible, please provide an example of the feature you requested. Or even better, contribute your code!
 
 ## What is the current bug behavior?
 
 
-## Relevant screenshots
-
-(Paste any relevant resource or screenshots
+## Link to Relevant screenshots
+(Paste any relevant resource or screenshots)
 
 
 
