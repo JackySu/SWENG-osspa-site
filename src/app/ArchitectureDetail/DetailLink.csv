@@ -30,6 +30,7 @@ ppid,description,url,type
 9,HL7 and FHIR Integration,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-hl7-an,Blog
 9,Knowledge and Insight Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-i,Blog
 11,Near Zero Downtime Maintenance,https://www.redhat.com/en/blog/near-zero-downtime-maintenance-rhel-sap-solutions,Blog
+11,Near Zero Downtime Architect Blog,https://www.redhat.com/architect/self-healing-infrastructure,Blog
 17,Self-healing infrastructure with Red Hat Insights and Ansible Automation Platform,https://www.redhat.com/en/blog/self-healing-infrastructure-red-hat-insights-and-ansible-automation-platform,Blog
 21,Building an Adaptable 5G Core on an Open Source Container Platform,https://www.redhat.com/en/blog/building-adaptable-5g-core-open-source-container-platform,Blog
 18,Smart Management for SAP,https://www.redhat.com/en/blog/red-hat-smart-management-sap,Blog
