@@ -77,6 +77,8 @@ class Contribute extends React.Component {
       
       </div>
       <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more. With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
+      <br><br>
+      Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
       </div>
   </div>
 
