@@ -35,7 +35,7 @@ render(){
   };
   var learnMoreButton=<span class="banner_link_learn_more">
       <Button variant="link">
-      <iframe width="200" height="25" src="https://www.youtube.com/embed/HEemD0HpY9Q" frameborder="0" allowfullscreen></iframe>
+      <iframe width="200" height="25" src="/architect/portfolio/images/contribute_schematic1.png" frameborder="0" allowfullscreen></iframe>
       <br/><a href="/architect/portfolio/contribute">Learn More <ArrowRightIcon /></a>
       </Button>
       </span>;
