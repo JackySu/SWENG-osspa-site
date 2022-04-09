@@ -53,7 +53,7 @@ render(){
          
       <Masthead id="light-masthead" backgroundColor="light">
       <MastheadMain>
-        <MastheadBrand><img src="/architect/portfolio/images/site-logo.png" width={"200px"}/></MastheadBrand>
+        <MastheadBrand><img src="/architect/portfolio/images/site-logo2.png" width={"200px"}/></MastheadBrand>
       </MastheadMain>
       <MastheadContent>
         <span class="middle_content">
