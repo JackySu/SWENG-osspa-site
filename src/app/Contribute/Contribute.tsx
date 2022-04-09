@@ -67,7 +67,7 @@ class Contribute extends React.Component {
     var top_intro = <div class='container '>
             
     <div class="left">
-      <table width="100%" height="381px" >
+      <table width="100%" height="281px" >
         <thead>
           <tr>
           <iframe class="learn_more_iframe" src="https://www.youtube.com/embed/HEemD0HpY9Q" frameborder="0"></iframe>
@@ -76,7 +76,7 @@ class Contribute extends React.Component {
       </table>
       
       </div>
-      <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more. With your help, we can become the go to reference for architects that want to build and innovate their systems with Red Hat solutions.
+      <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more. With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
       </div>
   </div>
 
