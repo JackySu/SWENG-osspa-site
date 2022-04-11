@@ -64,24 +64,23 @@ class Contribute extends React.Component {
       </PageSection>
     </GridItem>
     
-    var top_intro = <div class='container '>
-            
-    <div class="left">
-      <table width="100%" height="281px" >
-        <thead>
-          <tr>
-          <iframe class="learn_more_iframe" src="https://www.youtube.com/embed/87lISBZZc6w" frameborder="0"></iframe>
-          </tr>
-        </thead>
-      </table>
-      
-      </div>
-      <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more.
-      <br><br>
-      With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
-      <br><br>
-      Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
-      </div>
+    var top_intro = 
+    <div class='container'>
+        <div class="left">
+          <table width="100%" height="281px" >
+            <thead>
+              <tr>
+                <iframe class="learn_more_iframe" src="https://www.youtube.com/embed/87lISBZZc6w" frameborder="0"></iframe>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more.
+          <br/><br/>
+          With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
+          <br/><br/>
+          Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
+        </div>
   </div>
 
     var imagesize = (Math.round((this.state.windowSize-250)/7));
@@ -95,7 +94,8 @@ class Contribute extends React.Component {
       iframeheight= Math.round((iframewidth)/2);
       gridspan =12
 
-      top_intro = <div>
+      top_intro = 
+        <div>
           <div>
             <table width="100%" height="381px" >
               <thead>
@@ -106,10 +106,10 @@ class Contribute extends React.Component {
             </table>
           </div>
           <div> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more.
-      <br><br>
-      With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
-      <br><br>
-      Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
+            <br/><br/>
+            With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
+            <br/><br/>
+            Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
           </div>
         </div>
     }
