@@ -70,14 +70,14 @@ class Contribute extends React.Component {
       <table width="100%" height="281px" >
         <thead>
           <tr>
-          <iframe class="learn_more_iframe" src="https://www.youtube.com/embed/HEemD0HpY9Q" frameborder="0"></iframe>
+          <iframe class="learn_more_iframe" src="https://www.youtube.com/embed/87lISBZZc6w" frameborder="0"></iframe>
           </tr>
         </thead>
       </table>
       
       </div>
       <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more. With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
-      <br><br>
+      
       Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
       </div>
   </div>
