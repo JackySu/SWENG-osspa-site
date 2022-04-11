@@ -63,7 +63,9 @@ render(){
           //
           // latest blog entry / portfolio architecture product links below here:
           //
-          <a href="https://www.redhat.com/architect/self-healing-infrastructure" target="_blank"><Text component={TextVariants.h6}>LATEST BLOG POST April 7, 2022: How to architect a self-healing infrastructure:</Text></a>Use software to monitor your systems for anomalies, define remediation strategies, and deploy solutions as Ansible playbooks.
+          <a href="https://www.redhat.com/architect/self-healing-infrastructure" target="_blank">
+          <Text component={TextVariants.h6}>LATEST BLOG POST April 7, 2022: How to architect a self-healing infrastructure:</Text></a>
+          Use software to monitor your systems for anomalies, define remediation strategies, and deploy solutions as Ansible playbooks.
           //
           // 
           <br/>
