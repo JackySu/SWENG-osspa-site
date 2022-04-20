@@ -17,14 +17,14 @@ echo "Checkout prod branch"
 git clone https://gitlab.com/osspa/osspa-tool.git
 cd osspa-tool
 
-cp -R images/ ../osspa-site/asset/architect/portfolio/tool/
-cp -R Libraries/ ../osspa-site/asset/architect/portfolio/tool/
-cp -R Templates/ ../osspa-site/asset/architect/portfolio/tool/
+cp -R images ../osspa-site/asset/architect/portfolio/tool/
+cp -R Libraries ../osspa-site/asset/architect/portfolio/tool/
+cp -R Templates ../osspa-site/asset/architect/portfolio/tool/
 cp -R index.html ../osspa-site/asset/architect/portfolio/tool/
 
 cd ~/dev/osspa-site
 
-npm install
+npm install --legacy-peer-deps
 
 npm run build
 

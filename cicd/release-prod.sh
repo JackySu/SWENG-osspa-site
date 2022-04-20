@@ -17,13 +17,15 @@ read quaypwd
 
 echo $quaypwd
 
-cd ../prod/osspa-site
+cd ../prod
+rm -rf osspa-site
 
 echo ""
-echo "Checkout master branch and merge version branch into prod.....   "
+echo "Get main branch and merge version branch into prod.....   "
 # Checkout master branch and merge version branch into prod
-git checkout main
-git pull
+git clone https://gitlab.com/osspa/osspa-site.git
+cd osspa-site
+
 
 echo ""
 echo "Checkout prod Branch......."
@@ -65,9 +67,9 @@ echo ""
 echo "Push tooling merged commit......"
 git push https://rhosspa:$gitpwd@gitlab.com/osspa/osspa-tool.git
 
-cp -R images/ ../osspa-site/asset/architect/portfolio/tool/
-cp -R Libraries/ ../osspa-site/asset/architect/portfolio/tool/
-cp -R Templates/ ../osspa-site/asset/architect/portfolio/tool/
+cp -R images ../osspa-site/asset/architect/portfolio/tool/
+cp -R Libraries ../osspa-site/asset/architect/portfolio/tool/
+cp -R Templates ../osspa-site/asset/architect/portfolio/tool/
 cp -R index.html ../osspa-site/asset/architect/portfolio/tool/
 
 echo ""

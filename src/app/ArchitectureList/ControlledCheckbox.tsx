@@ -120,22 +120,7 @@ class ControlledCheckbox extends React.Component {
               </Tr>
             </Tbody>
           </TableComposable>
-          <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
-          <Thead>
-          <Tr>
-            <th colSpan="2" >Products</th>
-          </Tr>
-          </Thead>
-            <Tbody>
-            <Tr>
-              <Td>
-                {this.productArray.map( item =>
-                  <Checkbox label={item.pname} aria-label={item.pname}  id={item.pid} name={item.pid} key={item.pid} onChange={ e=> {this.handleProductChange(e, item.pid) ; updateProduct(item.pid);}} isChecked={this.checkIfSelected("product",item.pid)}/>
-                )}
-              </Td>
-            </Tr>
-            </Tbody>
-          </TableComposable>
+          
           <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
           <Thead>
           <Tr>
@@ -152,6 +137,23 @@ class ControlledCheckbox extends React.Component {
               </Tr>
               </Tbody>
         </TableComposable>
+
+        <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
+          <Thead>
+          <Tr>
+            <th colSpan="2" >Products</th>
+          </Tr>
+          </Thead>
+            <Tbody>
+            <Tr>
+              <Td>
+                {this.productArray.map( item =>
+                  <Checkbox label={item.pname} aria-label={item.pname}  id={item.pid} name={item.pid} key={item.pid} onChange={ e=> {this.handleProductChange(e, item.pid) ; updateProduct(item.pid);}} isChecked={this.checkIfSelected("product",item.pid)}/>
+                )}
+              </Td>
+            </Tr>
+            </Tbody>
+          </TableComposable>
     </React.Fragment>
     );
   }

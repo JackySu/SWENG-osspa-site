@@ -73,11 +73,7 @@ class PACatalog extends React.Component {
                   <Link to={DETAIL_URL+'?ppid='+item.ppid} ><CardTitle>{item.Heading}</CardTitle></Link>
                   <CardBody>{item.Summary}</CardBody>
                   <CardFooter>
-                    <LabelGroup numLabels={20}>
-                          {
-                            item.Product.split(",").map (producttag =>
-                            <Label color="red" key={item.ppid+producttag}>{producttag}</Label> 
-                          )}
+                    <LabelGroup numLabels={5}>
                           {
                             item.Solutions.split(",").map (solutiontag =>
                             <Label color="cyan" key={item.ppid+solutiontag}>{solutiontag}</Label> 
@@ -85,6 +81,10 @@ class PACatalog extends React.Component {
                           {
                             item.Vertical.split(",").map (verticaltag =>
                             <Label color="green" key={item.ppid+verticaltag} >{verticaltag}</Label> 
+                          )}
+                          {
+                            item.Product.split(",").map (producttag =>
+                            <Label color="red" key={item.ppid+producttag}>{producttag}</Label> 
                           )}
                           </LabelGroup>
                     </CardFooter>
