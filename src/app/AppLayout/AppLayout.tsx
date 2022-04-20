@@ -38,6 +38,10 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
     window.open("https://www.redhat.com/architect/");
   }
 
+  function openEBC(e) {
+    window.open("https://pg.ebc.redhat.com");
+  }
+
   function LogoImg() {
     const history = useHistory();
     function handleClick() {
@@ -71,14 +75,17 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
           <NavItem key={2} itemId={2} isActive={false}  onClick={openToolWindow}>
             Our Tool
           </NavItem>
-          <NavItem key={1} itemId={3} isActive={false}  href="/">
+          <NavItem key={4} itemId={3} isActive={false}  href="/">
             <a href="/architect/portfolio/contribute#_contribute">Contribute</a>
           </NavItem>
-          <NavItem key={1} itemId={3} isActive={false}  onClick={openArchitectWindow}>
+          <NavItem key={5} itemId={3} isActive={false}  onClick={openArchitectWindow}>
             Enable Architect
           </NavItem>
-          <NavItem key={3} itemId={4} isActive={false}  onClick={openRedHatWindow}>
+          <NavItem key={6} itemId={4} isActive={false}  onClick={openRedHatWindow}>
             Red Hat Solutions
+          </NavItem>
+          <NavItem key={7} itemId={4} isActive={false}  onClick={openEBC}>
+            Portfolio Graphic
           </NavItem>
         </NavList>
     </Nav>
