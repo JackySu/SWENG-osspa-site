@@ -18,19 +18,33 @@ ppid,description,url,type
 6,Overview of Edge Medical Diagnosis Elements,https://dzone.com/articles/edge-medical-diagnosis-common-architectural-elemen,Blog
 6,Predictive Analysis,https://dzone.com/articles/edge-medical-diagnosis-example-predictive-analysis,Blog
 6,Medical Diagnosis with GitOps,https://dzone.com/articles/edge-medical-diagnosis-example-architecture-with-g,Blog
-6,Medical Diagnosis Validated Pattern,http://redhat-gitops-patterns.io/medical-diagnosis/,Site
 8,A Study of Hosting and Managing on Hybrid Multi-Cloud,https://dzone.com/articles/a-study-of-hosting-and-managing-on-hybrid-multi-cl,Blog
 8,Overview of Making Hybrid Multi-Cloud GitOps Work ,https://dzone.com/articles/overview-of-making-hybrid-multi-cloud-gitops-works,Blog
 8,Hybrid Multi-Cloud Dynamic Security Management ,https://dzone.com/articles/hybrid-multi-cloud-dynamic-security-management,Blog
 8,Observability in Hybrid Multi-Cloud Environment ,https://dzone.com/articles/observability-in-hybrid-multi-cloud-environment,Blog
-8,Multi-Cloud GitOps Validated Pattern,https://redhat-gitops-patterns.io/multicloud-gitops/,Site
 9,Introduction to iDaas,https://dzone.com/articles/intelligent-data-as-a-service-idaas-architectural,Blog
 9,Elements of iDaas,https://dzone.com/articles/intelligent-data-as-a-service-idaas-common-archite,Blog
 9,iDaas Data Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-a,Blog
 9,HL7 and FHIR Integration,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-hl7-an,Blog
 9,Knowledge and Insight Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-i,Blog
 11,Near Zero Downtime Maintenance,https://www.redhat.com/en/blog/near-zero-downtime-maintenance-rhel-sap-solutions,Blog
-11,Near Zero Downtime Architect Blog,https://www.redhat.com/architect/self-healing-infrastructure,Blog
 17,Self-healing infrastructure with Red Hat Insights and Ansible Automation Platform,https://www.redhat.com/en/blog/self-healing-infrastructure-red-hat-insights-and-ansible-automation-platform,Blog
 21,Building an Adaptable 5G Core on an Open Source Container Platform,https://www.redhat.com/en/blog/building-adaptable-5g-core-open-source-container-platform,Blog
 18,Smart Management for SAP,https://www.redhat.com/en/blog/red-hat-smart-management-sap,Blog
+22,Telco 5G with Hyperscalers,https://medium.com/open-5g-hypercore/open-5g-hypercore-episode-i-166a89805c08,Blog
+22,Telco 5G with Hyperscalers,https://github.com/fenar/cnvopen5gcore,Repository
+12,Financial Payments Introduction,https://dzone.com/articles/financial-payments-architecture-an-introduction,Blog
+12,Immediate Payment ,https://dzone.com/articles/payments-architecture-immediate-payments-example,Blog
+12,Anti Money Laundering ,https://dzone.com/articles/payments-architecture-anti-money-laundering-exampl,Blog
+12,Fraud Detection,https://dzone.com/articles/payments-architecture-fraud-detection-example,Blog
+12,Financial Calculations ,https://dzone.com/articles/payments-architecture-financial-calculations-examp,Blog
+16,Retail Data Framework Introduction,https://dzone.com/articles/retail-data-framework-an-architectural-introductio,Blog
+16,Overview of Retail Data Framework Elements,https://dzone.com/articles/retail-data-framework-common-architectural-element,Blog
+16,Retail Data Framework Example,https://dzone.com/articles/retail-data-framework-example-data-architecture,Blog
+13,Point of Sale Introduction,https://dzone.com/articles/point-of-sale-an-architectural-introduction,Blog
+13,Overview of Point of Sale Elements,https://dzone.com/articles/point-of-sale-common-architectural-elements,Blog
+13,Point of Sale Example,https://dzone.com/articles/point-of-sale-example-image-distribution-architect,Blog
+1,Business Optimization Introduction,https://dzone.com/articles/business-optimisation-architecture-an-introduction,Blog
+1,Overview of Business Optimization Elements,https://dzone.com/articles/business-optimisation-architecture-common-architec,Blog
+1,Planning Optimization Example,https://dzone.com/articles/business-optimisation-architecture-example-plannin,Blog
+1,Vaccine Scheduling Example,https://dzone.com/articles/business-optimisation-architecture-example-vaccine,Blog
