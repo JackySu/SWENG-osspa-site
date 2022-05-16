@@ -18,6 +18,7 @@ ppid,description,url,type
 6,Overview of Edge Medical Diagnosis Elements,https://dzone.com/articles/edge-medical-diagnosis-common-architectural-elemen,Blog
 6,Predictive Analysis,https://dzone.com/articles/edge-medical-diagnosis-example-predictive-analysis,Blog
 6,Medical Diagnosis with GitOps,https://dzone.com/articles/edge-medical-diagnosis-example-architecture-with-g,Blog
+6,,,
 8,A Study of Hosting and Managing on Hybrid Multi-Cloud,https://dzone.com/articles/a-study-of-hosting-and-managing-on-hybrid-multi-cl,Blog
 8,Overview of Making Hybrid Multi-Cloud GitOps Work ,https://dzone.com/articles/overview-of-making-hybrid-multi-cloud-gitops-works,Blog
 8,Hybrid Multi-Cloud Dynamic Security Management ,https://dzone.com/articles/hybrid-multi-cloud-dynamic-security-management,Blog
@@ -27,6 +28,7 @@ ppid,description,url,type
 9,iDaas Data Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-a,Blog
 9,HL7 and FHIR Integration,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-hl7-an,Blog
 9,Knowledge and Insight Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-i,Blog
+11,Near Zero Downtime Architect Blog,https://www.redhat.com/architect/self-healing-infrastructure,Blog
 11,Near Zero Downtime Maintenance,https://www.redhat.com/en/blog/near-zero-downtime-maintenance-rhel-sap-solutions,Blog
 17,Self-healing infrastructure with Red Hat Insights and Ansible Automation Platform,https://www.redhat.com/en/blog/self-healing-infrastructure-red-hat-insights-and-ansible-automation-platform,Blog
 21,Building an Adaptable 5G Core on an Open Source Container Platform,https://www.redhat.com/en/blog/building-adaptable-5g-core-open-source-container-platform,Blog
@@ -61,3 +63,4 @@ ppid,description,url,type
 20,Supply Chain Integration Introduction,https://dzone.com/articles/supply-chain-integration-an-architectural-introduc,Blog
 20,Supply Chain Integration Elements,https://dzone.com/articles/supply-chain-integration-common-architectural-elem,Blog
 20,Supply Chain Integration Example,https://dzone.com/articles/supply-chain-integration-example-store-integration,Blog
+23,What is a Radio Access Network (RAN)?,https://www.redhat.com/en/topics/5g-networks/what-is-radio-access-network,Blog
