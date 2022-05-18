@@ -29,6 +29,7 @@ ppid,description,url,type
 9,iDaas Data Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-a,Blog
 9,HL7 and FHIR Integration,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-hl7-an,Blog
 9,Knowledge and Insight Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-i,Blog
+11,Near Zero Downtime Maintenance with Red Hat Enterprise Linux for SAP Solutions,https://www.redhat.com/en/resources/near-zero-downtime-sap-maintenance,Blog
 11,Near Zero Downtime Architect Blog,https://www.redhat.com/architect/self-healing-infrastructure,Blog
 11,Near Zero Downtime Maintenance,https://www.redhat.com/en/blog/near-zero-downtime-maintenance-rhel-sap-solutions,Blog
 17,Self-healing infrastructure with Red Hat Insights and Ansible Automation Platform,https://www.redhat.com/en/blog/self-healing-infrastructure-red-hat-insights-and-ansible-automation-platform,Blog
