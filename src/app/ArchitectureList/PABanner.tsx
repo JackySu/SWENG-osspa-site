@@ -57,6 +57,7 @@ render(){
       </MastheadMain>
       <MastheadContent>
         <span class="middle_content">
+        
           {" "}The Red Hat Portfolio Architecture Center showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
           <Divider component="div"/>
           {/***latest blog entry / portfolio architecture product links below here:***/}
