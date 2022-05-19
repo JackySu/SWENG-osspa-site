@@ -57,8 +57,7 @@ render(){
       </MastheadMain>
       <MastheadContent>
         <span class="middle_content">
-          <Text component={TextVariants.h2}>Red Hat Portfolio Architecture Center</Text>
-          {" "}Showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
+          {" "}The Red Hat Portfolio Architecture Center showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
           <Divider component="div"/>
           {/***latest blog entry / portfolio architecture product links below here:***/}
           <a href="https://www.redhat.com/architect/self-healing-infrastructure" target="_blank">
