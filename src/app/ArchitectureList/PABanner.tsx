@@ -61,9 +61,9 @@ render(){
           {" "}The Red Hat Portfolio Architecture Center showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
           <Divider component="div"/>
           {/***latest blog entry / portfolio architecture product links below here:***/}
-          <a href="https://www.redhat.com/architect/self-healing-infrastructure" target="_blank">
-          <Text component={TextVariants.h6}>LATEST BLOG POST April 7, 2022: How to architect a self-healing infrastructure:</Text></a>
-          Use software to monitor your systems for anomalies, define remediation strategies, and deploy solutions as Ansible playbooks.
+          <a href="https://www.redhat.com/en/blog/high-availability-sap-red-hat-enterprise-linux" target="_blank">
+          <Text component={TextVariants.h6}>LATEST BLOG POST June 3, 2022: High Availability for SAP on Red Hat Enterprise Linux:</Text></a>
+          Make critical environments more resilient by maximizing uptime and minimizing unplanned service disruptions.
           {/*********/} 
           <br/>
         </span>
