@@ -10,10 +10,12 @@ import Papa from 'papaparse';
 import productlist from "./ProductList.csv";
 import solutionlist from "./SolutionList.csv";
 import verticallist from "./VerticalList.csv";
+import typelist from "./TypeList.csv";
 
 var selectedProduct=[] as any;
 var selectedSolution=[] as any;
 var selectedVertical=[] as any;
+var selectedProductType=[] as any;
 var isExpanded  = true;
 
 import { SelectedList } from './SelectedList';
@@ -60,12 +62,25 @@ class ControlledCheckbox extends React.Component {
     }
   }
 
+  handleProductTypeChange = (value, id) => {
+    console.log(id,":",value);
+    this.setState({ [id]: value });
+    if(!selectedProductType.includes(id)){
+      selectedProductType.push(id);
+    }else{
+      const rindex = selectedProductType.indexOf(id);
+      selectedProductType.splice(rindex,1);
+    }
+  }
+
   checkIfSelected = (checkboxtype, checkboxid) => {
     if(checkboxtype=="solution" && selectedSolution.includes(checkboxid)){
       return true;
     }else if(checkboxtype=="product" && selectedProduct.includes(checkboxid)){
       return true;
     }else if(checkboxtype=="vertical" && selectedVertical.includes(checkboxid)){
+      return true;
+    }else if(checkboxtype=="producttype" && selectedProductType.includes(checkboxid)){
       return true;
     }
     return false;
@@ -74,6 +89,7 @@ class ControlledCheckbox extends React.Component {
   productArray;
   solutionArray;
   verticalArray;
+  typeArray;
 
   startload = () => {
     //console.log(listfile);
@@ -95,12 +111,18 @@ class ControlledCheckbox extends React.Component {
         this.verticalArray=results.data;
       }
     })
+    Papa.parse(typelist, {
+      header: true,
+      complete: (results) => {
+        this.typeArray=results.data;
+      }
+    })
   };
 
   render() {
     
     this.startload();
-    const {updateProduct, updateSolution,updateVertical} =  this.context;
+    const {updateProduct, updateSolution,updateVertical, updateProductType} =  this.context;
     return (
       <React.Fragment>
         <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100">
@@ -149,6 +171,23 @@ class ControlledCheckbox extends React.Component {
               <Td>
                 {this.productArray.map( item =>
                   <Checkbox label={item.pname} aria-label={item.pname}  id={item.pid} name={item.pid} key={item.pid} onChange={ e=> {this.handleProductChange(e, item.pid) ; updateProduct(item.pid);}} isChecked={this.checkIfSelected("product",item.pid)}/>
+                )}
+              </Td>
+            </Tr>
+            </Tbody>
+          </TableComposable>
+
+          <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100" >
+          <Thead>
+          <Tr>
+            <th colSpan="2" >Architecture Type</th>
+          </Tr>
+          </Thead>
+            <Tbody>
+            <Tr>
+              <Td>
+                {this.typeArray.map( item =>
+                  <Checkbox label={item.typename} aria-label={item.typename}  id={item.tid} name={item.tid} key={item.tid} onChange={ e=> {this.handleProductTypeChange(e, item.tid) ; updateProductType(item.tid);}} isChecked={this.checkIfSelected("producttype",item.tid)}/>
                 )}
               </Td>
             </Tr>

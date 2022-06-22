@@ -36,6 +36,13 @@ class PACatalog extends React.Component {
     };
   }
   
+  displayProductType(productType){
+
+    if(productType == "SP"){
+      return "Solution Pattern";
+    }else 
+      return "Portfolio Architecture";
+  }
 
   render() {
     
@@ -51,13 +58,8 @@ class PACatalog extends React.Component {
     //var cardPAImagesize =this.state.windowSize/4;
     if(Array.isArray(currentlist) ){
       tempdisplay=currentlist;
-      console.log("size---->"+tempdisplay.length)
     }
-    if(this.state.isMobileView === true) {
-      //cardPAImagesize=(this.state.windowSize-30)+"px";
-      
-    }
-
+  
     var return_content = 
     <Page onPageResize={onPageResize}>
      <Gallery hasGutter className='catalog_gallery'>
@@ -74,6 +76,10 @@ class PACatalog extends React.Component {
                   <CardBody>{item.Summary}</CardBody>
                   <CardFooter>
                     <LabelGroup numLabels={5}>
+                          {
+                            item.ProductType.split(",").map (typetag =>
+                            <Label color="purple" key={item.ppid+typetag}>{ this.displayProductType(typetag)}</Label> 
+                          )}
                           {
                             item.Solutions.split(",").map (solutiontag =>
                             <Label color="cyan" key={item.ppid+solutiontag}>{solutiontag}</Label> 

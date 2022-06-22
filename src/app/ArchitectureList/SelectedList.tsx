@@ -27,7 +27,8 @@ class SelectedListProvider extends React.Component{
         currentlist:this.loadLive(),
         selectedProduct: [] as any,
         selectedSolution: [] as any,
-        selectedVertical: [] as any
+        selectedVertical: [] as any,
+        selectedProductType: [] as any
     }
     updateList = () => {
         var templist = [] as any;
@@ -60,6 +61,16 @@ class SelectedListProvider extends React.Component{
                 console.log("element",element.Vertical);
                 this.state.selectedVertical.forEach(verticalItem => {
                     if(!element.Vertical.includes(verticalItem)){
+                        shouldPush = false;
+                    }    
+                });
+                
+            }
+
+            if(this.state.selectedProductType.length > 0){
+                console.log("element",element.ProductType);
+                this.state.selectedProductType.forEach(productTypeItem => {
+                    if(!element.ProductType.includes(productTypeItem)){
                         shouldPush = false;
                     }    
                 });
@@ -104,6 +115,17 @@ class SelectedListProvider extends React.Component{
         this.setState({selectedVertical:this.state.selectedVertical});
         this.updateList();
     }
+
+    updateProductType = (vid) => {
+        if(!this.state.selectedProductType.includes(vid)){
+            this.state.selectedProductType.push(vid);
+          }else{
+            const rindex = this.state.selectedProductType.indexOf(vid);
+            this.state.selectedProductType.splice(rindex,1);
+          }
+        this.setState({selectedProductType:this.state.selectedProductType});
+        this.updateList();
+    }
     
     
     
@@ -119,7 +141,7 @@ class SelectedListProvider extends React.Component{
         
        
         return(
-            <SelectedList.Provider value={{...this.state, updateProduct: this.updateProduct,updateSolution: this.updateSolution,updateVertical: this.updateVertical}}>
+            <SelectedList.Provider value={{...this.state, updateProduct: this.updateProduct,updateSolution: this.updateSolution,updateVertical: this.updateVertical,updateProductType: this.updateProductType}}>
                 {this.props.children}
             </SelectedList.Provider>
         );
