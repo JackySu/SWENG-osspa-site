@@ -151,7 +151,17 @@ app.use(
   })
 );
 
-
+//Reverse proxy for Solution Patterns
+app.use(
+  "/architect/portfolio/redhat-solution-patterns",
+  createProxyMiddleware({
+    target: "https://raw.githubusercontent.com/",
+    changeOrigin: true,
+    pathRewrite: {
+      '^/architect/portfolio/redhat-solution-patterns':'https://raw.githubusercontent.com/redhat-solution-patterns' 
+    }
+  })
+);
 
 app.listen(PORT, () => console.log('Portfolio Public Site listening on port', PORT))
 

@@ -154,7 +154,7 @@ class ArchitectureDetail extends React.Component {
       window.location.replace("/architect/portfolio");
     }
     
-    fetch("/architect/portfolio/osspa/portfolio-architecture-examples/-/raw/main/"+docname,{
+    fetch("/architect/portfolio"+docname,{
       headers : { 
           method: "get",
           'Accept': 'text/asciidoc'
