@@ -1,23 +1,23 @@
 pid,pname,plink
-ACM,Red Hat Advanced Cluster Management,https://www.redhat.com/en/technologies/management/advanced-cluster-management
-AMQ,Red Hat AMQ,https://www.redhat.com/en/technologies/jboss-middleware/amq
-Ansible,Red Hat Ansible Automation Platform,https://www.redhat.com/en/technologies/management/ansible
-API,Red Hat 3scale API Management,https://www.redhat.com/en/technologies/jboss-middleware/3scale
-Consulting,Red Hat Consulting,https://www.redhat.com/en/services/consulting
-Data,Red Hat Data Foundation,https://www.redhat.com/en/technologies/cloud-computing/openshift-data-foundation
-Edge,Red Hat Edge,https://www.redhat.com/en/topics/edge-computing/approach
-Identity,Red Hat Identity Management,https://access.redhat.com/products/identity-management
-Insights,Red Hat Insights,https://www.redhat.com/en/technologies/management/insights
-Integration,Red Hat Integration,https://www.redhat.com/en/products/integration
-OpenShift,Red Hat OpenShift Platform,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
-OpenStack,Red Hat OpenStack,https://www.redhat.com/en/technologies/linux-platforms/openstack-platform
-ProcessAutomation,Red Hat Process Automation,https://www.redhat.com/en/technologies/jboss-middleware/process-automation-manager
-Quay,Red Hat Quay,https://www.redhat.com/en/technologies/cloud-computing/quay
-RHEL,Red Hat Enterprise Linux,https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux
-Runtimes,Red Hat Runtimes,https://www.redhat.com/en/products/runtimes
-Satellite,Red Hat Satellite,https://www.redhat.com/en/technologies/management/satellite
-SmartManagement,Red Hat Smart Management,https://www.redhat.com/en/technologies/management/smart-management
-Storage,Red Hat Ceph Storage,https://www.redhat.com/en/technologies/storage/ceph
-Training,Red Hat Training,https://www.redhat.com/en/services/training-and-certification
-Virtualization,Red Hat Virtualization,https://www.redhat.com/en/technologies/virtualization/enterprise-virtualization
-Kafka,Red Hat OpenShift Streams,https://developers.redhat.com/products/red-hat-openshift-streams-for-apache-kafka/overview
+ACM,Red Hat Advanced Cluster Management,https://www.redhat.com/en/technologies/management/advanced-cluster-management?intcmp=7013a00000318EWAAY
+AMQ,Red Hat AMQ,https://www.redhat.com/en/technologies/jboss-middleware/amq?intcmp=7013a00000318EWAAY
+Ansible,Red Hat Ansible Automation Platform,https://www.redhat.com/en/technologies/management/ansible?intcmp=7013a00000318EWAAY
+API,Red Hat 3scale API Management,https://www.redhat.com/en/technologies/jboss-middleware/3scale?intcmp=7013a00000318EWAAY
+Consulting,Red Hat Consulting,https://www.redhat.com/en/services/consulting?intcmp=7013a00000318EWAAY
+Data,Red Hat Data Foundation,https://www.redhat.com/en/technologies/cloud-computing/openshift-data-foundation?intcmp=7013a00000318EWAAY
+Edge,Red Hat Edge,https://www.redhat.com/en/topics/edge-computing/approach?intcmp=7013a00000318EWAAY
+Identity,Red Hat Identity Management,https://access.redhat.com/products/identity-management?intcmp=7013a00000318EWAAY
+Insights,Red Hat Insights,https://www.redhat.com/en/technologies/management/insights?intcmp=7013a00000318EWAAY
+Integration,Red Hat Integration,https://www.redhat.com/en/products/integration?intcmp=7013a00000318EWAAY
+OpenShift,Red Hat OpenShift Platform,https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it?intcmp=7013a00000318EWAAY
+OpenStack,Red Hat OpenStack,https://www.redhat.com/en/technologies/linux-platforms/openstack-platform?intcmp=7013a00000318EWAAY
+ProcessAutomation,Red Hat Process Automation,https://www.redhat.com/en/technologies/jboss-middleware/process-automation-manager?intcmp=7013a00000318EWAAY
+Quay,Red Hat Quay,https://www.redhat.com/en/technologies/cloud-computing/quay?intcmp=7013a00000318EWAAY
+RHEL,Red Hat Enterprise Linux,https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux?intcmp=7013a00000318EWAAY
+Runtimes,Red Hat Runtimes,https://www.redhat.com/en/products/runtimes?intcmp=7013a00000318EWAAY
+Satellite,Red Hat Satellite,https://www.redhat.com/en/technologies/management/satellite?intcmp=7013a00000318EWAAY
+SmartManagement,Red Hat Smart Management,https://www.redhat.com/en/technologies/management/smart-management?intcmp=7013a00000318EWAAY
+Storage,Red Hat Ceph Storage,https://www.redhat.com/en/technologies/storage/ceph?intcmp=7013a00000318EWAAY
+Training,Red Hat Training,https://www.redhat.com/en/services/training-and-certification?intcmp=7013a00000318EWAAY
+Virtualization,Red Hat Virtualization,https://www.redhat.com/en/technologies/virtualization/enterprise-virtualization?intcmp=7013a00000318EWAAY
+Kafka,Red Hat OpenShift Streams,https://developers.redhat.com/products/red-hat-openshift-streams-for-apache-kafka/overview?intcmp=7013a00000318EWAAY
