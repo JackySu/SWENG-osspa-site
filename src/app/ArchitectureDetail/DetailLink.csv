@@ -71,3 +71,5 @@ ppid,description,url,type
 15,Remote Server Management Elements,https://dzone.com/articles/remote-server-management-common-architectural-elem,Blog
 15,Remote Server Management Example,https://dzone.com/articles/remote-server-management-example-remote-architectu,Blog
 24,Datacenter to edge: A reference architecture for managing remote resources,https://www.redhat.com/architect/edge-architecture-remote-management,Blog
+26,Validated Patterns - Industrial Edge,https://redhat-gitops-patterns.io/industrial-edge/,Site
+26,Boosting manufacturing efficiency with AI/ML at edge,https://www.redhat.com/en/blog/boosting-manufacturing-efficiency-and-product-quality-aiml-edge-computing-and-kubernetes?extIdCarryOver=true&sc_cid=701f2000001Css5AAC,Blog
