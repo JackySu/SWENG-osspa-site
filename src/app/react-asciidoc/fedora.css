@@ -20,7 +20,7 @@
 }
 
 
-/* Text styles 
+/* Text styles
 
 body{font-family: "Open Sans",sans-serif;background-color: var(--maincolor);color:var(--black);}
 */
@@ -80,9 +80,17 @@ span.image {
 
 
 div.paragraph {
-    padding-top:30px; 
+    padding-top:10px;
 }
 
+.exampleblock .content{
+    padding: 1em;
+
+}
+
+.exampleblock .content{
+    margin-top: 0.25em;
+}
 
 .contribute_title_desc {
     text-align: center;
@@ -90,6 +98,145 @@ div.paragraph {
     position: relative;
 }
 
+/*lists layout*/
+div.olist.arabic, div.ulist {
+    padding-top: 1em;
+    padding-left: 1.25em;
+}
+
+.ulist{
+    padding-left: 1.25em;
+}
+
+.ulist ul li{
+    list-style: circle !important;
+}
+.ulist ul{
+    list-style: circle !important;
+}
+
+.dlist{
+    margin-top: 1em;
+}
+
+/* image*/
+.imageblock{
+    text-align: center;
+}
+/* image end*/
+/* lists layout end*/
+.sidebarblock{
+    margin: 0.25em;
+    padding: 1em;
+}
+
+ /*Admonitions styling*/
+ .admonitionblock{
+    margin:1.4rem 0 0;
+}
+ .admonitionblock p, .admonitionblock td.content{
+    font-size:.88889rem
+}
+ .admonitionblock td.content>:first-child{
+    margin:0
+}
+ .admonitionblock pre{
+    font-size:.83333rem
+}
+ .admonitionblock>table{
+    table-layout:fixed;
+    position:relative;
+    width:100%
+}
+ .admonitionblock td.content{
+    padding:1rem 1rem .75rem;
+    width:100%;
+    border: 1px solid #dddddf;
+    border-radius: 0.25em;
+}
+ .admonitionblock .icon{
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:.83333rem;
+    padding:0.5rem;
+    height:1.25rem;
+    font-weight:500;
+    text-transform:uppercase;
+    border-radius:.45rem;
+    -webkit-transform:translate(-.5rem,-50%);
+    transform:translate(-.5rem,-50%)
+ }
+ .admonitionblock.caution .icon{
+    background-color:#F56D6D;
+    color:#fff;
+    padding: 0;
+}
+ .admonitionblock.important .icon{
+    background-color:#EE0000;
+    color:#fff;
+    text-align: center;
+    width: 100px;
+    padding: 0;
+ }
+
+ .admonitionblock.note .icon{
+    background-color:#0499C5;
+    color:#fff;
+    padding: 0;
+}
+ .admonitionblock.tip .icon{
+    background-color:#82C299;
+    color:#fff;
+     padding: 0;
+}
+ .admonitionblock.warning .icon{
+    background-color: #FAAA4F;
+    color:#fff;
+    text-align: center;
+    width: 100px;
+     padding: 0;
+ }
+
+ .admonitionblock .icon i{
+    display:-webkit-inline-box;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    height: 22.5px;
+}
+ .admonitionblock .icon i::after{
+    content:attr(title)
+}
+/*Admonitions styling end*/
+/* example blocks */
+.exampleblock {
+    font-size:.88889rem;
+    font-weight:500;
+    -webkit-hyphens:none;
+    -ms-hyphens:none;
+    hyphens:none;
+    letter-spacing:.01em;
+    padding-bottom:.075rem;
+    text-align:left
+}
+.exampleblock>.content{
+    border:.15rem solid #DEDEDE;
+    border-radius:.5rem;
+    padding:.75rem;
+    background-color: #F3F3F3;
+}
+.exampleblock>.content>:first-child{
+    margin-top:0
+}
+/* header 3 */
+.sect3 {
+    padding-top: 15px;
+}
+/* header 3 end*/
+/* example blocks end */
 .contribute_title_desc p {
     margin: 0;
     position: absolute;
@@ -255,7 +402,7 @@ img.pf-c-brand.footer-traditional-logo{
 .page__colophon {
     font-size: 0.9rem;
     color: #b3b5b7;
-    
+
 }
 
 
@@ -318,7 +465,7 @@ div.ulist{
 
 @media (min-width: 2400px){ .main_content_section{
     max-width: 2100px;
-   
+
 } }
 
 
