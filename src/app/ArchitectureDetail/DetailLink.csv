@@ -1,6 +1,6 @@
 ppid,description,url,type
-2,Cloud Adoption Architectural Introduction,https://dzone.com/articles/cloud-adoption-an-architectural-introduction,Blog 
-2,Overview of Cloud Adoption Elements,https://dzone.com/articles/cloud-adoption-common-architectural-elements,Blog 
+2,Cloud Adoption Architectural Introduction,https://dzone.com/articles/cloud-adoption-an-architectural-introduction,Blog
+2,Overview of Cloud Adoption Elements,https://dzone.com/articles/cloud-adoption-common-architectural-elements,Blog
 2,Example Cloud Adoption Architectures ,https://dzone.com/articles/cloud-adoption-example-adoption-architecture,Blog
 3,Cloud Factory Introduction,https://dzone.com/articles/cloud-factory-architectural-introduction,Blog
 3,Overview of Cloud Adoption Elements,https://dzone.com/articles/cloud-factory-common-architectural-elements,Blog
@@ -73,3 +73,8 @@ ppid,description,url,type
 24,Datacenter to edge: A reference architecture for managing remote resources,https://www.redhat.com/architect/edge-architecture-remote-management,Blog
 26,Validated Patterns - Industrial Edge,https://redhat-gitops-patterns.io/industrial-edge/,Site
 26,Boosting manufacturing efficiency with AI/ML at edge,https://www.redhat.com/en/blog/boosting-manufacturing-efficiency-and-product-quality-aiml-edge-computing-and-kubernetes?extIdCarryOver=true&sc_cid=701f2000001Css5AAC,Blog
+25,Learn more: complete documentation about how to Modernize your stack with Change Data Capture,https://red.ht/modernize-with-cdc,Site
+25,Full step-by-step guide: Try this solution (CDC),https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/solution-pattern-modernization-cdc/03-demo.html,Site
+25,More Red Hat Solution Patterns for Cloud Native Applications,https://redhat-solution-patterns.github.io/,Site
+25,What is change data capture?,https://www.redhat.com/en/topics/integration/what-is-change-data-capture,Blog
+25,Outbox pattern with OpenShift Streams for Apache Kafka and Debezium,https://developers.redhat.com/devnation/tech-talks/dual-writes-kafka-debezium,Video
