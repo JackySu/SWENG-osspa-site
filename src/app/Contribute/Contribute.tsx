@@ -150,7 +150,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Built on facts found in successful customer implementations and documented deployments. They contains logical, schematic, and detail diagrams on each of the technical components.</CardBody>    
+                      <CardBody className="contributecardbody">Built on facts found in successful customer implementations and documented deployments. They contain logical, schematic, and detail diagrams on each of the technical components.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
