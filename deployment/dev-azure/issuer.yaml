@@ -1,0 +1,23 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: azure-dns-issuer
+  namespace: osspa
+spec:
+  acme:
+    email: YOUR_EMAIL
+    preferredChain: ''
+    privateKeySecretRef:
+      name: azure-private-key
+    server: 'https://acme-v02.api.letsencrypt.org/directory'
+    solvers:
+      - dns01:
+          azureDNS:
+            clientID: Application_ID
+            clientSecretSecretRef:
+              key: client-secret
+              name: azuredns-secret
+            hostedZoneName: osspa.org
+            resourceGroupName: RESOURCE_GROUP
+            subscriptionID: SUBSCRIPTION_ID
+            tenantID: Directory_ID

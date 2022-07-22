@@ -25,7 +25,7 @@ spec:
       volumes:
         - name: cert
           secret:
-            secretName: osspa-cert
+            secretName: osspa-org-tls
             defaultMode: 420
       containers:
         - name: pawebsite
@@ -50,7 +50,7 @@ spec:
           terminationMessagePolicy: File
           envFrom:
             - secretRef:
-                name: osspa-cert
+                name: osspa-org-tls
           image: 'quay.io/osspa/sslhttpd:latest'
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
