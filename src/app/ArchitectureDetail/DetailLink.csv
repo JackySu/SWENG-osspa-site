@@ -73,6 +73,7 @@ ppid,description,url,type
 24,Datacenter to edge: A reference architecture for managing remote resources,https://www.redhat.com/architect/edge-architecture-remote-management,Blog
 26,Validated Patterns - Industrial Edge,https://redhat-gitops-patterns.io/industrial-edge/,Site
 26,Boosting manufacturing efficiency with AI/ML at edge,https://www.redhat.com/en/blog/boosting-manufacturing-efficiency-and-product-quality-aiml-edge-computing-and-kubernetes?extIdCarryOver=true&sc_cid=701f2000001Css5AAC,Blog
+26,Extending the hybrid cloud to the industrial edge,https://www.redhat.com/architect/cloud-industrial-edge-architecture,Blog
 25,Learn more: complete documentation about how to Modernize your stack with Change Data Capture,https://red.ht/modernize-with-cdc,Site
 25,Full step-by-step guide: Try this solution (CDC),https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/solution-pattern-modernization-cdc/03-demo.html,Site
 25,More Red Hat Solution Patterns for Cloud Native Applications,https://redhat-solution-patterns.github.io/,Site
