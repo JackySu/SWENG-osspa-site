@@ -223,7 +223,7 @@ div.olist.arabic, div.ulist {
     text-align:left
 }
 .exampleblock>.content{
-    border:.15rem solid #DEDEDE;
+    border:.1rem solid;
     border-radius:.5rem;
     padding:.75rem;
     background-color: #F3F3F3;
@@ -609,3 +609,5 @@ div.pf-l-gallery.pf-m-gutter.catalog_gallery{
 div.pf-c-page.banner_page{
     display: block;
 }
+
+
