@@ -42,7 +42,7 @@ export default class Asciidoc extends React.PureComponent {
             imagelocation=imagelocation.replace('"','');  
             console.log('imagelocation-->window.open("'+imagelocation+'");');
             
-            filteredhtml=filteredhtml.replace(imagelocation+'"',imagelocation+'"'+'onclick="window.open(\''+imagelocation+'\');"')
+            filteredhtml=filteredhtml.replace(imagelocation+'"',imagelocation+'"'+'class="asciidoc-img" onclick="window.open(\''+imagelocation+'\');"')
         }
        
 
