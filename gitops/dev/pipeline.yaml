@@ -1,0 +1,75 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: build-and-deploy-dev
+  namespace: osspa
+spec:
+  params:
+    - default: quay.io/osspa/pawebsite
+      name: IMAGE_NAME
+      type: string
+  tasks:
+    - name: fetch-repository
+      params:
+        - name: url
+          value: 'https://gitlab.com/osspa/osspa-site.git'
+        - name: revision
+          value: main
+        - name: subdirectory
+          value: ''
+        - name: deleteExisting
+          value: 'true'
+      taskRef:
+        kind: ClusterTask
+        name: git-clone
+      workspaces:
+        - name: output
+          workspace: workspace
+    - name: merge-tool-repository
+      params:
+        - name: GIT_SCRIPT
+          value: |
+            cd /workspace/source 
+            git clone https://gitlab.com/osspa/osspa-tool.git
+            cd /workspace/source/osspa-tool
+            cp -R images /workspace/source/asset/architect/portfolio/tool/
+            cp -R Libraries /workspace/source/asset/architect/portfolio/tool/
+            cp -R Templates /workspace/source/asset/architect/portfolio/tool/
+            cp -R index.html /workspace/source/asset/architect/portfolio/tool/
+            cd /workspace/source
+            rm -rf osspa-tool
+      runAfter:
+        - fetch-repository
+      taskRef:
+        kind: ClusterTask
+        name: git-cli
+      workspaces:
+        - name: source
+          workspace: workspace
+    - name: build
+      params:
+        - name: IMAGE
+          value: $(params.IMAGE_NAME)
+        - name: TLSVERIFY
+          value: 'false'
+      runAfter:
+        - merge-tool-repository
+      taskRef:
+        kind: ClusterTask
+        name: buildah
+      workspaces:
+        - name: source
+          workspace: workspace
+    - name: rollout
+      params:
+        - name: SCRIPT
+          value: |
+            oc scale --replicas=0 deployment/pawebsite -n osspa
+            oc scale --replicas=1 deployment/pawebsite -n osspa
+      runAfter:
+        - build
+      taskRef:
+        kind: ClusterTask
+        name: openshift-client
+  workspaces:
+    - name: workspace
