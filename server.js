@@ -163,6 +163,19 @@ app.use(
   })
 );
 
+
+//Reverse proxy for Validated Patterns
+app.use(
+  "/architect/portfolio/hybrid-cloud-patterns",
+  createProxyMiddleware({
+    target: "https://raw.githubusercontent.com/",
+    changeOrigin: true,
+    pathRewrite: {
+      '^/architect/portfolio/hybrid-cloud-patterns':'https://raw.githubusercontent.com/hybrid-cloud-patterns' 
+    }
+  })
+);
+
 app.listen(PORT, () => console.log('Portfolio Public Site listening on port', PORT))
 
 
