@@ -15,7 +15,8 @@ import  detailLinks  from './DetailLink.csv';
 import Papa from 'papaparse';
 const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
 const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
-import { Asciidoc, } from '@app/ArchitectureDetail/AsciiDoc';
+import { Asciidoc } from '@app/ArchitectureDetail/AsciiDoc';
+import { AsciidocVP } from '@app/ArchitectureDetail/AsciiDocVP';
 import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
 import EditIcon from '@patternfly/react-icons/dist/esm/icons/edit-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
@@ -28,12 +29,13 @@ import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-tab
 
 import palist from "../ArchitectureList/PAList.csv";
 import productlist from "../ArchitectureList/ProductList.csv";
+import e from 'express';
 
 var title;
 var ppid;
 var docname;
 var resourcelist;
-
+var productType;
 
 
 class ArchitectureDetail extends React.Component {
@@ -50,7 +52,8 @@ class ArchitectureDetail extends React.Component {
         if(productresults.data[i].ppid == ppid && productresults.data[i].islive == "TRUE"){
           docname = productresults.data[i].DetailPage;
           title = productresults.data[i].Heading;
-
+          productType = productresults.data[i].ProductType;
+          
           this.theProduct = productresults.data[i];
           this.productUsedArray=this.theProduct.Product.split(',');
           
@@ -265,8 +268,12 @@ class ArchitectureDetail extends React.Component {
       leftmenu=<PageSection></PageSection>;
       contentGridItemSpan=12;
     }
-    
-    
+   
+    var ascii_render =  <Asciidoc>{this.state.data}</Asciidoc>;
+    if(productType=="VP"){
+      ascii_render =  <AsciidocVP>{this.state.data}</AsciidocVP>;
+    }
+
 
     return (
 
@@ -302,7 +309,8 @@ class ArchitectureDetail extends React.Component {
               </GridItem>
                 <GridItem span={contentGridItemSpan} rowSpan={11}>
                 <PageSection>
-                  <Asciidoc>{this.state.data}</Asciidoc>
+                  
+                 {ascii_render}
                 </PageSection>
                 </GridItem>
                 <GridItem>

@@ -40,7 +40,9 @@ class PACatalog extends React.Component {
 
     if(productType == "SP"){
       return "Solution Pattern";
-    }else 
+    }else if(productType == "VP"){
+      return "Validated Pattern";
+    }else
       return "Portfolio Architecture";
   }
 

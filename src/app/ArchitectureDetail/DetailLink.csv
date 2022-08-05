@@ -67,6 +67,10 @@ ppid,description,url,type
 20,Supply Chain Integration Example,https://dzone.com/articles/supply-chain-integration-example-store-integration,Blog
 20,How to Get the Supply Chain Back to (Better than) Normal,https://devops.com/how-to-get-the-supply-chain-back-to-better-than-normal/,Blog
 23,What is a Radio Access Network (RAN)?,https://www.redhat.com/en/topics/5g-networks/what-is-radio-access-network,Blog
+23,Open RAN and O-RAN in Brief,https://www.redhat.com/en/blog/open-ran-and-o-ran-brief,Blog
+23,Red Hat OpenShift drives a strong 5G open RAN ecosystem,https://www.redhat.com/en/blog/red-hat-openshift-drives-strong-5g-open-ran-ecosystem,Blog
+23,Red Hat and Nokia collaborate to accelerate 5G RAN technology innovation,https://www.redhat.com/en/blog/red-hat-and-nokia-collaborate-accelerate-5g-ran-technology-innovation,Blog
+23,Accelerate your 5G strategy with virtualized RAN (vRAN),https://www.redhat.com/en/blog/accelerate-your-5g-strategy-virtualized-ran-vran,Blog
 15,Remote Server Management Introduction,https://dzone.com/articles/remote-server-management-an-architectural-introduc,Blog
 15,Remote Server Management Elements,https://dzone.com/articles/remote-server-management-common-architectural-elem,Blog
 15,Remote Server Management Example,https://dzone.com/articles/remote-server-management-example-remote-architectu,Blog
@@ -82,3 +86,7 @@ ppid,description,url,type
 29,How to architect intelligent workflow automation for insurance companies,https://www.redhat.com/architect/intelligent-workflow-automation-insurance,Blog
 29,How to architect intelligent automation with ITSM,https://www.redhat.com/architect/itsm-automation-insurance-systems,Blog
 29,How to architect intelligent automation using the Strangler pattern,https://www.redhat.com/architect/insurance-process-automation-strangler-pattern,Blog
+30,Installation Details,https://hybrid-cloud-patterns.io/ansible-edge-gitops/installation-details/,Site
+30,Pattern AAP Configuration Details,https://hybrid-cloud-patterns.io/ansible-edge-gitops/ansible-automation-platform/,Site
+30,Understanding the Edge GitOps VMs Helm Chart,https://hybrid-cloud-patterns.io/ansible-edge-gitops/openshift-virtualization/,Site
+30,Cluster Sizing,https://hybrid-cloud-patterns.io/ansible-edge-gitops/cluster-sizing/,Site
