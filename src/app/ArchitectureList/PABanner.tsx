@@ -61,9 +61,9 @@ render(){
           {" "}The Red Hat Portfolio Architecture Center showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
           <Divider component="div"/>
           {/***latest blog entry / portfolio architecture product links below here:***/}
-          <a href="https://www.redhat.com/architect/insurance-process-automation-strangler-pattern" target="_blank">
-          <Text component={TextVariants.h6}>LATEST BLOG POST July 6, 2022: How to architect intelligent automation using the Strangler pattern: A real-world example:</Text></a>
-          The Strangler pattern puts an intermediary interface in front of an old system, service, or function to advance digital transformation without losing past investments.
+          <a href="https://www.redhat.com/architect/cloud-industrial-edge-architecture" target="_blank">
+          <Text component={TextVariants.h6}>LATEST BLOG POST July 27, 2022: Extending the hybrid cloud to the industrial edge: A reference architecture:</Text></a>
+          Combining AI, ML, and GitOps provides manufacturers the data they need whether at a central datacenter or a remote edge location to understand and predict the health of production systems.
 .
           {/*********/} 
           <br/>
