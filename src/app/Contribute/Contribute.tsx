@@ -55,6 +55,7 @@ class Contribute extends React.Component {
                 </Tbody>
     
       </TableComposable>
+      
       </PageSection>
     </GridItem>
     

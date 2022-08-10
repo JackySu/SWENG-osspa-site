@@ -261,7 +261,7 @@ class LearnMore extends React.Component {
                       <CardTitle className="contributecardtitle">Code you can run</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/whatisVP_01.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardBody className="contributecardbody">Contain all the code needed to help build your edge stack so that you can go from zero to POC faster. All steps are fully automated through GitOps processes to automate deployments consistently and at scale..</CardBody>    
@@ -272,7 +272,7 @@ class LearnMore extends React.Component {
                       <CardTitle className="contributecardtitle">Dynamic and updated</CardTitle>
                       <CardHeader  className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/pa-overview-best-pattern.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/whatisVP_02.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardBody className="contributecardbody">Continuously tested against current product releases so that your deployment is kept up to date—reducing risk while using the latest capabilities.</CardBody>    
@@ -283,7 +283,7 @@ class LearnMore extends React.Component {
                       <CardTitle className="contributecardtitle">Open and customizable</CardTitle>
                       <CardHeader  className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/pa-overview-tools.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/whatisVP_03.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
                       <CardBody className="contributecardbody">We build the foundational architecture that you can further customize to meet the needs of your use case. And community members can contribute their own improvements - making sure innovation never stops..</CardBody>    
