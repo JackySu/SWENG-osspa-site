@@ -35,28 +35,28 @@ export default class AsciidocVP extends React.PureComponent {
         filteredhtml=filteredhtml.replace('video::','<div class="youtubeframe"><p><iframe src="https://www.youtube.com/embed/');
         filteredhtml=filteredhtml.replace('[youtube]','" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></p></div>');
            
-        let imgpattern = /!\[.*\]\(.*\)/g;
+        let imgpattern = /\[!\[.*\]\(.*\)/g;
         let result = filteredhtml.match(imgpattern);
-
+        console.log(filteredhtml );
         for(var i=0;result!=null&&i<result.length; i++ ){
 
             let linkresult = result[i].replace(/\]\(<a href=(.*)\)/g,"");
-            var imagelocation=linkresult.replace(/!\[.*\]\(/g,''); 
+            var imagelocation=linkresult.replace(/\[!\[.*\]\(/g,''); 
             var newImagelocation=imagelocation.replace(/\)/g,'');    
             newImagelocation=newImagelocation.replace('"','');  
             newImagelocation=newImagelocation.replace('..','');  
             console.log(result[i]+"-->newImagelocation--> "+newImagelocation);
 
             var imagehtml = '<img src="https://github.com/hybrid-cloud-patterns/docs/raw/gh-pages'+newImagelocation+'" class="asciidoc-img" />';
-            linkresult
+   
 
-            console.log("--> result[i]--> "+ result[i]);
+            console.log("Place"+ result[i],"to-->", imagehtml );
 
             filteredhtml=filteredhtml.replace(result[i],imagehtml);
         }
        
 
-
+        
         //console.log("filteredhtml-->"+filteredhtml);
         return (
             

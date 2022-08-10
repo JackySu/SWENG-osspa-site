@@ -86,7 +86,9 @@ ppid,description,url,type
 29,How to architect intelligent workflow automation for insurance companies,https://www.redhat.com/architect/intelligent-workflow-automation-insurance,Blog
 29,How to architect intelligent automation with ITSM,https://www.redhat.com/architect/itsm-automation-insurance-systems,Blog
 29,How to architect intelligent automation using the Strangler pattern,https://www.redhat.com/architect/insurance-process-automation-strangler-pattern,Blog
-30,Installation Details,https://hybrid-cloud-patterns.io/ansible-edge-gitops/installation-details/,Site
-30,Pattern AAP Configuration Details,https://hybrid-cloud-patterns.io/ansible-edge-gitops/ansible-automation-platform/,Site
-30,Understanding the Edge GitOps VMs Helm Chart,https://hybrid-cloud-patterns.io/ansible-edge-gitops/openshift-virtualization/,Site
-30,Cluster Sizing,https://hybrid-cloud-patterns.io/ansible-edge-gitops/cluster-sizing/,Site
+30,Getting Started,https://redhat-gitops-patterns.io/industrial-edge/getting-started/,Site
+30,Factory Site,https://redhat-gitops-patterns.io/industrial-edge/factory/,Site
+30,Application Demo,https://redhat-gitops-patterns.io/industrial-edge/application/,Site
+30,Cluster Sizing,https://redhat-gitops-patterns.io/industrial-edge/cluster-sizing/,Site
+30,Troubleshooting,https://redhat-gitops-patterns.io/industrial-edge/troubleshooting/,Site
+30,Industrial Edge Portfolio Architecture,https://www.redhat.com/architect/portfolio/architecturedetail?ppid=26,Site
