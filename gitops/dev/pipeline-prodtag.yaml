@@ -1,0 +1,47 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: dev2prod
+  namespace: osspa
+spec:
+  params:
+    - default: quay.io/osspa/pawebsite
+      name: IMAGE_NAME
+      type: string
+  tasks:
+    - name: backup
+      params:
+        - name: IMAGE
+          value: $(params.IMAGE_NAME)
+        - name: TLSVERIFY
+          value: 'false'
+        - name: FROM_TAG
+          value: 'prod'
+        - name: TO_TAG
+          value: 'backup'
+      taskRef:
+        kind: Task
+        name: buildah-tag
+      workspaces:
+        - name: source
+          workspace: workspace
+    - name: pushprod
+      params:
+        - name: IMAGE
+          value: $(params.IMAGE_NAME)
+        - name: TLSVERIFY
+          value: 'false'
+        - name: FROM_TAG
+          value: 'latest'
+        - name: TO_TAG
+          value: 'prod'
+      taskRef:
+        kind: Task
+        name: buildah-tag
+      runAfter:
+        - backup
+      workspaces:
+        - name: source
+          workspace: workspace
+  workspaces:
+    - name: workspace
