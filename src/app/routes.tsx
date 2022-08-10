@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Route, RouteComponentProps, Switch } from 'react-router-dom';
 import { accessibleRouteChangeHandler } from '@app/utils/utils';
 import { Contribute } from '@app/Contribute/Contribute';
+import { LearnMore } from '@app/Contribute/LearnMore';
 import { Support } from '@app/Support/Support';
 import { ArchitectureList } from '@app/ArchitectureList/ArchitectureList';
 import { GeneralSettings } from '@app/Settings/General/GeneralSettings';
@@ -53,6 +54,13 @@ const routes: AppRouteConfig[] = [
     label: 'Contribute',
     path: '/contribute',
     title: 'Portfolio Architecture | Contribute',
+  },
+  {
+    component: LearnMore,
+    exact: true,
+    label: 'LearnMore',
+    path: '/learnmore',
+    title: 'Portfolio Architecture | Learn More',
   },
   {
     label: 'Community',
