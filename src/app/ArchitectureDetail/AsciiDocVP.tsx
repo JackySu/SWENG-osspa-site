@@ -37,7 +37,6 @@ export default class AsciidocVP extends React.PureComponent {
            
         let imgpattern = /\[!\[.*\]\(.*\)/g;
         let result = filteredhtml.match(imgpattern);
-        console.log(filteredhtml );
         for(var i=0;result!=null&&i<result.length; i++ ){
 
             let linkresult = result[i].replace(/\]\(<a href=(.*)\)/g,"");
@@ -45,17 +44,14 @@ export default class AsciidocVP extends React.PureComponent {
             var newImagelocation=imagelocation.replace(/\)/g,'');    
             newImagelocation=newImagelocation.replace('"','');  
             newImagelocation=newImagelocation.replace('..','');  
-            console.log(result[i]+"-->newImagelocation--> "+newImagelocation);
-
+            
             var imagehtml = '<img src="https://github.com/hybrid-cloud-patterns/docs/raw/gh-pages'+newImagelocation+'" class="asciidoc-img" />';
    
-
-            console.log("Place"+ result[i],"to-->", imagehtml );
-
             filteredhtml=filteredhtml.replace(result[i],imagehtml);
         }
-       
-
+        filteredhtml=filteredhtml.replace("&lt;iframe","<iframe class='_doc_iframe'");
+        filteredhtml=filteredhtml.replace("iframe&lt;","iframe>");
+        
         
         //console.log("filteredhtml-->"+filteredhtml);
         return (
