@@ -289,7 +289,7 @@ class ArchitectureDetail extends React.Component {
           }}
           className="inline-page"
         >
-          <PageSection name="scrolling-section" className='main_content_section'>
+          <PageSection name="scrolling-section" className='main_content_section_info'>
               <Grid >
               
               {leftmenu}

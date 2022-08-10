@@ -70,7 +70,10 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children}) => {
             <a href="/architect/portfolio">Portfolio Architecture</a>
           </NavItem>
           <NavItem key={1} itemId={1} isActive={false}  href="/">
-            <a href="/architect/portfolio/contribute">Learn More</a>
+            <a href="/architect/portfolio/learnmore">Learn More</a>
+          </NavItem>
+          <NavItem key={1} itemId={1} isActive={false}  href="/">
+            <a href="/architect/portfolio/contribute">Contribute</a>
           </NavItem>
           <NavItem key={2} itemId={2} isActive={false}  onClick={openToolWindow}>
             Our Tool
