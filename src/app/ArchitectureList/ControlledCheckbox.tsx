@@ -3,7 +3,7 @@ import "@patternfly/react-core/dist/styles/base.css";
 
 
 import React from 'react';
-import { Checkbox, SearchInput } from '@patternfly/react-core';
+import { Checkbox, SearchInput, Radio} from '@patternfly/react-core';
 import { TableComposable, Thead, Tbody, Tr, Th, Td} from '@patternfly/react-table'; 
 
 import Papa from 'papaparse';
@@ -21,6 +21,7 @@ var isExpanded  = true;
 
 import { SelectedList } from './SelectedList';
 import { ThumbsDownIcon } from '@patternfly/react-icons';
+import { ids } from 'webpack';
 
 class ControlledCheckbox extends React.Component {
   static contextType = SelectedList;
@@ -54,7 +55,7 @@ class ControlledCheckbox extends React.Component {
   }
 
   handleVerticalChange = (value, id) => {
-    //console.log(id,":",value);
+    
     this.setState({ [id]: value });
     if(!selectedVertical.includes(id)){
       selectedVertical.push(id);
@@ -65,14 +66,12 @@ class ControlledCheckbox extends React.Component {
   }
 
   handleProductTypeChange = (value, id) => {
-    //console.log(id,":",value);
+    //Reset ProductType everytime
+    console.log(id,":",value);
     this.setState({ [id]: value });
-    if(!selectedProductType.includes(id)){
-      selectedProductType.push(id);
-    }else{
-      const rindex = selectedProductType.indexOf(id);
-      selectedProductType.splice(rindex,1);
-    }
+    selectedProductType=[id];
+    console.log("selectedProductType:",selectedProductType);
+    
   }
 
 
@@ -220,7 +219,7 @@ class ControlledCheckbox extends React.Component {
             <Tr>
               <Td>
                 {this.typeArray.map( item =>
-                  <Checkbox label={item.typename} aria-label={item.typename}  id={item.tid} name={item.tid} key={item.tid} onChange={ e=> {this.handleProductTypeChange(e, item.tid) ; updateProductType(item.tid);}} isChecked={this.checkIfSelected("producttype",item.tid)}/>
+                  <Radio label={item.typename} aria-label={item.typename}  id={item.tid} name='productType' key={item.tid} onChange={ e=> {this.handleProductTypeChange(e, item.tid) ; updateProductType(item.tid);}} isChecked={this.checkIfSelected("producttype",item.tid)}/>
                 )}
               </Td>
             </Tr>

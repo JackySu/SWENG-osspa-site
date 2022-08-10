@@ -132,13 +132,8 @@ class SelectedListProvider extends React.Component{
         this.updateList();
     }
 
-    updateProductType = (vid) => {
-        if(!this.state.selectedProductType.includes(vid)){
-            this.state.selectedProductType.push(vid);
-          }else{
-            const rindex = this.state.selectedProductType.indexOf(vid);
-            this.state.selectedProductType.splice(rindex,1);
-          }
+    updateProductType = (tid) => {
+        this.state.selectedProductType=[tid];
         this.setState({selectedProductType:this.state.selectedProductType});
         this.updateList();
     }
