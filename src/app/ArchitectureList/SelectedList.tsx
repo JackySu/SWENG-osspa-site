@@ -28,7 +28,8 @@ class SelectedListProvider extends React.Component{
         selectedProduct: [] as any,
         selectedSolution: [] as any,
         selectedVertical: [] as any,
-        selectedProductType: [] as any
+        selectedProductType: [] as any,
+        searchInput: ''
     }
     updateList = () => {
         var templist = [] as any;
@@ -38,7 +39,7 @@ class SelectedListProvider extends React.Component{
         this.loadLive().forEach(element => {
             var shouldPush = true;
             if(this.state.selectedProduct.length > 0){
-                console.log("element",element.Product);
+                //console.log("element",element.Product);
                 this.state.selectedProduct.forEach(productItem => {
                     if(!element.Product.includes(productItem)){
                         shouldPush = false;
@@ -48,7 +49,7 @@ class SelectedListProvider extends React.Component{
             }
 
             if(this.state.selectedSolution.length > 0){
-                console.log("element",element.Solutions);
+                //console.log("element",element.Solutions);
                 this.state.selectedSolution.forEach(solutionItem => {
                     if(!element.Solutions.includes(solutionItem)){
                         shouldPush = false;
@@ -58,7 +59,7 @@ class SelectedListProvider extends React.Component{
             }
 
             if(this.state.selectedVertical.length > 0){
-                console.log("element",element.Vertical);
+                //console.log("element",element.Vertical);
                 this.state.selectedVertical.forEach(verticalItem => {
                     if(!element.Vertical.includes(verticalItem)){
                         shouldPush = false;
@@ -68,13 +69,28 @@ class SelectedListProvider extends React.Component{
             }
 
             if(this.state.selectedProductType.length > 0){
-                console.log("element",element.ProductType);
+                //console.log("element",element.ProductType);
                 this.state.selectedProductType.forEach(productTypeItem => {
                     if(!element.ProductType.includes(productTypeItem)){
                         shouldPush = false;
                     }    
                 });
                 
+            }
+            
+            if(shouldPush){
+                if(this.state.searchInput!=''){
+                    console.log("this.state.searchInput-->"+this.state.searchInput);
+                    var lowerCaseInput=this.state.searchInput.toLowerCase();
+                    
+                    if((element.Heading.toLowerCase()).includes(lowerCaseInput))
+                        shouldPush = true;
+                    else if((element.Summary.toLowerCase()).includes(lowerCaseInput))
+                        shouldPush = true;
+                    else 
+                        shouldPush = false;
+                    
+                }
             }
 
             if(shouldPush)
@@ -127,6 +143,12 @@ class SelectedListProvider extends React.Component{
         this.updateList();
     }
     
+    searchAll = (searchInput) => {
+        //This will only search the Title and description, not the tags
+        this.state.searchInput=searchInput;
+        this.setState({searchInput:this.state.searchInput});
+        this.updateList();
+    }
     
     
     constructor(props) {
@@ -141,7 +163,7 @@ class SelectedListProvider extends React.Component{
         
        
         return(
-            <SelectedList.Provider value={{...this.state, updateProduct: this.updateProduct,updateSolution: this.updateSolution,updateVertical: this.updateVertical,updateProductType: this.updateProductType}}>
+            <SelectedList.Provider value={{...this.state, updateProduct: this.updateProduct,updateSolution: this.updateSolution,updateVertical: this.updateVertical,updateProductType: this.updateProductType, searchAll:this.searchAll}}>
                 {this.props.children}
             </SelectedList.Provider>
         );

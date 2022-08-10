@@ -3,7 +3,7 @@ import "@patternfly/react-core/dist/styles/base.css";
 
 
 import React from 'react';
-import { Checkbox, Nav, NavList, NavExpandable, NavItem } from '@patternfly/react-core';
+import { Checkbox, SearchInput } from '@patternfly/react-core';
 import { TableComposable, Thead, Tbody, Tr, Th, Td} from '@patternfly/react-table'; 
 
 import Papa from 'papaparse';
@@ -16,9 +16,11 @@ var selectedProduct=[] as any;
 var selectedSolution=[] as any;
 var selectedVertical=[] as any;
 var selectedProductType=[] as any;
+var searchPhrase='';
 var isExpanded  = true;
 
 import { SelectedList } from './SelectedList';
+import { ThumbsDownIcon } from '@patternfly/react-icons';
 
 class ControlledCheckbox extends React.Component {
   static contextType = SelectedList;
@@ -30,7 +32,7 @@ class ControlledCheckbox extends React.Component {
   
   
   handleSolutionChange = (value, id) => {
-    console.log(id,":",value);
+    //console.log(id,":",value);
     this.setState({ [id]: value });
     if(!selectedSolution.includes(id)){
       selectedSolution.push(id);
@@ -41,7 +43,7 @@ class ControlledCheckbox extends React.Component {
   }
 
   handleProductChange = (value, id) => {
-    console.log(id,":",value);
+    //console.log(id,":",value);
     this.setState({ [id]: value });
     if(!selectedProduct.includes(id)){
       selectedProduct.push(id);
@@ -52,7 +54,7 @@ class ControlledCheckbox extends React.Component {
   }
 
   handleVerticalChange = (value, id) => {
-    console.log(id,":",value);
+    //console.log(id,":",value);
     this.setState({ [id]: value });
     if(!selectedVertical.includes(id)){
       selectedVertical.push(id);
@@ -63,7 +65,7 @@ class ControlledCheckbox extends React.Component {
   }
 
   handleProductTypeChange = (value, id) => {
-    console.log(id,":",value);
+    //console.log(id,":",value);
     this.setState({ [id]: value });
     if(!selectedProductType.includes(id)){
       selectedProductType.push(id);
@@ -72,6 +74,8 @@ class ControlledCheckbox extends React.Component {
       selectedProductType.splice(rindex,1);
     }
   }
+
+
 
   checkIfSelected = (checkboxtype, checkboxid) => {
     if(checkboxtype=="solution" && selectedSolution.includes(checkboxid)){
@@ -86,10 +90,12 @@ class ControlledCheckbox extends React.Component {
     return false;
   };
 
+
   productArray;
   solutionArray;
   verticalArray;
   typeArray;
+
 
   startload = () => {
     //console.log(listfile);
@@ -119,12 +125,39 @@ class ControlledCheckbox extends React.Component {
     })
   };
 
+  
+  emptysearch = () => {
+    //console.log(id,":",value);
+    this.setState({ searchPhrase: '' });
+    searchPhrase='';
+  }
+  
   render() {
     
     this.startload();
-    const {updateProduct, updateSolution,updateVertical, updateProductType} =  this.context;
+    const {updateProduct, updateSolution,updateVertical, updateProductType, searchAll} =  this.context;
     return (
       <React.Fragment>
+        <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100">
+          <Thead>
+            <Tr>
+              <Th colSpan="2">Search</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr>
+              <Td>
+              <SearchInput
+                  placeholder="Search"
+                  value={searchPhrase}
+                  onChange={changeContent=>searchPhrase=changeContent}
+                  onSearch={()=>searchAll(searchPhrase)}
+                  onClear={()=>(this.emptysearch(),searchAll(''))}
+                />
+              </Td>
+            </Tr>
+          </Tbody>
+        </TableComposable>
         <TableComposable variant={'compact'} borders={false} className="pf-c-table pf-m-width-100">
           <Thead>
           <Tr>
@@ -198,4 +231,4 @@ class ControlledCheckbox extends React.Component {
   }
 }
 
-export { ControlledCheckbox, selectedProduct,selectedSolution,selectedVertical };
+export { ControlledCheckbox, selectedProduct,selectedSolution,selectedVertical,searchPhrase };
