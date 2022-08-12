@@ -210,6 +210,32 @@ div.olist.arabic, div.ulist {
  .admonitionblock .icon i::after{
     content:attr(title)
 }
+
+.admonitionblock.announcement .icon{
+    background-color:#9d0c0c;
+    color:#fff;
+    text-align: center;
+    width: 100px;
+    padding: 0;
+    transform:translate(0,-50%)
+ }
+
+.admonitionblock.announcement >table{
+    table-layout:fixed;
+    position:relative;
+    width:100%
+}
+.admonitionblock.announcement p, .admonitionblock.announcement td.content{
+    font-size: 1rem
+}
+
+.banner_date_format{
+    font-size: 0.888rem;
+    font-style: italic;
+    color:rgb(96, 23, 19);
+}
+
+
 /*Admonitions styling end*/
 /* example blocks */
 .exampleblock {
@@ -448,6 +474,9 @@ div.ulist{
         margin-left: auto;
         margin-right: auto;
     }
+    div.pf-c-panel__main-body._banner{ max-width: 280px; }
+    div.pf-c-panel__footer._banner{ max-width: 250px; align-items: center;}
+    
 }
 
 @media (min-width: 350px) { 
@@ -464,6 +493,7 @@ div.ulist{
         margin-left: auto;
         margin-right: auto;
     }
+    div.pf-c-panel__main-body._banner{ max-width: 340px; }
 }
 
 @media (min-width: 768px) { 
@@ -480,6 +510,7 @@ div.ulist{
         margin-left: auto;
         margin-right: auto;
     } 
+    div.pf-c-panel__main-body._banner{ max-width: 750px; }
 }
 
 @media (min-width: 920px) { 
@@ -496,6 +527,7 @@ div.ulist{
         margin-left: auto;
         margin-right: auto;
     }
+    div.pf-c-panel__main-body._banner{ max-width: 870px; }
 }
 
 @media (min-width: 1200px) { 
@@ -512,6 +544,7 @@ div.ulist{
         margin-left: auto;
         margin-right: auto;
     }
+    div.pf-c-panel__main-body._banner{ max-width: 1170px; }
 }
 
 @media (min-width: 1400px){ 
@@ -528,6 +561,7 @@ div.ulist{
         margin-left: auto;
         margin-right: auto;
     } 
+    div.pf-c-panel__main-body._banner{ max-width: 1220px; }
 }
 
 @media (min-width: 2000px){ 
@@ -544,6 +578,7 @@ div.ulist{
         margin-left: auto;
         margin-right: auto;
     } 
+    div.pf-c-panel__main-body._banner{ max-width: 1540px; }
 }
 
 
@@ -561,6 +596,7 @@ div.ulist{
         margin-left: auto;
         margin-right: auto;
     }
+    div.pf-c-panel__main-body._banner{ max-width: 1840px; }
 }
 
 

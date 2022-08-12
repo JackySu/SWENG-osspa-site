@@ -13,8 +13,6 @@ import {
 const qs = require('query-string');
 import  detailLinks  from './DetailLink.csv';
 import Papa from 'papaparse';
-const imgBrand = "https://www.patternfly.org/v4/v4/images/pfLogo.ffdafb0c74aa4c9c011251aa8f0c144c.svg";
-const imgAvatar = "https://www.patternfly.org/v4/v4/images/avatarImg.6daf7202106fbdb9c72360d30a6ea85d.svg";
 import { Asciidoc } from '@app/ArchitectureDetail/AsciiDoc';
 import { AsciidocVP } from '@app/ArchitectureDetail/AsciiDocVP';
 import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';

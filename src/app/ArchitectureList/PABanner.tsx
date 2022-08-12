@@ -7,17 +7,30 @@ import {
   MastheadBrand,
   MastheadContent,
   Button,
-  Text,
-  TextVariants,
-  Divider,
-  Page
+  Panel,
+  PanelMain,
+  PanelMainBody,
+  PanelFooter,
+  Page,
+  Tile
 } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
+import { Carousel } from '@trendyol-js/react-carousel';
+import announcementList from "./AnnouncementList.csv";
+import Papa from 'papaparse';
 
 
 class PABanner extends React.Component{
+   displayList;
+  loadAnnouncementList = () => Papa.parse(announcementList, {
+    header: true,
+    complete: (results) => {
+      
+      this.displayList = results.data;
+      console.log("displayList-->", this.displayList);
+    }
+  });
 
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -25,10 +38,21 @@ class PABanner extends React.Component{
     };
    
 }
-
+async componentDidMount() {
+  
+}
 
 
 render(){
+  
+    this.loadAnnouncementList();
+  
+    if(!Array.isArray(this.displayList) ){
+      this.displayList = [] as any;
+      alert('cant load file');
+      
+    }
+
   const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
     this.setState({ isMobileView: props.mobileView});
   
@@ -56,18 +80,45 @@ render(){
         <MastheadBrand><img src="/architect/portfolio/images/site-logo.png" width={"230px"}/></MastheadBrand>
       </MastheadMain>
       <MastheadContent>
-        <span class="middle_content">
+       
+      <Panel>
+        <PanelMain>
+          <PanelMainBody className="_banner">{" "}The Red Hat Portfolio Architecture Center showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
+          
+          
+        <Carousel show={1} slide={1} swiping={true} infinite={true}>
+       
+        { this.displayList.map( item => 
+
+       
+          <div class="admonitionblock announcement">
+            <table class="banner" >
+            <tbody><tr>
+            <td class="icon">
+              <div class="title">New {item.announcementType}</div>
+            </td>
+            <td class="content">
+            <a href={item.titleLink}><i class="pf-icon pf-icon-attention-bell"/>&nbsp;&nbsp; <b>{item.title}</b></a> <div class="banner_date_format">{item.date}</div>
+            <div class="pf-c-card__body">
+              {item.desc}
+            </div>
+            </td>
+            </tr>
+            </tbody></table>
+          </div>
+          
+                        
+        )}
         
-          {" "}The Red Hat Portfolio Architecture Center showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
-          <Divider component="div"/>
-          {/***latest blog entry / portfolio architecture product links below here:***/}
-          <a href="https://www.redhat.com/architect/cloud-industrial-edge-architecture" target="_blank">
-          <Text component={TextVariants.h6}>LATEST BLOG POST July 27, 2022: Extending the hybrid cloud to the industrial edge: A reference architecture:</Text></a>
-          Combining AI, ML, and GitOps provides manufacturers the data they need whether at a central datacenter or a remote edge location to understand and predict the health of production systems.
-.
-          {/*********/} 
-          <br/>
-        </span>
+        </Carousel>
+
+
+        </PanelMainBody>
+        </PanelMain>
+      </Panel>
+
+          
+        
         {learnMoreButton}
       </MastheadContent>
     </Masthead>

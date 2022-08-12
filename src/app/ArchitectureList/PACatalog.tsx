@@ -4,6 +4,7 @@ import "@patternfly/react-core/dist/styles/base.css";
 import React from 'react';
 import {
   Brand, 
+  Badge,
   Card, 
   CardBody, 
   CardFooter, 
@@ -17,8 +18,6 @@ import {
   Label
 } from '@patternfly/react-core';
 import { Link } from "react-router-dom";
-import InfoCircleIcon from '@patternfly/react-icons/dist/js/icons/info-circle-icon';
-import Papa from 'papaparse';
 import { SelectedList } from './SelectedList';
 
 const CARD_IMG_URL = "https://gitlab.com/osspa/portfolio-architecture-examples/-/raw/main/images/"
@@ -66,7 +65,7 @@ class PACatalog extends React.Component {
     <Page onPageResize={onPageResize}>
      <Gallery hasGutter className='catalog_gallery'>
             {
-              tempdisplay.map( item =>
+              tempdisplay.map( item => 
               <GalleryItem key={item.ppid}>
                <Card isHoverable={false} key={item.ppid} isCompact  >
                   <CardHeader>
@@ -74,7 +73,7 @@ class PACatalog extends React.Component {
                     <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" className='catalog_card_img'/></Link>
                     </CardHeaderMain>
                   </CardHeader>
-                  <Link to={DETAIL_URL+'?ppid='+item.ppid} ><CardTitle>{item.Heading}</CardTitle></Link>
+                  <Link to={DETAIL_URL+'?ppid='+item.ppid} ><CardTitle>{item.Heading} &nbsp;&nbsp; {item.isnew =="TRUE" && <Badge key={1}>New!</Badge>}</CardTitle></Link>  
                   <CardBody>{item.Summary}</CardBody>
                   <CardFooter>
                     <LabelGroup numLabels={5}>
