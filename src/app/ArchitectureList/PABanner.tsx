@@ -27,7 +27,6 @@ class PABanner extends React.Component{
     complete: (results) => {
       
       this.displayList = results.data;
-      console.log("displayList-->", this.displayList);
     }
   });
 
@@ -95,7 +94,7 @@ render(){
             <table class="banner" >
             <tbody><tr>
             <td class="icon">
-              <div class="title">New {item.announcementType}</div>
+              <div class="title">{item.announcementType}</div>
             </td>
             <td class="content">
             <a href={item.titleLink}><i class="pf-icon pf-icon-attention-bell"/>&nbsp;&nbsp; <b>{item.title}</b></a> <div class="banner_date_format">{item.date}</div>
