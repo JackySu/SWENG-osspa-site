@@ -92,3 +92,8 @@ ppid,description,url,type
 30,Cluster Sizing,https://redhat-gitops-patterns.io/industrial-edge/cluster-sizing/,Site
 30,Troubleshooting,https://redhat-gitops-patterns.io/industrial-edge/troubleshooting/,Site
 30,Industrial Edge Portfolio Architecture,https://www.redhat.com/architect/portfolio/architecturedetail?ppid=26,Site
+31,Getting Started,https://hybrid-cloud-patterns.io/devsecops/getting-started/,Site
+31,Secured Development Cluster,https://hybrid-cloud-patterns.io/devsecops/devel-cluster/,Site
+31,Secured Production Clusters,https://hybrid-cloud-patterns.io/devsecops/production-cluster/,Site
+31,Secure Supply Chain Demo,https://hybrid-cloud-patterns.io/devsecops/secure-supply-chain-demo/,Site
+31,Cluster Sizing,https://hybrid-cloud-patterns.io/devsecops/cluster-sizing/,Site

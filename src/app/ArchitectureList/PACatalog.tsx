@@ -41,10 +41,22 @@ class PACatalog extends React.Component {
       return "Solution Pattern";
     }else if(productType == "VP"){
       return "Validated Pattern";
+    }else if(productType == "CP"){
+      return "Community Pattern";
     }else
       return "Portfolio Architecture";
   }
 
+  displayProductTypeUrl(productType){
+    if(productType == "SP"){
+      return "/learnmore#_solutionPattern";
+    }else if(productType == "VP"){
+      return "/learnmore#_validatedPattern";
+    }else if(productType == "CP"){
+      return "/learnmore#_validatedPattern";
+    }else
+      return "/learnmore";
+  }
   render() {
     
     const {currentlist, selectedProduct, selectedSolution,selectedVertical} = this.context;
@@ -73,13 +85,13 @@ class PACatalog extends React.Component {
                     <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" className='catalog_card_img'/></Link>
                     </CardHeaderMain>
                   </CardHeader>
-                  <Link to={DETAIL_URL+'?ppid='+item.ppid} ><CardTitle>{item.Heading} &nbsp;&nbsp; {item.isnew =="TRUE" && <Badge key={1}>New!</Badge>}</CardTitle></Link>  
+                  <CardTitle><Link to={DETAIL_URL+'?ppid='+item.ppid} >{item.Heading}</Link>{item.isnew =="TRUE" && '  '}{item.isnew =="TRUE" && <Badge key={1}>New!</Badge>}</CardTitle>
                   <CardBody>{item.Summary}</CardBody>
                   <CardFooter>
                     <LabelGroup numLabels={5}>
                           {
                             item.ProductType.split(",").map (typetag =>
-                            <Label color="purple" key={item.ppid+typetag}>{ this.displayProductType(typetag)}</Label> 
+                            <Label color="purple" key={item.ppid+typetag}><Link to={this.displayProductTypeUrl(typetag)}>{ this.displayProductType(typetag)}</Link></Label> 
                           )}
                           {
                             item.Solutions.split(",").map (solutiontag =>

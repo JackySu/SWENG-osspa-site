@@ -268,7 +268,7 @@ class ArchitectureDetail extends React.Component {
     }
    
     var ascii_render =  <Asciidoc>{this.state.data}</Asciidoc>;
-    if(productType=="VP"){
+    if(productType=="VP" || productType=="CP"){
       ascii_render =  <AsciidocVP>{this.state.data}</AsciidocVP>;
     }
 
