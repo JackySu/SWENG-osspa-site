@@ -297,7 +297,7 @@ class ArchitectureDetail extends React.Component {
               <GridItem span={contentGridItemSpan} rowSpan={1}>
                 <PageSection className="banner" >
                     <Breadcrumb> 
-                      <BreadcrumbItem to="#">Portfolio Architecture</BreadcrumbItem>
+                      <BreadcrumbItem to="#">Architecture Center</BreadcrumbItem>
                       <BreadcrumbItem to="#" isActive>{title}</BreadcrumbItem>
                     </Breadcrumb>
                     <br/>
