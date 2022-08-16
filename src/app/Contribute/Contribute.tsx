@@ -49,6 +49,9 @@ class Contribute extends React.Component {
                         <Td><a href="/architect/portfolio/contribute#_contribute">Contribute to Portfolio Architecture</a></Td>
                       </Tr>
                       <Tr>
+                        <Td><a href="/architect/portfolio/contribute#_contributeVP">Contribute to Validated Pattern</a></Td>
+                      </Tr>
+                      <Tr>
                         <Td><a href="/architect/portfolio/contribute#_other">Other Resources</a></Td>
                       </Tr>
                       
@@ -154,6 +157,13 @@ class Contribute extends React.Component {
                 <br/>
                 </p>
 
+                <a id="_contributeVP"></a><h2>Contribute to Validate Pattern</h2>
+                <p>
+                The Community Pattern and Validated Pattern initiatives encourage participation from their users.  If you would like to contribute to a new pattern, see the <a href="https://hybrid-cloud-patterns.io/creating-a-new-pattern/">creating a new pattern</a> page.   If there are aspects of a community or validated pattern you would like to engage in, please work with the folks contributing to the pattern by submitting a pull request.
+                    
+                </p>
+                <br/>
+
                 <a id="_other"></a><h2>Other Resources</h2>
                 
 
@@ -202,9 +212,13 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   </Gallery>
+                 
+                  <br/>
                   </PageSection>
                   </GridItem>
           </Grid>
+
+          
         </PageSection>
 
         

@@ -221,6 +221,7 @@ class ControlledCheckbox extends React.Component {
                 {this.typeArray.map( item =>
                   <Radio label={item.typename} aria-label={item.typename}  id={item.tid} name='productType' key={item.tid} onChange={ e=> {this.handleProductTypeChange(e, item.tid) ; updateProductType(item.tid);}} isChecked={this.checkIfSelected("producttype",item.tid)}/>
                 )}
+                  <Radio label='All types' aria-label='allType'  id='type00' name='productType' key='ALL' onChange={ e=> {this.handleProductTypeChange(e, 'ALL') ; updateProductType('ALL');}} isChecked={this.checkIfSelected("producttype",'ALL')}/>
               </Td>
             </Tr>
             </Tbody>

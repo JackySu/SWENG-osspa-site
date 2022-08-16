@@ -133,7 +133,11 @@ class SelectedListProvider extends React.Component{
     }
 
     updateProductType = (tid) => {
-        this.state.selectedProductType=[tid];
+
+        if(tid=='ALL'){
+            this.state.selectedProductType=[];
+        }else
+            this.state.selectedProductType=[tid];
         this.setState({selectedProductType:this.state.selectedProductType});
         this.updateList();
     }

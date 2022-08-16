@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { 
-  JumpLinks, JumpLinksItem,
+  
   Page, PageSection, PageSectionVariants,
   Grid,GridItem,
   Gallery, GalleryItem,
@@ -67,11 +67,11 @@ class LearnMore extends React.Component {
             </thead>
           </table>
         </div>
-        <div class="right"> Architecture Center --- XXX
+        <div class="right"> <b>Red Hat Architecture Center</b>
           <br/><br/>
-          With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
+          Provides examples, patterns, and use cases for designing and building with Red Hat Solutions.
           <br/><br/>
-          Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
+          It covers from actual customer implementation, opinionated design and validated formula, partner solution and innovative ideas from applications, data centers to private and public clouds. 
         </div>
   </div>
 
@@ -221,41 +221,41 @@ class LearnMore extends React.Component {
               <Gallery  hasGutter className="learn_more_gallery">
                 <GalleryItem key="one" >
                   <Card isHoverable={false} key="xx" isCompact isPlain >
-                      <CardTitle className="contributecardtitle">Evidence based architecture reference</CardTitle>
+                      <CardTitle className="contributecardtitle">Opinionated practices</CardTitle>
                       <CardHeader className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/whatisSP_01.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Built on facts found in successful customer implementations and documented deployments. They contain logical, schematic, and detail diagrams on each of the technical components.</CardBody>    
+                      <CardBody className="contributecardbody">Opinionated practices on how to design, develop, integrate, automate and deliver cloud native applications. They target common use cases faced by organizations on a digital transformation through cloud adoption and app modernization.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
                   <Card isHoverable={false} key="yy" isCompact isPlain>
-                      <CardTitle className="contributecardtitle">Combination of recommended practices and patterns</CardTitle>
+                      <CardTitle className="contributecardtitle">Reference implementation</CardTitle>
                       <CardHeader  className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/pa-overview-best-pattern.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/whatisSP_02.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Our architectures are based on deployment scenarios and business drivers, and provide recommendations, lessons learned, and best practices on how to use Red Hat products to architect solutions.</CardBody>    
+                      <CardBody className="contributecardbody">Every solution pattern contains a fully working reference implementation which illustrates the use case. The reference implementation can be used to demo the solution pattern or as a basis for enablement activities.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem >
                   <Card isHoverable={false} key="zz" isCompact isPlain>
-                      <CardTitle className="contributecardtitle">Tools to help you create and architect your deployment</CardTitle>
+                      <CardTitle className="contributecardtitle">Fully documented</CardTitle>
                       <CardHeader  className="contribute_card_header" >
                             <CardHeaderMain>
-                              <Brand src="/architect/portfolio/images/pa-overview-tools.png" alt="Card Image" width={imagesize+"px"}/>
+                              <Brand src="/architect/portfolio/images/whatisSP_03.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Use our resources and tools to build your own architecture diagrams with standardized icons for better team collaboration and communication, and submit your ideas to a community of Red Hat experts who can provide feedback and guidance.</CardBody>    
+                      <CardBody className="contributecardbody">The solution patterns are fully documented, and typically include background information on business contexts and use cases, detailed technical diagrams, demo walkthrough guides, provisioning instructions and automation scripts.</CardBody>    
                   </Card>
                 </GalleryItem>
               </Gallery>
 
               <a id="_validatedPattern"></a><h2>What is Validated Pattern</h2>
-              <Gallery  hasGutter className="learn_more_gallery">
+               <Gallery  hasGutter className="learn_more_gallery">
                 <GalleryItem key="one" >
                   <Card isHoverable={false} key="xx" isCompact isPlain >
                       <CardTitle className="contributecardtitle">Code you can run</CardTitle>
@@ -290,7 +290,9 @@ class LearnMore extends React.Component {
                   </Card>
                 </GalleryItem>
               </Gallery>
-
+              <br/>
+              <b>Community patterns</b> are deployment examples contributed from the community at large.  They represent use cases and because the pattern framework is gitops based, their modular aspect allows for pieces to be used in other community or validated patterns.
+             
                 
                   </PageSection>
                   </GridItem>
