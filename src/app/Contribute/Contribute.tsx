@@ -46,10 +46,13 @@ class Contribute extends React.Component {
                 <Tbody>
                     
                       <Tr>
-                        <Td><a href="/architect/portfolio/contribute#_contribute">Contribute to Portfolio Architecture</a></Td>
+                        <Td><a href="/architect/portfolio/contribute#_buildingPA">What is Portfolio Architecture</a></Td>
                       </Tr>
                       <Tr>
-                        <Td><a href="/architect/portfolio/contribute#_contributeVP">Contribute to Validated Pattern</a></Td>
+                        <Td><a href="/architect/portfolio/contribute#_paprocess">How Portfolio Architectures are created</a></Td>
+                      </Tr>
+                      <Tr>
+                        <Td><a href="/architect/portfolio/contribute#_contribute">Contribute to Portfolio Architecture</a></Td>
                       </Tr>
                       <Tr>
                         <Td><a href="/architect/portfolio/contribute#_other">Other Resources</a></Td>
@@ -58,7 +61,6 @@ class Contribute extends React.Component {
                 </Tbody>
     
       </TableComposable>
-      
       </PageSection>
     </GridItem>
     
@@ -128,7 +130,7 @@ class Contribute extends React.Component {
             
         
         
-        <PageSection className='main_content_section_info'>
+        <PageSection className='main_content_section'>
         
         <Grid >
           
@@ -137,6 +139,93 @@ class Contribute extends React.Component {
           <GridItem span={gridspan} rowSpan={11}>
           <PageSection>
               {top_intro}
+             
+              <a id="_buildingPA"></a><h2>What is Portfolio Architecture</h2>
+              <Gallery  hasGutter className="learn_more_gallery">
+                <GalleryItem key="one" >
+                  <Card isHoverable={false} key="xx" isCompact isPlain >
+                      <CardTitle className="contributecardtitle">Evidence based architecture reference</CardTitle>
+                      <CardHeader className="contribute_card_header" >
+                            <CardHeaderMain>
+                              <Brand src="/architect/portfolio/images/pa-overview-evidence.png" alt="Card Image" width={imagesize+"px"}/>
+                            </CardHeaderMain>
+                      </CardHeader>
+                      <CardBody className="contributecardbody">Built on facts found in successful customer implementations and documented deployments. They contain logical, schematic, and detail diagrams on each of the technical components.</CardBody>    
+                  </Card>
+                  </GalleryItem>
+                  <GalleryItem >
+                  <Card isHoverable={false} key="yy" isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Combination of recommended practices and patterns</CardTitle>
+                      <CardHeader  className="contribute_card_header" >
+                            <CardHeaderMain>
+                              <Brand src="/architect/portfolio/images/pa-overview-best-pattern.png" alt="Card Image" width={imagesize+"px"}/>
+                            </CardHeaderMain>
+                      </CardHeader>
+                      <CardBody className="contributecardbody">Our architectures are based on deployment scenarios and business drivers, and provide recommendations, lessons learned, and best practices on how to use Red Hat products to architect solutions.</CardBody>    
+                  </Card>
+                  </GalleryItem>
+                  <GalleryItem >
+                  <Card isHoverable={false} key="zz" isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Tools to help you create and architect your deployment</CardTitle>
+                      <CardHeader  className="contribute_card_header" >
+                            <CardHeaderMain>
+                              <Brand src="/architect/portfolio/images/pa-overview-tools.png" alt="Card Image" width={imagesize+"px"}/>
+                            </CardHeaderMain>
+                      </CardHeader>
+                      <CardBody className="contributecardbody">Use our resources and tools to build your own architecture diagrams with standardized icons for better team collaboration and communication, and submit your ideas to a community of Red Hat experts who can provide feedback and guidance.</CardBody>    
+                  </Card>
+                </GalleryItem>
+              </Gallery>
+             
+              <a id="_paprocess"></a><h2>How Portfolio Architectures are created</h2>
+                <Gallery  hasGutter className="learn_more_gallery_process">
+                <GalleryItem>
+                  <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Review Submissions</CardTitle>
+                      <CardHeader className="contribute_card_header" >
+                            <CardHeaderMain>
+                              <Brand src="/architect/portfolio/images/contribute_pa_create_01.png" alt="Card Image" width={imagesize+"px"}/>
+                            </CardHeaderMain>
+                      </CardHeader>
+                      <CardBody className="contributecardbody">Submissions come from the community, partners and customers, and from Red Hatters who work with architects and engineers on their deployment implementations.</CardBody>    
+                  </Card>
+                  </GalleryItem>
+                  <GalleryItem>
+                  <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Genericize Technology</CardTitle>
+                      <CardHeader className="contribute_card_header" >
+                            <CardHeaderMain>
+                              <Brand src="/architect/portfolio/images/contribute_pa_create_02.png" alt="Card Image" width={imagesize+"px"}/>
+                            </CardHeaderMain>
+                      </CardHeader>
+                      <CardBody className="contributecardbody">We take specific deployment scenarios and examine all products and parts of the solution. This leads us to build a generic architecture that fits many customer and industry needs, and allows for further customization with our open-source software.</CardBody>    
+                  </Card>
+                  </GalleryItem>
+                  <GalleryItem>
+                  <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Outline Architecture</CardTitle>
+                      <CardHeader className="contribute_card_header" >
+                            <CardHeaderMain>
+                              <Brand src="/architect/portfolio/images/contribute_pa_create_03.png" alt="Card Image" width={imagesize+"px"}/>
+                            </CardHeaderMain>
+                      </CardHeader>
+                      <CardBody className="contributecardbody">With a generic solution gathered and researched, we then develop and design best practices to give you a solution that can be easily optimized to fit the specific business objectives of your organization, with your choice of technologies in the deployment.</CardBody>    
+                  </Card>
+                  </GalleryItem>
+                  <GalleryItem>
+                  <Card isCompact isPlain>
+                      <CardTitle className="contributecardtitle">Complete Architecture</CardTitle>
+                      <CardHeader className="contribute_card_header" >
+                            <CardHeaderMain>
+                              <Brand src="/architect/portfolio/images/contribute_pa_create_04.png" alt="Card Image" width={imagesize+"px"}/>
+                            </CardHeaderMain>
+                      </CardHeader>
+                      <CardBody className="contributecardbody">Published Portfolio Architectures on the website ensure consistency in product scope and usage in various deployment scenarios and provide expert guidance on successful implementations.</CardBody>    
+                  </Card>
+                  </GalleryItem>
+                  </Gallery>
+               
+
 
                 <a id="_contribute"></a><h2>Contribute to Portfolio Architecture</h2>
                 <p>
@@ -156,13 +245,6 @@ class Contribute extends React.Component {
                 </Gallery> 
                 <br/>
                 </p>
-
-                <a id="_contributeVP"></a><h2>Contribute to Validate Pattern</h2>
-                <p>
-                The Community Pattern and Validated Pattern initiatives encourage participation from their users.  If you would like to contribute to a new pattern, see the <a href="https://hybrid-cloud-patterns.io/creating-a-new-pattern/">creating a new pattern</a> page.   If there are aspects of a community or validated pattern you would like to engage in, please work with the folks contributing to the pattern by submitting a pull request.
-                    
-                </p>
-                <br/>
 
                 <a id="_other"></a><h2>Other Resources</h2>
                 
@@ -212,13 +294,9 @@ class Contribute extends React.Component {
                   </Card>
                   </GalleryItem>
                   </Gallery>
-                 
-                  <br/>
                   </PageSection>
                   </GridItem>
           </Grid>
-
-          
         </PageSection>
 
         
