@@ -34,6 +34,8 @@ var ppid;
 var docname;
 var resourcelist;
 var productType;
+var metaDesc;
+var metaKeyword;
 
 
 class ArchitectureDetail extends React.Component {
@@ -51,6 +53,9 @@ class ArchitectureDetail extends React.Component {
           docname = productresults.data[i].DetailPage;
           title = productresults.data[i].Heading;
           productType = productresults.data[i].ProductType;
+          metaDesc = productresults.data[i].metaDesc; 
+          metaKeyword = productresults.data[i].metaKeyword; 
+
           
           this.theProduct = productresults.data[i];
           this.productUsedArray=this.theProduct.Product.split(',');
@@ -272,7 +277,9 @@ class ArchitectureDetail extends React.Component {
       ascii_render =  <AsciidocVP>{this.state.data}</AsciidocVP>;
     }
 
-
+    //REPLACING HEADER
+    document.getElementsByTagName("META")[3].content= metaDesc;
+    document.getElementsByTagName("META")[4].content= metaKeyword;
     return (
 
       <React.Fragment>
