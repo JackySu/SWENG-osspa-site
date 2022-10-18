@@ -82,10 +82,10 @@ class PACatalog extends React.Component {
                <Card isHoverable={false} key={item.ppid} isCompact  >
                   <CardHeader>
                     <CardHeaderMain>
-                    <Link to={DETAIL_URL+'?ppid='+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" className='catalog_card_img'/></Link>
+                    <Link to={DETAIL_URL+'/'+item.ppid} ><Brand src={CARD_IMG_URL+item.Image1Url} alt="Card Image" className='catalog_card_img'/></Link>
                     </CardHeaderMain>
                   </CardHeader>
-                  <CardTitle><Link to={DETAIL_URL+'?ppid='+item.ppid} >{item.Heading}</Link>{item.isnew =="TRUE" && '  '}{item.isnew =="TRUE" && <Badge key={1}>New!</Badge>}</CardTitle>
+                  <CardTitle><Link to={DETAIL_URL+'/'+item.ppid} >{item.Heading}</Link>{item.isnew =="TRUE" && '  '}{item.isnew =="TRUE" && <Badge key={1}>New!</Badge>}</CardTitle>
                   <CardBody>{item.Summary}</CardBody>
                   <CardFooter>
                     <LabelGroup numLabels={5}>

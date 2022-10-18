@@ -45,7 +45,7 @@ const routes: AppRouteConfig[] = [
     exact: true,
     isAsync: true,
     label: 'Architecture Detail',
-    path: '/architecturedetail',
+    path: '/architecturedetail/:ppid',
     title: 'Portfolio Architecture | Architecture Detail',
   },
   {
@@ -62,25 +62,7 @@ const routes: AppRouteConfig[] = [
     path: '/learnmore',
     title: 'Portfolio Architecture | Learn More',
   },
-  {
-    label: 'Community',
-    routes: [
-      {
-        component: GeneralSettings,
-        exact: true,
-        label: 'General',
-        path: '/settings/general',
-        title: 'PatternFly Seed | General Settings',
-      },
-      {
-        component: ProfileSettings,
-        exact: true,
-        label: 'Profile',
-        path: '/settings/profile',
-        title: 'PatternFly Seed | Profile Settings',
-      },
-    ],
-  },
+  
 ];
 
 // a custom hook for sending focus to the primary content container
