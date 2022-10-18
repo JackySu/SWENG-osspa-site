@@ -10,7 +10,7 @@ import {
   Grid,
   GridItem
 } from '@patternfly/react-core';
-const qs = require('query-string');
+//const qs = require('query-string');
 import  detailLinks  from './DetailLink.csv';
 import Papa from 'papaparse';
 import { Asciidoc } from '@app/ArchitectureDetail/AsciiDoc';
@@ -22,12 +22,12 @@ import GitLabIcon from '@patternfly/react-icons/dist/esm/icons/gitlab-icon';
 import MonitoringIcon from '@patternfly/react-icons/dist/esm/icons/monitoring-icon';
 
 import '@app/react-asciidoc/fedora.css';
-import { array } from 'prop-types';
+
 import { TableComposable, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
 
 import palist from "../ArchitectureList/PAList.csv";
 import productlist from "../ArchitectureList/ProductList.csv";
-import e from 'express';
+
 
 var title;
 var ppid;
@@ -36,7 +36,7 @@ var resourcelist;
 var productType;
 
 
-class ArchitectureDetail extends React.Component {
+class ArchitectureDetail extends React.Component  {
 
   detailMap = new Map();
   productUsedArray = new Array();
@@ -143,16 +143,14 @@ class ArchitectureDetail extends React.Component {
   
 
   async componentDidMount() {
-    
-    const parsed = qs.parse(location.search);
-    ppid = parsed.ppid;
+    ppid=(window.location.pathname).replace('/architect/portfolio/architecturedetail/', '');
     this.loadPA();
     this.loadResources();
     this.loadProductList();
 
     if(""==docname || null==docname){
       alert("Portfolio Architecture Not Found!")
-      window.location.replace("/architect/portfolio");
+      //window.location.replace("/architect/portfolio");
     }
     
     fetch("/architect/portfolio"+docname,{
@@ -166,7 +164,7 @@ class ArchitectureDetail extends React.Component {
           return response.text(); 
         else{
           alert("Detail Document unavalible!")
-          window.location.replace("/architect/portfolio");
+          //window.location.replace("/architect/portfolio");
         }
       })
       
