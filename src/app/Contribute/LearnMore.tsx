@@ -106,7 +106,10 @@ class LearnMore extends React.Component {
         </div>
     }
 
-    
+    //REPLACING HEADER
+    document.getElementsByTagName("META")[3].content= "Contribute your implementation of Red Hat multi-product solutions. Open Source Software Portfolio Architecture Community provide new references for architects that want to build and innovate their systems with open-source Red Hat solutions.";
+    document.getElementsByTagName("META")[4].content= "open source, create architecture";
+
     return  <React.Fragment>
         
         <Page
