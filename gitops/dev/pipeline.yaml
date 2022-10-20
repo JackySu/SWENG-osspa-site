@@ -71,7 +71,7 @@ spec:
         - name: TLSVERIFY
           value: 'false'
       runAfter:
-        - merge-tool-repository
+        - load-repo-image
       taskRef:
         kind: ClusterTask
         name: buildah
