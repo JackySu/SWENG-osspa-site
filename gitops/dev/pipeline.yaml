@@ -53,7 +53,7 @@ spec:
             cd /workspace/source 
             git clone https://gitlab.com/osspa/portfolio-architecture-examples.git
             cd /workspace/source/portfolio-architecture-examples
-            cp -R images /workspace/source/asset/architect/portfolio/repo/images
+            cp -R images /workspace/source/asset/architect/portfolio/repo
             cd /workspace/source
             rm -rf portfolio-architecture-examples
       runAfter:
