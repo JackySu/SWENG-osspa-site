@@ -11,6 +11,7 @@ import { NotFound } from '@app/NotFound/NotFound';
 import { useDocumentTitle } from '@app/utils/useDocumentTitle';
 import { LastLocationProvider, useLastLocation } from 'react-router-last-location';
 import { ArchitectureDetail } from '@app/ArchitectureDetail/ArchitectureDetail';
+import { DetailRedirect } from '@app/ArchitectureDetail/DetailRedirect';
 let routeFocusTimer: number;
 export interface IAppRoute {
   label?: string; // Excluding the label will exclude the route from the nav sidebar in AppLayout
@@ -45,7 +46,15 @@ const routes: AppRouteConfig[] = [
     exact: true,
     isAsync: true,
     label: 'Architecture Detail',
-    path: '/architecturedetail/:ppid',
+    path: '/detail/:ppid',
+    title: 'Portfolio Architecture | Architecture Detail',
+  },
+  {
+    component: DetailRedirect,
+    exact: true,
+    isAsync: true,
+    label: 'Architecture Detail - redirect',
+    path: '/architecturedetail',
     title: 'Portfolio Architecture | Architecture Detail',
   },
   {

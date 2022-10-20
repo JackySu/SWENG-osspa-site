@@ -148,14 +148,14 @@ class ArchitectureDetail extends React.Component  {
   
 
   async componentDidMount() {
-    ppid=(window.location.pathname).replace('/architect/portfolio/architecturedetail/', '');
+    ppid=(window.location.pathname).replace('/architect/portfolio/detail/', '');
     this.loadPA();
     this.loadResources();
     this.loadProductList();
 
     if(""==docname || null==docname){
       alert("Portfolio Architecture Not Found!")
-      //window.location.replace("/architect/portfolio");
+      window.location.replace("/architect/portfolio");
     }
     
     fetch("/architect/portfolio"+docname,{
@@ -169,7 +169,7 @@ class ArchitectureDetail extends React.Component  {
           return response.text(); 
         else{
           alert("Detail Document unavalible!")
-          //window.location.replace("/architect/portfolio");
+          window.location.replace("/architect/portfolio");
         }
       })
       
