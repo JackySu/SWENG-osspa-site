@@ -40,9 +40,11 @@ export default class Asciidoc extends React.PureComponent {
             
             var imagelocation=result[i].replace('<img src="','');     
             imagelocation=imagelocation.replace('"','');  
+            var newLocation=imagelocation.replace('https://gitlab.com/osspa/portfolio-architecture-examples/-/raw/main','/architect/portfolio/repo');  
+            console.log("imagelocation->["+imagelocation +"]  and  newLocation-->["+newLocation+"]");    
+           
             
-            
-            filteredhtml=filteredhtml.replace(imagelocation+'"',imagelocation+'"'+'class="asciidoc-img" onclick="window.open(\''+imagelocation+'\');"')
+            filteredhtml=filteredhtml.replace(imagelocation+'"',newLocation+'"'+'class="asciidoc-img" onclick="window.open(\''+newLocation+'\');"')
         }
        
 

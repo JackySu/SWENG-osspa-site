@@ -20,7 +20,7 @@ import {
 import { Link } from "react-router-dom";
 import { SelectedList } from './SelectedList';
 
-const CARD_IMG_URL = "https://gitlab.com/osspa/portfolio-architecture-examples/-/raw/main/images/"
+const CARD_IMG_URL = "/architect/portfolio/repo/images/"
 const isExpanded = false;
 const DETAIL_URL = '/detail'
 
