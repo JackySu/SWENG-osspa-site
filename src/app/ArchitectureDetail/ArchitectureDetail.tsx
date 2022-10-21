@@ -119,8 +119,7 @@ class ArchitectureDetail extends React.Component  {
     location.hash = "#" + hash;
   }
   getBranch(){
-    console.log("Host->"+window.location.hostname);
-    if(window.location.hostname=="redhat.com")
+    if(window.location.hostname=="www.redhat.com")
       return "production";
     else
       return "main";
@@ -170,7 +169,7 @@ class ArchitectureDetail extends React.Component  {
     if(productType=="PA"){
       docname = PA_DOC_URL+"/"+branch+"/"+docname;
     }
-    console.log("docname->"+docname);
+    
     fetch("/architect/portfolio"+docname,{
       headers : { 
           method: "get",
