@@ -26,7 +26,7 @@ export default class Footer extends React.PureComponent {
                 <Text component={TextVariants.p} className="footerCopyRighttext">
                     <Brand alt="rh-logo" className="footer-traditional-logo" src="https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo.svg" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; © 2021 Red Hat, Inc.        <a href="https://www.redhat.com/en/about/privacy-policy">Privacy statement</a>        |        <a href="https://www.redhat.com/en/about/terms-use">Terms of use</a>        |        <a href="https://www.redhat.com/en/about/all-policies-guidelines">All policies and guidelines</a>        |        <a href="https://www.redhat.com/en/about/digital-accessibility">Digital accessibility</a>       |       <a id="teconsent"></a> <span id="teconsent" ></span>
-                    <a href="https://www.redhat.com/summit?intcmp=7013a0000025wJwAAI" target="_blank"><Brand alt="summit-logo" className="footer-traditional-logo" src="https://www.redhat.com/cms/managed-files/Logo-Red_Hat-Summit-A-Standard-RGB-02_0.svg" /></a>
+                    
                 </Text>
                 <br/>
                 <br/>

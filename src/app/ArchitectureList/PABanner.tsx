@@ -73,6 +73,7 @@ render(){
           onPageResize={onPageResize}
           className="banner_page"
         >
+
          
       <Masthead id="light-masthead" backgroundColor="light">
       <MastheadMain>
@@ -83,44 +84,34 @@ render(){
       <Panel>
         <PanelMain>
           <PanelMainBody className="_banner">{" "}The Red Hat Portfolio Architecture Center showcases successful customer deployments of our open-source software, as well as provides architecture best practices, tools, and links to other associated resources to meet your innovative datacenter and cloud based business objectives.
-          
-          
-        <Carousel show={1} slide={1} swiping={true} infinite={true}>
-       
-        { this.displayList.map( item => 
-
-       
-          <div class="admonitionblock announcement">
-            <table class="banner" >
-            <tbody><tr>
-            <td class="icon">
-              <div class="title">{item.announcementType}</div>
-            </td>
-            <td class="content">
-            <a href={item.titleLink}><i class="pf-icon pf-icon-attention-bell"/>&nbsp;&nbsp; <b>{item.title}</b></a> <div class="banner_date_format">{item.date}</div>
-            <div class="pf-c-card__body">
-              {item.desc}
-            </div>
-            </td>
-            </tr>
-            </tbody></table>
-          </div>
-          
-                        
-        )}
-        
-        </Carousel>
-
-
         </PanelMainBody>
         </PanelMain>
       </Panel>
-
-          
-        
         {learnMoreButton}
       </MastheadContent>
     </Masthead>
+    <Masthead id="light-masthead-carousel" backgroundColor="light" >
+      <MastheadContent>
+        <Carousel show={1} slide={1} swiping={true} infinite={true}>
+       
+       { this.displayList.map( item => 
+         <div class="admonitionblock announcement">
+           <table class="banner" >
+           <tbody><tr>
+           <td class="icon">
+             <div class="title">{item.announcementType}</div>
+           </td>
+           <td class="content">
+           <a href={item.titleLink}><i class="pf-icon pf-icon-attention-bell"/>&nbsp;&nbsp; <b>{item.title}</b></a>  &nbsp; &nbsp; <i>{item.date}</i>  &nbsp; &nbsp;  {item.desc}
+           </td>
+           </tr>
+           </tbody></table>
+         </div>           
+       )}
+       
+       </Carousel>
+       </MastheadContent>
+       </Masthead>
     
     </Page>
     </React.Fragment>
