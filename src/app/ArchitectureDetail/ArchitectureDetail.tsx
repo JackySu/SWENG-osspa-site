@@ -37,6 +37,7 @@ var productType;
 var metaDesc;
 var metaKeyword;
 
+const PA_DOC_URL = "/osspa/portfolio-architecture-examples/-/raw";
 
 class ArchitectureDetail extends React.Component  {
 
@@ -45,6 +46,8 @@ class ArchitectureDetail extends React.Component  {
   usedproductarray = Array();
   theProduct;
   
+  
+
   loadPA = () => Papa.parse(palist, {
     header: true,
     complete: (productresults) => {
@@ -115,7 +118,13 @@ class ArchitectureDetail extends React.Component  {
   scrollTo(hash) {
     location.hash = "#" + hash;
   }
-  
+  getBranch(){
+    console.log("Host->"+window.location.hostname);
+    if(window.location.hostname=="redhat.com")
+      return "production";
+    else
+      return "main";
+  }
   constructor(props) {
     super(props);
 
@@ -157,7 +166,11 @@ class ArchitectureDetail extends React.Component  {
       alert("Portfolio Architecture Not Found!")
       window.location.replace("/architect/portfolio");
     }
-    
+    var branch = this.getBranch();
+    if(productType=="PA"){
+      docname = PA_DOC_URL+"/"+branch+"/"+docname;
+    }
+    console.log("docname->"+docname);
     fetch("/architect/portfolio"+docname,{
       headers : { 
           method: "get",
@@ -271,7 +284,7 @@ class ArchitectureDetail extends React.Component  {
     }
    
     var ascii_render =  <Asciidoc>{this.state.data}</Asciidoc>;
-    if(productType=="VP" || productType=="CP"){
+    if(productType=="VP" || productType=="CP" ){
       ascii_render =  <AsciidocVP>{this.state.data}</AsciidocVP>;
     }
 
