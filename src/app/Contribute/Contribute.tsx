@@ -77,7 +77,7 @@ class Contribute extends React.Component {
         </div>
         <div class="right"> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more.
           <br/><br/>
-          With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
+          With your help, we can become the go to reference for architects that want to build and innovate their systems with open source Red Hat solutions.
           <br/><br/>
           Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
         </div>
@@ -107,7 +107,7 @@ class Contribute extends React.Component {
           </div>
           <div> The Open Source Software Portfolio Architecture community depends on contributions to help us grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new architectures and ideas, and more.
             <br/><br/>
-            With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
+            With your help, we can become the go to reference for architects that want to build and innovate their systems with open source Red Hat solutions.
             <br/><br/>
             Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
           </div>
@@ -115,7 +115,7 @@ class Contribute extends React.Component {
     }
 
     //REPLACING HEADER
-    document.getElementsByTagName("META")[3].content= "Contribute your implementation of Red Hat multi-product solutions. Open Source Software Portfolio Architecture Community provide new references for architects that want to build and innovate their systems with open-source Red Hat solutions.";
+    document.getElementsByTagName("META")[3].content= "Contribute your implementation of Red Hat multi-product solutions. Open Source Software Portfolio Architecture Community provide new references for architects that want to build and innovate their systems with open source Red Hat solutions.";
     document.getElementsByTagName("META")[4].content= "open source, create architecture";
 
     return  <React.Fragment>
@@ -201,7 +201,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/contribute_pa_create_02.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">We take specific deployment scenarios and examine all products and parts of the solution. This leads us to build a generic architecture that fits many customer and industry needs, and allows for further customization with our open-source software.</CardBody>    
+                      <CardBody className="contributecardbody">We take specific deployment scenarios and examine all products and parts of the solution. This leads us to build a generic architecture that fits many customer and industry needs, and allows for further customization with our open source software.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
@@ -293,7 +293,7 @@ class Contribute extends React.Component {
                               <Brand src="/architect/portfolio/images/contribute_other_03.png" alt="Card Image" width={(imagesize-30)+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">Help us enhance our <br/> <a href="https://gitlab.com/osspa/osspa-tool/-/issues/new" target="_blank">architectural diagram tool</a><br/> and <br/><a href="https://gitlab.com/osspa/osspa-site/-/issues/new?issuable_template=site_suggestions" target="_blank">open-source software PA Center</a></CardBody>    
+                      <CardBody className="contributecardbody">Help us enhance our <br/> <a href="https://gitlab.com/osspa/osspa-tool/-/issues/new" target="_blank">architectural diagram tool</a><br/> and <br/><a href="https://gitlab.com/osspa/osspa-site/-/issues/new?issuable_template=site_suggestions" target="_blank">open source software PA Center</a></CardBody>    
                   </Card>
                   </GalleryItem>
                   </Gallery>
