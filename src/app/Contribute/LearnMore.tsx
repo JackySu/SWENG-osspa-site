@@ -99,7 +99,7 @@ class LearnMore extends React.Component {
           </div>
           <div> Architecture Center --- XXX
             <br/><br/>
-            With your help, we can become the go to reference for architects that want to build and innovate their systems with open-source Red Hat solutions.
+            With your help, we can become the go to reference for architects that want to build and innovate their systems with open source Red Hat solutions.
             <br/><br/>
             Learn more about how and why we create these products with you to help solve real-world business challenges faced by customers and partners like you every day.
           </div>
@@ -107,7 +107,7 @@ class LearnMore extends React.Component {
     }
 
     //REPLACING HEADER
-    document.getElementsByTagName("META")[3].content= "Contribute your implementation of Red Hat multi-product solutions. Open Source Software Portfolio Architecture Community provide new references for architects that want to build and innovate their systems with open-source Red Hat solutions.";
+    document.getElementsByTagName("META")[3].content= "Contribute your implementation of Red Hat multi-product solutions. Open Source Software Portfolio Architecture Community provide new references for architects that want to build and innovate their systems with open source Red Hat solutions.";
     document.getElementsByTagName("META")[4].content= "open source, create architecture";
 
     return  <React.Fragment>
@@ -193,7 +193,7 @@ class LearnMore extends React.Component {
                               <Brand src="/architect/portfolio/images/contribute_pa_create_02.png" alt="Card Image" width={imagesize+"px"}/>
                             </CardHeaderMain>
                       </CardHeader>
-                      <CardBody className="contributecardbody">We take specific deployment scenarios and examine all products and parts of the solution. This leads us to build a generic architecture that fits many customer and industry needs, and allows for further customization with our open-source software.</CardBody>    
+                      <CardBody className="contributecardbody">We take specific deployment scenarios and examine all products and parts of the solution. This leads us to build a generic architecture that fits many customer and industry needs, and allows for further customization with our open source software.</CardBody>    
                   </Card>
                   </GalleryItem>
                   <GalleryItem>
