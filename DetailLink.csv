@@ -101,3 +101,4 @@ ppid,description,url,type
 32,ARO Landing Zone Accelerator,https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator,
 32,ARO Landing Zone Accelerator GitHub repo,https://github.com/Azure/ARO-Landing-Zone-Accelerator,Site
 32,How to deploy Azure Red Hat OpenShift,https://www.redhat.com/en/blog/how-deploy-azure-red-hat-openshift,Blog
+33,Modernising SCADA system interfaces,https://www.redhat.com/en/blog/modernizing-scada-system-interfaces,Blog
