@@ -1,0 +1,103 @@
+ppid,description,url,type
+2,Cloud Adoption Architectural Introduction,https://dzone.com/articles/cloud-adoption-an-architectural-introduction,Blog 
+2,Overview of Cloud Adoption Elements,https://dzone.com/articles/cloud-adoption-common-architectural-elements,Blog 
+2,Example Cloud Adoption Architectures ,https://dzone.com/articles/cloud-adoption-example-adoption-architecture,Blog
+3,Cloud Factory Introduction,https://dzone.com/articles/cloud-factory-architectural-introduction,Blog
+3,Overview of Cloud Adoption Elements,https://dzone.com/articles/cloud-factory-common-architectural-elements,Blog
+3,Example Cloud Factory Architectures ,https://dzone.com/articles/cloud-factory-example-factory-deployment,Blog
+4,Cloud Native Development Blueprint,https://dzone.com/articles/cloud-native-development-a-blueprint,Blog
+4,Cloud Native Development on Local Containers,https://dzone.com/articles/cloud-native-development-on-local-containers,Blog
+4,Cloud Native Development on Remote Containers,https://dzone.com/articles/cloud-native-development-on-remote-containers,Blog
+4,Advanced Cloud Native Deployment,https://dzone.com/articles/cloud-native-development-an-advanced-deployment-bl,Blog
+4,Overview of Cloud Native Development Elements,https://dzone.com/articles/cloud-native-development-common-architectural-elem,Blog
+5,Integration Key to Experience,https://dzone.com/articles/integration-key-to-experience-an-introduction-part,Blog
+5,Proces Integration,https://dzone.com/articles/integration-key-to-customer-example-process-integr,Blog
+5,Mobile Integration,https://dzone.com/articles/integration-key-to-customer-experience-example-mob,Blog
+5,Service Integration,https://dzone.com/articles/integration-key-to-experience-service-integration,Blog
+6,Edge Medical Introduction,https://dzone.com/articles/edge-medical-diagnosis-architectural-introduction,Blog
+6,Overview of Edge Medical Diagnosis Elements,https://dzone.com/articles/edge-medical-diagnosis-common-architectural-elemen,Blog
+6,Predictive Analysis,https://dzone.com/articles/edge-medical-diagnosis-example-predictive-analysis,Blog
+6,Medical Diagnosis with GitOps,https://dzone.com/articles/edge-medical-diagnosis-example-architecture-with-g,Blog
+6,Edge Medical Diagnosis Validated Pattern,https://hybrid-cloud-patterns.io/medical-diagnosis/,Site
+8,A Study of Hosting and Managing on Hybrid Multi-Cloud,https://dzone.com/articles/a-study-of-hosting-and-managing-on-hybrid-multi-cl,Blog
+8,Overview of Making Hybrid Multi-Cloud GitOps Work ,https://dzone.com/articles/overview-of-making-hybrid-multi-cloud-gitops-works,Blog
+8,Hybrid Multi-Cloud Dynamic Security Management ,https://dzone.com/articles/hybrid-multi-cloud-dynamic-security-management,Blog
+8,Observability in Hybrid Multi-Cloud Environment ,https://dzone.com/articles/observability-in-hybrid-multi-cloud-environment,Blog
+8,Deploying the Multicloud GitOps Pattern,https://hybrid-cloud-patterns.io/multicloud-gitops/getting-started/,Site
+9,Introduction to iDaas,https://dzone.com/articles/intelligent-data-as-a-service-idaas-architectural,Blog
+9,Elements of iDaas,https://dzone.com/articles/intelligent-data-as-a-service-idaas-common-archite,Blog
+9,iDaas Data Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-a,Blog
+9,HL7 and FHIR Integration,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-hl7-an,Blog
+9,Knowledge and Insight Architecture,https://dzone.com/articles/intelligent-data-as-a-service-idaas-example-data-i,Blog
+11,Near Zero Downtime Maintenance with Red Hat Enterprise Linux for SAP Solutions,https://www.redhat.com/en/resources/near-zero-downtime-sap-maintenance,Blog
+11,Near Zero Downtime Architect Blog,https://www.redhat.com/architect/self-healing-infrastructure,Blog
+11,Near Zero Downtime Maintenance,https://www.redhat.com/en/blog/near-zero-downtime-maintenance-rhel-sap-solutions,Blog
+17,Self-healing infrastructure with Red Hat Insights and Ansible Automation Platform,https://www.redhat.com/en/blog/self-healing-infrastructure-red-hat-insights-and-ansible-automation-platform,Blog
+21,Building an Adaptable 5G Core on an Open Source Container Platform,https://www.redhat.com/en/blog/building-adaptable-5g-core-open-source-container-platform,Blog
+18,Smart Management for SAP,https://www.redhat.com/en/blog/red-hat-smart-management-sap,Blog
+22,Telco 5G with Hyperscalers,https://medium.com/open-5g-hypercore/open-5g-hypercore-episode-i-166a89805c08,Blog
+22,Telco 5G with Hyperscalers,https://github.com/fenar/cnvopen5gcore,Repository
+12,Financial Payments Introduction,https://dzone.com/articles/financial-payments-architecture-an-introduction,Blog
+12,Immediate Payment ,https://dzone.com/articles/payments-architecture-immediate-payments-example,Blog
+12,Anti Money Laundering ,https://dzone.com/articles/payments-architecture-anti-money-laundering-exampl,Blog
+12,Fraud Detection,https://dzone.com/articles/payments-architecture-fraud-detection-example,Blog
+12,Financial Calculations ,https://dzone.com/articles/payments-architecture-financial-calculations-examp,Blog
+16,Retail Data Framework Introduction,https://dzone.com/articles/retail-data-framework-an-architectural-introductio,Blog
+16,Overview of Retail Data Framework Elements,https://dzone.com/articles/retail-data-framework-common-architectural-element,Blog
+16,Retail Data Framework Example,https://dzone.com/articles/retail-data-framework-example-data-architecture,Blog
+13,Point of Sale Introduction,https://dzone.com/articles/point-of-sale-an-architectural-introduction,Blog
+13,Overview of Point of Sale Elements,https://dzone.com/articles/point-of-sale-common-architectural-elements,Blog
+13,Point of Sale Example,https://dzone.com/articles/point-of-sale-example-image-distribution-architect,Blog
+1,Business Optimization Introduction,https://dzone.com/articles/business-optimisation-architecture-an-introduction,Blog
+1,Overview of Business Optimization Elements,https://dzone.com/articles/business-optimisation-architecture-common-architec,Blog
+1,Planning Optimization Example,https://dzone.com/articles/business-optimisation-architecture-example-plannin,Blog
+1,Vaccine Scheduling Example,https://dzone.com/articles/business-optimisation-architecture-example-vaccine,Blog
+7,Headless E-Commerce Introduction,https://dzone.com/articles/headless-ecommerce-an-architectural-introduction,Blog
+7,Headless E-Commerce Elements,https://dzone.com/articles/headless-ecommerce-common-architectural-elements,Blog
+7,Headless E-Commerce Examples,https://dzone.com/articles/headless-ecommerce-example-headless-architectures,Blog
+10,Integrating with SaaS Applications,https://dzone.com/articles/integrating-with-saas-applications-an-introduction,Blog
+14,Real-Time Stock Control Introduction,https://dzone.com/articles/real-time-stock-control-an-architectural-introduct,Blog
+14,Real-Time Stock Control Elements,https://dzone.com/articles/real-time-stock-control-common-architectural-eleme,Blog
+14,Real-Time Stock Control Examples,https://dzone.com/articles/real-time-stock-control-example-stock-control-arch,Blog
+19,Store Health and Safety Introduction,https://dzone.com/articles/store-health-and-safety-an-architectural-introduct,Blog
+19,Store Health and Safety Elements,https://dzone.com/articles/store-health-and-safety-common-architectural-eleme,Blog
+19,Store Health and Safety Example,https://dzone.com/articles/store-health-and-safety-example-health-and-safety,Blog
+20,Supply Chain Integration Introduction,https://dzone.com/articles/supply-chain-integration-an-architectural-introduc,Blog
+20,Supply Chain Integration Elements,https://dzone.com/articles/supply-chain-integration-common-architectural-elem,Blog
+20,Supply Chain Integration Example,https://dzone.com/articles/supply-chain-integration-example-store-integration,Blog
+20,How to Get the Supply Chain Back to (Better than) Normal,https://devops.com/how-to-get-the-supply-chain-back-to-better-than-normal/,Blog
+23,What is a Radio Access Network (RAN)?,https://www.redhat.com/en/topics/5g-networks/what-is-radio-access-network,Blog
+23,Open RAN and O-RAN in Brief,https://www.redhat.com/en/blog/open-ran-and-o-ran-brief,Blog
+23,Red Hat OpenShift drives a strong 5G open RAN ecosystem,https://www.redhat.com/en/blog/red-hat-openshift-drives-strong-5g-open-ran-ecosystem,Blog
+23,Red Hat and Nokia collaborate to accelerate 5G RAN technology innovation,https://www.redhat.com/en/blog/red-hat-and-nokia-collaborate-accelerate-5g-ran-technology-innovation,Blog
+23,Accelerate your 5G strategy with virtualized RAN (vRAN),https://www.redhat.com/en/blog/accelerate-your-5g-strategy-virtualized-ran-vran,Blog
+15,Remote Server Management Introduction,https://dzone.com/articles/remote-server-management-an-architectural-introduc,Blog
+15,Remote Server Management Elements,https://dzone.com/articles/remote-server-management-common-architectural-elem,Blog
+15,Remote Server Management Example,https://dzone.com/articles/remote-server-management-example-remote-architectu,Blog
+24,Datacenter to edge: A reference architecture for managing remote resources,https://www.redhat.com/architect/edge-architecture-remote-management,Blog
+26,Validated Patterns - Industrial Edge,https://redhat-gitops-patterns.io/industrial-edge/,Site
+26,Boosting manufacturing efficiency with AI/ML at edge,https://www.redhat.com/en/blog/boosting-manufacturing-efficiency-and-product-quality-aiml-edge-computing-and-kubernetes?extIdCarryOver=true&sc_cid=701f2000001Css5AAC,Blog
+26,Extending the hybrid cloud to the industrial edge,https://www.redhat.com/architect/cloud-industrial-edge-architecture,Blog
+25,Learn more: complete documentation about how to Modernize your stack with Change Data Capture,https://red.ht/modernize-with-cdc,Site
+25,Full step-by-step guide: Try this solution (CDC),https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/solution-pattern-modernization-cdc/03-demo.html,Site
+25,More Red Hat Solution Patterns for Cloud Native Applications,https://redhat-solution-patterns.github.io/,Site
+25,What is change data capture?,https://www.redhat.com/en/topics/integration/what-is-change-data-capture,Blog
+25,Outbox pattern with OpenShift Streams for Apache Kafka and Debezium,https://developers.redhat.com/devnation/tech-talks/dual-writes-kafka-debezium,Video
+29,How to architect intelligent workflow automation for insurance companies,https://www.redhat.com/architect/intelligent-workflow-automation-insurance,Blog
+29,How to architect intelligent automation with ITSM,https://www.redhat.com/architect/itsm-automation-insurance-systems,Blog
+29,How to architect intelligent automation using the Strangler pattern,https://www.redhat.com/architect/insurance-process-automation-strangler-pattern,Blog
+30,Getting Started,https://redhat-gitops-patterns.io/industrial-edge/getting-started/,Site
+30,Factory Site,https://redhat-gitops-patterns.io/industrial-edge/factory/,Site
+30,Application Demo,https://redhat-gitops-patterns.io/industrial-edge/application/,Site
+30,Cluster Sizing,https://redhat-gitops-patterns.io/industrial-edge/cluster-sizing/,Site
+30,Troubleshooting,https://redhat-gitops-patterns.io/industrial-edge/troubleshooting/,Site
+30,Industrial Edge Portfolio Architecture,https://www.redhat.com/architect/portfolio/architecturedetail?ppid=26,Site
+31,Getting Started,https://hybrid-cloud-patterns.io/devsecops/getting-started/,Site
+31,Secured Development Cluster,https://hybrid-cloud-patterns.io/devsecops/devel-cluster/,Site
+31,Secured Production Clusters,https://hybrid-cloud-patterns.io/devsecops/production-cluster/,Site
+31,Secure Supply Chain Demo,https://hybrid-cloud-patterns.io/devsecops/secure-supply-chain-demo/,Site
+31,Cluster Sizing,https://hybrid-cloud-patterns.io/devsecops/cluster-sizing/,Site
+28,API Management Platform for SAP,https://www.redhat.com/en/blog/integrating-sap-other-applications-using-red-hat-openshift,Blog
+32,ARO Landing Zone Accelerator,https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator,
+32,ARO Landing Zone Accelerator GitHub repo,https://github.com/Azure/ARO-Landing-Zone-Accelerator,Site
+32,How to deploy Azure Red Hat OpenShift,https://www.redhat.com/en/blog/how-deploy-azure-red-hat-openshift,Blog
