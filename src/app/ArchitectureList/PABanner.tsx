@@ -16,19 +16,16 @@ import {
 } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import { Carousel } from '@trendyol-js/react-carousel';
-import announcementList from "./AnnouncementList.csv";
-import Papa from 'papaparse';
 
 
 class PABanner extends React.Component{
    displayList;
-  loadAnnouncementList = () => Papa.parse(announcementList, {
-    header: true,
-    complete: (results) => {
-      
-      this.displayList = results.data;
-    }
-  });
+   loadAnnouncementList = async () => {
+    const response = await fetch(`http://localhost:5297/AnnouncementList`)
+    this.displayList = await response.json()
+    return true;  // this return value is necessary though not used, please don't remove it
+  }
+
 
   constructor(props) {
     super(props);
@@ -37,6 +34,7 @@ class PABanner extends React.Component{
     };
    
 }
+
 async componentDidMount() {
   
 }
@@ -44,13 +42,17 @@ async componentDidMount() {
 
 render(){
   
-    this.loadAnnouncementList();
-  
+    
+    if (this.displayList == undefined) {
+      this.loadAnnouncementList();
+    }
+    /*
     if(!Array.isArray(this.displayList) ){
       this.displayList = [] as any;
       alert('cant load file');
       
     }
+    */
 
   const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
     this.setState({ isMobileView: props.mobileView});
@@ -66,7 +68,29 @@ render(){
         learnMoreButton=<div></div>
         
       }
-    
+  
+      var bannerArticle = <div></div>  // still loading, so don't display anything but an empty div
+      if (this.displayList != undefined) {
+      bannerArticle = <Carousel show={1} slide={1} swiping={true} infinite={true}>
+       
+        {this.displayList.map( item => 
+          <div class="admonitionblock announcement">
+            <table class="banner" >
+            <tbody><tr>
+            <td class="icon">
+              <div class="title">{item.announcementType}</div>
+            </td>
+            <td class="content">
+            <a href={item.titleLink}><i class="pf-icon pf-icon-attention-bell"/>&nbsp;&nbsp; <b>{item.title}</b></a>  &nbsp; &nbsp; <i>{item.date}</i>  &nbsp; &nbsp;  {item.desc}
+            </td>
+            </tr>
+            </tbody></table>
+          </div>           
+        )}
+        
+        </Carousel>
+      }
+
     return(
       <React.Fragment>
         <Page
@@ -92,24 +116,7 @@ render(){
     </Masthead>
     <Masthead id="light-masthead-carousel" backgroundColor="light" >
       <MastheadContent>
-        <Carousel show={1} slide={1} swiping={true} infinite={true}>
-       
-       { this.displayList.map( item => 
-         <div class="admonitionblock announcement">
-           <table class="banner" >
-           <tbody><tr>
-           <td class="icon">
-             <div class="title">{item.announcementType}</div>
-           </td>
-           <td class="content">
-           <a href={item.titleLink}><i class="pf-icon pf-icon-attention-bell"/>&nbsp;&nbsp; <b>{item.title}</b></a>  &nbsp; &nbsp; <i>{item.date}</i>  &nbsp; &nbsp;  {item.desc}
-           </td>
-           </tr>
-           </tbody></table>
-         </div>           
-       )}
-       
-       </Carousel>
+        {bannerArticle}
        </MastheadContent>
        </Masthead>
     

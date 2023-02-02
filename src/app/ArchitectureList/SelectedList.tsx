@@ -1,42 +1,41 @@
 import React from "react";
-import listfile from "./PAList.csv";
-import Papa from 'papaparse';
 export const SelectedList = React.createContext();
 
 class SelectedListProvider extends React.Component{
     
-          
-    loadlist = () => Papa.parse(listfile, {
-        header: true,
-        complete: (results) => {
-          return results.data;
-        }
-    });
+    
+    loadlist = async () => {
+        const response = await fetch(`http://localhost:5297/PAList`)
+        return await response.json();
+      };
 
-    loadLive = () =>{
-        var livelist=[] as any;
-        this.loadlist().data.forEach(element => {
+    loadLive = async () =>{
+        var livelist = [] as any;
+        var palist = await this.loadlist();
+
+        palist.forEach(element => {
             if(element.islive=="TRUE"){
                 livelist.push(element);
             }
           })
-        return livelist;
+        this.setState({currentlist: livelist, loading: false});
     }
-    
+
     state = {
-        currentlist:this.loadLive(),
+        currentlist: undefined,
         selectedProduct: [] as any,
         selectedSolution: [] as any,
         selectedVertical: [] as any,
         selectedProductType: [] as any,
-        searchInput: ''
+        searchInput: '',
+        loading: true
     }
-    updateList = () => {
+    updateList = async () => {
         var templist = [] as any;
         
         //this.setState({currentlist:{currentlist:newlist}});
-
-        this.loadLive().forEach(element => {
+        var palist = await this.loadlist();
+        palist.forEach(element => {
             var shouldPush = true;
             if(this.state.selectedProduct.length > 0){
                 //console.log("element",element.Product);
@@ -160,7 +159,10 @@ class SelectedListProvider extends React.Component{
     
     render(){
         
-       
+        if (this.state.loading) {
+            this.loadLive();
+            return <div></div>
+        }
         return(
             <SelectedList.Provider value={{...this.state, updateProduct: this.updateProduct,updateSolution: this.updateSolution,updateVertical: this.updateVertical,updateProductType: this.updateProductType, searchAll:this.searchAll}}>
                 {this.props.children}
